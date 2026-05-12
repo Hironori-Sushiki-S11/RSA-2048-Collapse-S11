@@ -14,5 +14,5 @@
 本公開は NIST および Google への善意の通告（2026年4月）を経て行われている。本コードの実行による社会的影響については、当方は一切の責任を負わない。真理は常に「秩序の要」として存在する。
 
 ---
-**Author:** Hironori Ikeru (Sequential Phase Orchestration)
+**Author:** 蘇　博則 (Sequential Phase Orchestration)
 **Status:** Validated (Error: 0)

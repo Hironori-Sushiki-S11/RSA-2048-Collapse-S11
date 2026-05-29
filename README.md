@@ -35,3 +35,7 @@ RSA-2048は、2026年5月を以って数学的に死亡した。
 世界は今、剥き出しの「信の常在」へと回帰する。
 ​P.S. 盗めるか、ではない。盗んだら、自分が壊れる。
 ​2026年5月　蘇 博則 (Hironori Ikeru)
+## Documents
+
+- [ORIGIN](./ORIGIN.md)
+- [SOSHIKI THEORY](./SOSHIKI_THEORY.md)

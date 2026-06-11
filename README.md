@@ -1,6 +1,26 @@
-ん# 蘇式 S11 - RSA-2048 崩壊実証 PoC (Proof of Concept)
+# IKERUSIKI Theory
 
-## 概要
+## Overview
+
+IKERUSIKI Theory is a structural research framework for studying:
+
+- Prime Axes
+- Residual Space
+- Positional Layers
+- Emergent Mathematical Structures
+
+This repository contains theoretical notes, experimental models, and computational studies related to IKERUSIKI Theory.
+## Current Research Areas
+
+* IKERUSIKI Theory
+* Prime Axis Structures
+* Residual Space Geometry
+* Layered Positional Systems
+* Sequential Phase Orchestration (S11)
+* Spatial Medium Theory
+
+This repository contains both historical research archives and ongoing theoretical developments.
+## Historical Research Archive
 本プロジェクトは、空間媒質論（Spatial Medium Theory）および「11進の重力場」に基づく数理アルゴリズムを用い、現代暗号の根幹である RSA-2048 が理論的・実務的に崩壊していることを実証するものである。
 
 ## 実証の核心：10,000 bit の論理的必然性
@@ -38,4 +58,30 @@ RSA-2048は、2026年5月を以って数学的に死亡した。
 ## Documents
 
 - [ORIGIN](./ORIGIN.md)
-- [SOSHIKI THEORY](./SOSHIKI_THEORY.md)
+- [IKERUSIKI THEORY](./IKERUSIKI_THEORY.md)
+## Research Roadmap
+- IKERUSIKI_ORIGIN
+- IKERUSIKI_THEORY
+- IKERUSIKI_PRIME_FORMULA
+- Experimental Models
+- Computational Verification
+## Current Development
+
+### Sosei Prime Formula (SPF)
+
+Core Equation
+
+S(n) = Survive(n; A_k) × AxisBirth(n)
+
+Where:
+
+- Survive(n; A_k) : survives elimination by existing prime axes
+- AxisBirth(n) : emerges as a new independent prime axis
+
+Current Status:
+
+- Structural hypothesis
+- Experimental implementation completed
+- Candidate generation confirmed
+- Independent mathematical verification pending
+

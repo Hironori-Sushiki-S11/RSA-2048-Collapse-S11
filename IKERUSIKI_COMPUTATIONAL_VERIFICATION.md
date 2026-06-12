@@ -42,3 +42,25 @@ In Progress
 ## Results
 
 Pending
+## Verification 001
+
+Limit: 10,000
+
+Candidates: 9999
+Survivors : 2081
+Prime Axes: 1229
+Composite : 852
+
+### Elimination Summary
+
+13 axis : 159
+17 axis : 110
+19 axis : 94
+23 axis : 76
+29 axis : 59
+31 axis : 56
+37 axis : 46
+41 axis : 41
+43 axis : 37
+47 axis : 33
+...

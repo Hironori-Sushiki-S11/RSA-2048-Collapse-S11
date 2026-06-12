@@ -79,3 +79,34 @@ Composite : 未記録
 
 Full composite survivor output was too long to record manually.
 Only summary values will be recorded after extraction.
+LIMIT: 1,000,000
+
+Candidates: 999,999
+
+Survivors : 207,796
+
+Prime Axes: 78,498
+
+Composite : 129,298
+
+
+
+13軸 → 15,983 個（12.36%）
+
+17軸 → 11,283 個（8.73%）
+
+19軸 → 9,502 個（7.35%）
+
+23軸 → 7,434 個（5.75%）
+
+29軸 → 5,646 個（4.37%）
+
+31軸 → 5,098 個（3.94%）
+
+37軸 → 4,136 個（3.20%）
+
+41軸 → 3,617 個（2.80%）
+
+43軸 → 3,356 個（2.60%）
+
+47軸 → 2,982 個（2.31%）

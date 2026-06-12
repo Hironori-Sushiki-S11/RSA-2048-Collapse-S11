@@ -65,8 +65,8 @@ RSA-2048は、2026年5月を以って数学的に死亡した。
 - IKERUSIKI_THEORY
 - IKERUSIKI_PRIME_FORMULA
 - IKERUSIKI_PRIME_EXPERIMENTS
-- Experimental Models
-- Computational Verification
+- IKERUSIKI_EXPERIMENTAL_MODELS
+- IKERUSIKI_COMPUTATIONAL_VERIFICATION
 ## Current Development
 
 ### Sosei Prime Formula (SPF)

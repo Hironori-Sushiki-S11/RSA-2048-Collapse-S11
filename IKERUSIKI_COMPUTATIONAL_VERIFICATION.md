@@ -104,7 +104,11 @@ Composite : 129,298
 31軸 → 5,098 個（3.94%）
 
 37軸 → 4,136 個（3.20%）
-
+## Observation
+The elimination hierarchy remains stable.
+13 > 17 > 19 > 23 > 29 > 31 > 37 > 41 > 43 > 47
+The dominant axes are preserved when the observation range increases from 10,000 to 1,000,000.
+This suggests that the residual space is not random noise, but has a stable prime-axis elimination structure.
 41軸 → 3,617 個（2.80%）
 
 43軸 → 3,356 個（2.60%）

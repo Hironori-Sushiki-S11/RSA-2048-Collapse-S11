@@ -1,7 +1,7 @@
 # IKERUSIKI Verification 001
 # Observation of Residual Space after known prime-axis elimination
 
-LIMIT = 1000
+LIMIT = 10000
 
 KNOWN_PRIMES = [2, 3, 5, 7, 11]
 

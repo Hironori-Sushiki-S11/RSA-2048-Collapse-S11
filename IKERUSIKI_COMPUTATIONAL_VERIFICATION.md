@@ -64,3 +64,18 @@ Composite : 852
 43 axis : 37
 47 axis : 33
 ...
+## Verification 002
+
+Limit: 100,000
+
+## Results
+
+Candidates: 未記録
+Survivors : 未記録
+Prime Axes: 未記録
+Composite : 未記録
+
+## Note
+
+Full composite survivor output was too long to record manually.
+Only summary values will be recorded after extraction.

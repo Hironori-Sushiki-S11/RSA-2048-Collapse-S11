@@ -25,3 +25,20 @@ The objective is to document:
 Verification not yet started.
 
 Results will be added as experiments are completed.
+# Verification 001
+
+## Objective
+
+Test candidate generation behavior up to 100,000,000 digits.
+
+## Status
+
+In Progress
+
+## Target
+
+100,000,000 digits
+
+## Results
+
+Pending

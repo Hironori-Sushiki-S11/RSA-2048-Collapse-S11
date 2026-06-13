@@ -66,7 +66,7 @@ Composite : 852
 ...
 ## Verification 002
 
-Limit: 100,000
+Limit: 1000000
 
 ## Results
 

@@ -148,6 +148,34 @@ LIMIT を
 これは残差空間が単純なランダムノイズではなく、
 
 スケールに対して安定した構造を持つ可能性を示している。
+## Quantitative Comparison
+
+Survival Rate
+
+10,000:
+2081 / 9999 = 20.81%
+
+1,000,000:
+207796 / 999999 = 20.78%
+
+Difference:
+0.03%
+
+Prime Axis Rate
+
+10,000:
+1229 / 2081 = 59.06%
+
+1,000,000:
+78498 / 207796 = 37.78%
+
+Composite Rate
+
+10,000:
+852 / 2081 = 40.94%
+
+1,000,000:
+129298 / 207796 = 62.22%
 
 ### Conclusion
 
@@ -160,3 +188,23 @@ Verification001 と Verification002 の比較により、
 Verification003 (LIMIT = 10,000,000)
 
 に進む。
+
+# Verification 003
+
+## Objective
+
+Scale extension test
+
+## Limit
+
+10,000,000
+
+## Status
+
+Pending
+
+## Expected Observation
+
+- Survival rate stability
+- Axis ranking stability
+- Residual-space structure persistence

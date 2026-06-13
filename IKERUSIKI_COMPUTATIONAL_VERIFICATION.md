@@ -68,12 +68,8 @@ Composite : 852
 
 Limit: 1000000
 
-## Results
 
-Candidates: 未記録
-Survivors : 未記録
-Prime Axes: 未記録
-Composite : 未記録
+
 
 ## Note
 
@@ -90,7 +86,7 @@ Prime Axes: 78,498
 Composite : 129,298
 
 
-
+## Results
 13軸 → 15,983 個（12.36%）
 
 17軸 → 11,283 個（8.73%）
@@ -106,6 +102,7 @@ Composite : 129,298
 37軸 → 4,136 個（3.20%）
 ## Observation
 The elimination hierarchy remains stable.
+観察
 13 > 17 > 19 > 23 > 29 > 31 > 37 > 41 > 43 > 47
 The dominant axes are preserved when the observation range increases from 10,000 to 1,000,000.
 This suggests that the residual space is not random noise, but has a stable prime-axis elimination structure.

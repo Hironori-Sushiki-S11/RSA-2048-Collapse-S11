@@ -203,8 +203,52 @@ Scale extension test
 
 Pending
 
-## Expected Observation
+## Scale Comparison
 
-- Survival rate stability
-- Axis ranking stability
-- Residual-space structure persistence
+| LIMIT | Survival Rate |
+|--------|--------|
+| 10,000 | 20.81% |
+| 1,000,000 | 20.78% |
+| 10,000,000 | 20.78% |
+
+Observation:
+
+The survival rate remained stable across three scales.
+## Axis Rank Stability
+
+Verification001
+
+13 > 17 > 19 > 23 > 29 > 31 > 37 > 41 > 43 > 47
+
+Verification002
+
+13 > 17 > 19 > 23 > 29 > 31 > 37 > 41 > 43 > 47
+
+Verification003
+
+13 > 17 > 19 > 23 > 29 > 31 > 37 > 41 > 43 > 47
+
+Observation:
+
+Axis ranking remained unchanged across all tested scales.
+## Interpretation
+Across three scales
+10,000
+→ 1,000,000
+→ 10,000,000
+the candidate space exhibited:
+- stable survival rate
+- stable axis hierarchy
+- persistent residual-space structure
+The observed behavior suggests that the residual space is not random noise but contains scale-stable elimination patterns.
+## Conclusion
+Verification001
+Verification002
+Verification003
+all produced consistent structural observations.
+The survival rate remained near 20.8%.
+The dominant elimination hierarchy
+13 > 17 > 19 > 23 > 29 > 31 > 37 > 41 > 43 > 47
+remained unchanged.
+This supports the hypothesis that the residual candidate space possesses scale-stable structure rather than purely random distribution.
+Verification004 (LIMIT = 100,000,000) is proposed as the next validation step.

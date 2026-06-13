@@ -111,3 +111,8 @@ This suggests that the residual space is not random noise, but has a stable prim
 43軸 → 3,356 個（2.60%）
 
 47軸 → 2,982 個（2.31%）
+
+| LIMIT | Survivors | Prime Axes | Composite |
+|---------|---------|---------|---------|
+| 10,000 | 2,081 | 1,229 | 852 |
+| 1,000,000 | 207,796 | 78,498 | 129,298 |

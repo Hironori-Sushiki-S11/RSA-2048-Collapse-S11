@@ -574,3 +574,123 @@ Completed
 Verification010
 
 Prime preservation and composite reduction test.
+# Verification 010
+
+## Objective
+
+Prime preservation and composite reduction test.
+
+## Limit
+
+1,000,000
+
+## Results
+
+| Known Axes Count | Last Axis | Survivors | Prime Axes | Composite | Survival Rate | Prime Preservation Rate | Composite Rate |
+|----------:|----------:|----------:|----------:|----------:|----------:|----------:|----------:|
+| 4 | 7 | 228,574 | 78,498 | 150,076 | 22.8574% | 100.0% | 65.6575% |
+| 5 | 11 | 207,796 | 78,498 | 129,298 | 20.7796% | 100.0% | 62.2235% |
+| 6 | 13 | 191,813 | 78,498 | 113,315 | 19.1813% | 100.0% | 59.0758% |
+| 7 | 17 | 180,530 | 78,498 | 102,032 | 18.0530% | 100.0% | 56.5180% |
+| 8 | 19 | 171,028 | 78,498 | 92,530 | 17.1028% | 100.0% | 54.1023% |
+| 9 | 23 | 163,594 | 78,498 | 85,096 | 16.3594% | 100.0% | 52.0166% |
+| 10 | 29 | 157,948 | 78,498 | 79,450 | 15.7948% | 100.0% | 50.3014% |
+
+## Observation
+
+As additional known prime axes are introduced:
+
+- Survivors decrease.
+- Composite survivors decrease.
+- Prime Axes remain unchanged.
+- Prime Preservation Rate remains 100%.
+
+Prime Axes:
+
+78,498
+
+for every tested configuration.
+
+Composite survivors:
+
+150,076
+
+↓
+
+129,298
+
+↓
+
+113,315
+
+↓
+
+102,032
+
+↓
+
+92,530
+
+↓
+
+85,096
+
+↓
+
+79,450
+
+## Interpretation
+
+Known-axis expansion compresses the candidate space while preserving all observed prime axes within the tested range.
+
+The reduction occurs primarily in composite survivors.
+
+This suggests that candidate-space compression can be achieved without observed loss of prime-axis candidates under the tested conditions.
+
+## Quantitative Effect
+
+Composite reduction:
+
+150,076
+
+↓
+
+79,450
+
+Reduction:
+
+70,626
+
+Reduction Ratio:
+
+47.06%
+
+Prime Preservation:
+
+100%
+
+within LIMIT = 1,000,000.
+
+## Conclusion
+
+The tested candidate-space compression method reduces composite survivors while maintaining complete preservation of observed prime axes.
+
+Within the tested range, increased known-axis coverage improves search-space efficiency without reducing the detected prime-axis population.
+
+## Status
+
+Completed
+
+## Next Step
+
+Verification011
+
+Composite reduction efficiency curve.
+
+Measure:
+
+- Composite reduction per added axis
+- Marginal gain of each added prime axis
+- Compression efficiency saturation
+
+to determine whether candidate-space compression follows a predictable law.

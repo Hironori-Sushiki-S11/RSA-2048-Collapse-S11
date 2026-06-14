@@ -257,3 +257,40 @@ Verification004 (LIMIT = 100,000,000) is proposed as the next validation step.
 Completed
 ## Status
 Completed
+# Verification 004
+
+## Objective
+
+Known prime axes variation test.
+
+## Limit
+
+1,000,000
+
+## Results
+
+| KNOWN_PRIMES | Survivors | Prime Axes | Composite | Survival Rate |
+|---|---:|---:|---:|---:|
+| [2,3,5,7] | 228,574 | 78,498 | 150,076 | 22.86% |
+| [2,3,5,7,11] | 207,796 | 78,498 | 129,298 | 20.78% |
+| [2,3,5,7,11,13,17] | 180,530 | 78,498 | 102,032 | 18.05% |
+
+## Observation
+
+Increasing the known prime axes reduces the residual candidate space.
+
+The number of Prime Axes remains unchanged.
+
+Composite survivors are reduced.
+
+## Interpretation
+
+Known-axis expansion compresses the search space while preserving prime axes.
+
+This suggests that the method can reduce unnecessary composite candidates without losing prime-axis candidates.
+
+## Energy Cost Note
+
+This may contribute to computational cost reduction in candidate search tasks.
+
+However, actual data-center energy savings require benchmark comparison against existing optimized methods.

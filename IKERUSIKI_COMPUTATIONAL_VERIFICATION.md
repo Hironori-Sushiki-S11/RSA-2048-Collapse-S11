@@ -405,3 +405,41 @@ Verification007 will compare total contribution between:
 - mod 4 = 3 axes
 
 to examine possible links with square-sum structure, lattice geometry, and circular symmetry.
+# Verification 007
+
+## Objective
+
+mod4 contribution comparison.
+
+## Limit
+
+1,000,000
+
+## Known Prime Axes
+
+[2, 3, 5, 7, 11]
+
+## Results
+
+Composite: 129,298
+
+| mod4 | Count | Ratio |
+|---:|---:|---:|
+| 1 | 70,057 | 54.1826% |
+| 3 | 59,241 | 45.8174% |
+
+Difference:
+
+mod4=1 - mod4=3 = 10,816
+
+## Observation
+
+The contribution is not evenly split between mod4=1 and mod4=3 axes.
+
+mod4=1 axes contribute more than mod4=3 axes.
+
+## Interpretation
+
+This suggests that the residual candidate space may contain a mod4-dependent asymmetry.
+
+Further investigation is required to determine whether this asymmetry is related to square-sum structure, lattice geometry, or circular symmetry.

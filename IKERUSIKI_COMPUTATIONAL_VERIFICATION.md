@@ -294,3 +294,41 @@ This suggests that the method can reduce unnecessary composite candidates withou
 This may contribute to computational cost reduction in candidate search tasks.
 
 However, actual data-center energy savings require benchmark comparison against existing optimized methods.
+# Verification 005
+
+## Objective
+
+Axis decay measurement.
+
+## Limit
+
+1,000,000
+
+## Results
+
+| Axis | Count | Ratio | Relative to 13 |
+|---:|---:|---:|---:|
+| 13 | 15,983 | 12.3614% | 100.00% |
+| 17 | 11,283 | 8.7264% | 70.59% |
+| 19 | 9,502 | 7.3489% | 59.45% |
+| 23 | 7,434 | 5.7495% | 46.51% |
+| 29 | 5,646 | 4.3667% | 35.33% |
+| 31 | 5,098 | 3.9428% | 31.90% |
+| 37 | 4,136 | 3.1988% | 25.88% |
+| 41 | 3,617 | 2.7974% | 22.63% |
+| 43 | 3,356 | 2.5956% | 21.00% |
+| 47 | 2,982 | 2.3063% | 18.66% |
+
+## Observation
+
+The elimination contribution decreases smoothly as the axis increases.
+
+The strongest elimination axis is 13.
+
+Subsequent axes show a monotonic decay in contribution.
+
+## Interpretation
+
+The residual candidate space is not only stable in axis ranking, but also exhibits a measurable decay structure.
+
+This suggests that prime-axis elimination strength may follow a regular attenuation pattern.

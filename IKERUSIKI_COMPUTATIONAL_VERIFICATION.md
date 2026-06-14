@@ -443,3 +443,134 @@ mod4=1 axes contribute more than mod4=3 axes.
 This suggests that the residual candidate space may contain a mod4-dependent asymmetry.
 
 Further investigation is required to determine whether this asymmetry is related to square-sum structure, lattice geometry, or circular symmetry.
+# Verification 008
+
+## Objective
+
+mod4 average contribution comparison.
+
+## Limit
+
+1,000,000
+
+## Known Prime Axes
+
+[2, 3, 5, 7, 11]
+
+## Results
+
+Composite: 129,298
+
+| mod4 | Axis Count | Total Count | Average Per Axis |
+|--------|--------:|--------:|--------:|
+| 1 | 79 | 70,057 | 886.80 |
+| 3 | 84 | 59,241 | 705.25 |
+
+Difference:
+
+Average contribution difference
+
+886.80 − 705.25 = 181.55
+
+## Observation
+
+The asymmetry remains after normalization by axis count.
+
+mod4=1 axes contribute more composite eliminations per axis than mod4=3 axes.
+
+Even though the mod4=3 group contains more axes (84 vs 79), the average elimination contribution remains larger for mod4=1.
+
+## Interpretation
+
+The residual candidate space exhibits not only total-contribution asymmetry but also per-axis asymmetry.
+
+This suggests that the observed bias is not explained solely by axis count.
+
+Further investigation is required to determine whether this behavior reflects a deeper arithmetic structure or a finite-scale effect.
+
+## Status
+
+Completed
+
+## Next Step
+
+Verification009
+
+Top-layer persistence test:
+
+- Top20 axes
+- Top50 axes
+- Top100 axes
+- Top150 axes
+
+to determine whether the mod4 asymmetry persists across ranking depth.
+# Verification 009
+
+## Objective
+
+Top-layer persistence test of mod4 asymmetry.
+
+## Limit
+
+1,000,000
+
+## Known Prime Axes
+
+[2, 3, 5, 7, 11]
+
+## Results
+
+| Range | mod4=1 Total | mod4=3 Total | Difference |
+|---------|---------:|---------:|---------:|
+| Top20 | 49,681 | 37,331 | 12,350 |
+| Top50 | 60,360 | 49,452 | 10,908 |
+| Top100 | 67,599 | 56,887 | 10,712 |
+| Top150 | 69,970 | 59,141 | 10,829 |
+
+## Observation
+
+The contribution difference remains near 10,000 across all tested ranking depths.
+
+Top20:
+
+12,350
+
+Top50:
+
+10,908
+
+Top100:
+
+10,712
+
+Top150:
+
+10,829
+
+The asymmetry does not disappear as deeper layers are included.
+
+## Interpretation
+
+If the observed imbalance were caused only by a small number of dominant axes, the difference would be expected to diminish as more axes were added.
+
+Instead, the difference remains approximately stable.
+
+This suggests that the mod4 asymmetry is distributed across multiple ranking layers rather than being concentrated in only a few dominant axes.
+
+## Conclusion
+
+The mod4=1 contribution advantage persists across Top20–Top150 ranking depths.
+
+The observed asymmetry therefore appears to be structurally distributed rather than localized.
+
+Further testing at larger limits is required to determine whether the effect remains scale-stable.
+
+## Status
+
+Completed
+
+## Next Step
+
+Verification010
+
+Prime preservation and composite reduction test.

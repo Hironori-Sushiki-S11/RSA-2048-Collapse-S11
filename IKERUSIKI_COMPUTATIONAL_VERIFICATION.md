@@ -332,3 +332,76 @@ Subsequent axes show a monotonic decay in contribution.
 The residual candidate space is not only stable in axis ranking, but also exhibits a measurable decay structure.
 
 This suggests that prime-axis elimination strength may follow a regular attenuation pattern.
+# Verification 006
+
+## Objective
+
+Axis decay fitting and mod 4 observation.
+
+## Limit
+
+1,000,000
+
+## Known Prime Axes
+
+[2, 3, 5, 7, 11]
+
+## Results
+
+Composite: 129,298
+
+Power-law fit:
+
+count ≈ C / axis^alpha
+
+alpha = 1.4783
+
+## Top Axis Data
+
+| Axis | Count | Ratio | mod 4 |
+|---:|---:|---:|---:|
+| 13 | 15,983 | 12.3614% | 1 |
+| 17 | 11,283 | 8.7264% | 1 |
+| 19 | 9,502 | 7.3489% | 3 |
+| 23 | 7,434 | 5.7495% | 3 |
+| 29 | 5,646 | 4.3667% | 1 |
+| 31 | 5,098 | 3.9428% | 3 |
+| 37 | 4,136 | 3.1988% | 1 |
+| 41 | 3,617 | 2.7974% | 1 |
+| 43 | 3,356 | 2.5956% | 3 |
+| 47 | 2,982 | 2.3063% | 3 |
+
+## Observation
+
+The axis decay is not flat.
+
+The contribution decreases as the axis increases.
+
+The fitted decay exponent is approximately:
+
+alpha = 1.4783
+
+This suggests that the elimination contribution follows a power-law-like attenuation pattern.
+
+## Interpretation
+
+The residual candidate space shows not only:
+
+- survival-rate stability
+- axis-rank stability
+- axis-decay structure
+
+but also a measurable decay exponent.
+
+The observed exponent is between 1 and 2.
+
+Further verification is required to determine whether this exponent is stable across larger LIMIT values.
+
+## Next Step
+
+Verification007 will compare total contribution between:
+
+- mod 4 = 1 axes
+- mod 4 = 3 axes
+
+to examine possible links with square-sum structure, lattice geometry, and circular symmetry.

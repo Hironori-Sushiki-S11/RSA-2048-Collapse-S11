@@ -694,3 +694,95 @@ Measure:
 - Compression efficiency saturation
 
 to determine whether candidate-space compression follows a predictable law.
+# Verification 011
+
+## Objective
+
+Composite reduction efficiency analysis.
+
+## Source
+
+Verification010 results.
+
+## Limit
+
+1,000,000
+
+## Results
+
+| Added Axis | Composite Before | Composite After | Reduction |
+|---:|---:|---:|---:|
+| 11 | 150,076 | 129,298 | 20,778 |
+| 13 | 129,298 | 113,315 | 15,983 |
+| 17 | 113,315 | 102,032 | 11,283 |
+| 19 | 102,032 | 92,530 | 9,502 |
+| 23 | 92,530 | 85,096 | 7,434 |
+| 29 | 85,096 | 79,450 | 5,646 |
+
+## Observation
+
+Each added known prime axis reduces the number of composite survivors.
+
+The marginal reduction decreases as the added axis increases.
+
+The reduction sequence is:
+
+20,778
+
+↓
+
+15,983
+
+↓
+
+11,283
+
+↓
+
+9,502
+
+↓
+
+7,434
+
+↓
+
+5,646
+
+## Interpretation
+
+Composite reduction efficiency follows the same structure as prime-axis elimination contribution.
+
+This means that the observed axis contribution is not merely descriptive.
+
+It directly corresponds to candidate-space compression efficiency.
+
+## Key Point
+
+Axis contribution
+
+=
+
+Composite reduction efficiency
+
+within the tested range.
+
+## Conclusion
+
+Verification011 connects the axis-elimination structure with practical candidate-space compression.
+
+The method preserves all observed prime axes while progressively reducing composite candidates.
+
+This supports the interpretation that known-axis expansion can function as a structured candidate-space compression method.
+
+## Status
+
+Completed
+
+## Next Step
+
+Verification012
+
+Compression efficiency decay fitting.
+
+Measure whether the marginal reduction sequence follows the same attenuation pattern observed in Verification006.

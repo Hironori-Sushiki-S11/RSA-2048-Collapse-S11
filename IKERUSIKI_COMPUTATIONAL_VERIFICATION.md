@@ -786,3 +786,89 @@ Verification012
 Compression efficiency decay fitting.
 
 Measure whether the marginal reduction sequence follows the same attenuation pattern observed in Verification006.
+# Verification012 (LIMIT = 100,000,000 実証実験)
+
+## Results
+
+LIMIT: 100,000,000
+
+KNOWN_AXES:
+
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+
+SEGMENT_SIZE: 500,000
+
+Candidates: 99,999,999
+
+Survivors: 15,794,728
+
+Prime Axes: 5,761,455
+
+Composite: 10,033,273
+
+Survival Rate: 15.794728%
+
+Prime Axis Rate: 36.477076%
+
+Composite Rate: 63.522924%
+
+Elapsed seconds: 450.01
+
+## Top Elimination Axes
+
+| Axis | Count | Ratio |
+|---:|---:|---:|
+| 31 | 509,508 | 5.078183% |
+| 37 | 413,103 | 4.117330% |
+| 41 | 362,709 | 3.615062% |
+| 43 | 337,382 | 3.362632% |
+| 47 | 301,484 | 3.004842% |
+| 53 | 261,684 | 2.608162% |
+| 59 | 230,683 | 2.299180% |
+| 61 | 219,393 | 2.186654% |
+| 67 | 196,552 | 1.959002% |
+| 71 | 182,782 | 1.821758% |
+| 73 | 175,351 | 1.747695% |
+| 79 | 159,910 | 1.593797% |
+| 83 | 150,351 | 1.498524% |
+| 89 | 138,581 | 1.381214% |
+| 97 | 125,778 | 1.253609% |
+| 101 | 119,552 | 1.191555% |
+| 103 | 116,075 | 1.156901% |
+| 107 | 110,630 | 1.102631% |
+| 109 | 107,564 | 1.072073% |
+| 113 | 102,739 | 1.023983% |
+
+## Observation
+
+The LIMIT = 100,000,000 experiment completed successfully using segmented processing.
+
+The known-axis set was extended to:
+
+[2,3,5,7,11,13,17,19,23,29]
+
+The remaining candidate space was compressed to:
+
+15.794728%
+
+Prime Axes remained at:
+
+5,761,455
+
+Composite candidates were:
+
+10,033,273
+
+The next dominant elimination axis became 31, as expected after known axes up to 29 were removed.
+
+## Interpretation
+
+This confirms that known-axis expansion continues to compress the candidate space at LIMIT = 100,000,000.
+
+The dominant residual elimination structure begins from the next unremoved prime axis.
+
+This supports the interpretation that candidate-space compression is governed by sequential prime-axis elimination.
+
+## Status
+
+Completed

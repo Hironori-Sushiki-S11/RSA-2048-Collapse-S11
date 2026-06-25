@@ -1326,3 +1326,27 @@ Trajectory rows written: 168
 Output main: verification015_prime_appearance_morphing.csv
 
 Output trajectory: verification015_prime_position_trajectory.csv
+
+Verification015 analysis complete
+
+Limit: 1000
+
+Prime count: 168
+
+Radix count: 80
+
+Main rows: 13440
+
+Trajectory rows: 168
+
+Delta rows: 13272
+
+Outputs:
+
+verification015_prime_appearance_morphing.csv
+
+verification015_prime_position_trajectory.csv
+
+verification015_prime_morphing_delta.csv
+
+verification015_summary.csv

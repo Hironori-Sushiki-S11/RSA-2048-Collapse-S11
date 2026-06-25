@@ -872,3 +872,190 @@ This supports the interpretation that candidate-space compression is governed by
 ## Status
 
 Completed
+
+# Verification013
+
+## IKERUSIKI Phase-Difference Prime Extractor (Prototype Ver.1)
+
+### Objective
+
+After Verification001–012 confirmed the stability of the residual space,
+the next step was to test whether a phase-based function could directly
+extract prime coordinates from the residual space.
+
+This verification is therefore the first prototype implementation of
+the IKERUSIKI phase extractor.
+
+---
+
+## Experimental Parameters
+
+LIMIT = 1,000,000
+
+KNOWN_AXES
+
+2,3,5,7,11,13,17,19,23,29
+
+Constants
+
+K_B = 11
+
+S = 1.2
+
+PHI = 1.618033988749895
+
+PSI_SCALE = 3.141640786499874
+
+---
+
+## Experimental Result
+
+Residual survivors
+
+157948
+
+Total primes in residual
+
+78498
+
+Extractor output
+
+Extracted candidates
+
+36867
+
+Extracted primes
+
+18418
+
+Extracted composites
+
+18449
+
+Missed primes
+
+60080
+
+---
+
+## Performance
+
+Precision
+
+49.958 %
+
+Recall
+
+23.463 %
+
+Compression
+
+23.341 %
+
+---
+
+## Phase Score
+
+Average phase score (Prime)
+
+0.256088
+
+Average phase score (Composite)
+
+0.255897
+
+Difference
+
+0.000191
+
+---
+
+## Interpretation
+
+The prototype successfully compressed the search space to approximately
+23.3% of the residual space.
+
+However, Version 1 showed almost no discrimination between primes and
+composites.
+
+The phase score difference was extremely small, indicating that the
+current phase function does not yet provide sufficient separating power.
+
+This does **not** invalidate the residual-space observations obtained in
+Verification001–012.
+
+Instead, it falsifies the first implementation of the phase extractor
+while preserving the residual-space dataset for future reinterpretation.
+
+---
+
+## Conclusion
+
+Verification013 demonstrates:
+
+- Residual-space compression remains valid.
+- The first IKERUSIKI extractor is insufficient for prime prediction.
+- New structural observables are required.
+- Future work should investigate boundary windows, carry transitions,
+  numeral-system structures, and phase transitions rather than only
+  static residual statistics.
+
+Status
+
+Prototype completed.
+
+Result:
+
+Phase Extractor Ver.1 → NOT sufficient.
+
+Residual-space observations → retained for further structural analysis.
+
+# Verification 014
+
+## Objective
+
+Boundary Window Analysis.
+
+This verification reinterprets the previous residual-space statistics through boundary windows.
+
+The focus is not only on how many candidates survive, but on where structural behavior changes.
+
+## Concept
+
+In Iroha-base interpretation:
+
+- 0 functions like punctuation.
+- Carrying functions like framing.
+- Digit-boundaries function like phase transitions.
+- A base system is not only a counting system, but also a boundary-generating system.
+
+Therefore, the residual space should be observed near boundary windows.
+
+## Target
+
+The target is to observe whether prime behavior changes near:
+
+- digit boundaries
+- carry boundaries
+- base-transition windows
+- residual-space phase shifts
+
+## Interpretation Shift
+
+Previous verifications mainly measured:
+
+- survival rate
+- axis contribution
+- composite reduction
+- prime preservation
+
+Verification014 reads these same structures as:
+
+- boundary behavior
+- phase transition behavior
+- punctuation-like zero behavior
+- framing behavior caused by carry operations
+
+## Status
+
+Design phase.

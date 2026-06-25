@@ -1184,3 +1184,31 @@ across different radix systems.
 ## Next Verification
 
 Verification016 will investigate whether the observed morphing reveals common structures, invariants, or general laws shared across different boundary systems.
+## Execution Plan
+
+Verification015 will generate observation tables for each boundary system.
+
+For each prime p ≤ 1,000,000 and each pair (b, k), compute:
+
+- Block Ω(p;b,k)
+- Position Ψ(p;b,k)
+- Boundary Distance Δ(p;b,k)
+
+Then aggregate:
+
+- Position frequency
+- Boundary distance frequency
+- Boundary concentration rate
+- Boundary avoidance rate
+- Morphing trajectory of selected primes
+
+---
+
+## First Observation Target
+
+The first target is the position distribution.
+
+For each boundary system:
+
+```text
+B = (b, k)

@@ -1286,3 +1286,29 @@ This confirms the existence of **Prime Appearance Morphing**.
 At this stage, no general law is claimed.
 
 The purpose of this observation is to generate morphing data from which structural regularities may later emerge.
+
+## Execution Result
+
+
+
+### Configuration
+
+
+
+```text
+
+LIMIT = 1,000
+
+Radix = 2–81
+
+Layer = 1
+
+
+
+Prime count: 168
+
+Rows written: 13,440
+
+Output:
+
+verification015_prime_appearance_morphing.csv

@@ -1212,3 +1212,77 @@ For each boundary system:
 
 ```text
 B = (b, k)
+## Initial Observation 001
+
+### Observation Condition
+
+```text
+Prime numbers:
+2, 3, 5, 7, 11, 13, 17, 19, 29, 101
+
+Radix:
+2, 3, 4, 5, 8, 9, 10, 12, 16, 27, 81
+
+Layer:
+k = 1
+```
+
+### Observation Formula
+
+```text
+position = ((p - 1) mod b) + 1
+
+block = floor((p - 1) / b) + 1
+
+boundary_distance = min(position - 1, b - position)
+```
+
+### Initial Observation
+
+For the same prime number, changing the radix changes:
+
+* block
+* position
+* boundary distance
+
+Therefore, the appearance of a prime is not fixed, but morphs according to the boundary-generation system.
+
+Examples:
+
+**Prime 13**
+
+```text
+b=2   → position=1  boundary=0
+b=3   → position=1  boundary=0
+b=5   → position=3  boundary=2
+b=9   → position=4  boundary=3
+b=16  → position=13 boundary=3
+```
+
+**Prime 101**
+
+```text
+b=2   → position=1  boundary=0
+b=5   → position=1  boundary=0
+b=9   → position=2  boundary=1
+b=16  → position=5  boundary=4
+b=81  → position=20 boundary=19
+```
+
+### Initial Interpretation
+
+Changing the radix changes the apparent location of a prime.
+
+The same prime may appear:
+
+* exactly on a boundary,
+* near a boundary,
+* or deep inside a block,
+
+depending on the boundary system.
+
+This confirms the existence of **Prime Appearance Morphing**.
+
+At this stage, no general law is claimed.
+
+The purpose of this observation is to generate morphing data from which structural regularities may later emerge.

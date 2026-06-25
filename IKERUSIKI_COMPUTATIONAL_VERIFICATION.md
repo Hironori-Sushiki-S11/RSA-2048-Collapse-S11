@@ -1059,3 +1059,128 @@ Verification014 reads these same structures as:
 ## Status
 
 Design phase.
+
+# Verification015: Prime Appearance Morphing
+
+## Purpose
+
+Verification014 introduced Boundary Window Analysis, focusing on radix, carry operations, and boundaries as the primary objects of observation.
+
+Verification015 investigates how the appearance of prime numbers changes when the radix itself is changed.
+
+The objective is not to change the nature of prime numbers, but to observe how their appearances morph under different boundary-generation systems.
+
+---
+
+## Fundamental Hypothesis
+
+Changing the radix simultaneously changes:
+
+* Partition
+* Carry structure
+* Blocks
+* Hierarchical layers
+* Boundaries
+
+Although the integer set itself remains unchanged, the appearance of prime numbers changes with the boundary system.
+
+This transformation is referred to as **Prime Appearance Morphing**.
+
+---
+
+## Boundary Parameters
+
+Define the boundary system as
+
+**B = (b, k)**
+
+where
+
+* **b** : Radix
+* **k** : Hierarchical layer
+
+---
+
+## Observation Functions
+
+For an integer **n**,
+
+Block:
+
+Ω(n;b,k) = floor((n−1)/b^k) + 1
+
+Position:
+
+Ψ(n;b,k) = ((n−1) mod b^k) + 1
+
+Boundary Distance:
+
+Δ(n;b,k) = min(Ψ−1, b^k−Ψ)
+
+These quantities describe where an integer appears under a given boundary system.
+
+Verification015 applies these observations specifically to prime numbers.
+
+---
+
+## Observation
+
+Investigate multiple radix systems.
+
+Example:
+
+b = 2, 3, 4, 5, 8, 9, 10, 12, 16, 27, 81
+
+Layers:
+
+k = 1, 2, 3, 4
+
+Target:
+
+Prime numbers up to 1,000,000.
+
+For every prime p, record:
+
+* Block
+* Position
+* Boundary Distance
+
+for every boundary system.
+
+---
+
+## Morphing Observation
+
+Observe how prime appearances change when the radix changes.
+
+Compare:
+
+* Position shifts
+* Block shifts
+* Boundary proximity
+* Carry-boundary proximity
+* Boundary avoidance
+* Boundary concentration
+
+The object of observation is **not the prime itself**, but the **morphing of its appearance** under different boundary systems.
+
+---
+
+## Objective
+
+Verification015 does not claim a new law.
+
+Its purpose is to determine whether Prime Appearance Morphing exhibits
+
+* reproducibility
+* periodicity
+* statistical bias
+* continuity
+
+across different radix systems.
+
+---
+
+## Next Verification
+
+Verification016 will investigate whether the observed morphing reveals common structures, invariants, or general laws shared across different boundary systems.

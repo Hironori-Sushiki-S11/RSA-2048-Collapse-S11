@@ -1350,3 +1350,134 @@ verification015_prime_position_trajectory.csv
 verification015_prime_morphing_delta.csv
 
 verification015_summary.csv
+
+# Verification016: Critical Boundary Correspondence
+
+## Purpose
+
+Verification015では、進法を変えることで素数の現れ方がどのようにモーフィングするかを観測した。
+
+Verification016では、その境界構造を、ゼータ関数・オイラー積・リーマン予想に現れる境界構造と比較する。
+
+目的は、リーマン予想を証明することではない。
+
+目的は、
+
+- 進法境界
+- 繰り上がり
+- 零点
+- 臨界線
+- 素数と整数の対応
+
+を、同じ「境界構造」という観点から整理することである。
+
+---
+
+## Background
+
+オイラー積は、全ての素数を使った積として表される。
+
+zeta(s) = Π_p 1 / (1 - p^(-s))
+
+これは、素数側から整数世界を見る表現である。
+
+一方、ゼータ関数は全ての整数を使った無限和として表される。
+
+zeta(s) = Σ_n 1 / n^s
+
+これは、整数側から同じ構造を見る表現である。
+
+つまり、ゼータ関数には
+
+- 素数側
+- 整数側
+
+という二つの見方が重なっている。
+
+---
+
+## Critical Line
+
+リーマン予想では、非自明な零点が
+
+Re(s) = 1/2
+
+の直線上に並ぶとされる。
+
+この直線は、単なる線ではなく、
+
+複素平面における構造のせめぎ合いが集中する境界として見ることができる。
+
+本Verificationでは、この直線を
+
+Critical Boundary
+
+として扱う。
+
+---
+
+## Correspondence
+
+Verification015との対応は次のように整理できる。
+
+| Verification015 | Zeta / Riemann Structure |
+|---|---|
+| 進法 b | 複素平面の観測枠 |
+| 階層 k | スケール・解像度 |
+| 繰り上がり境界 | 臨界線 |
+| 境界距離 Δ | 零点と境界の関係 |
+| 素数の現れ方 | 素数分布の反映 |
+| モーフィング軌跡 | 零点配置の構造 |
+
+---
+
+## Core Question
+
+進法を変えると、素数の現れ方はモーフィングする。
+
+一方、ゼータ関数では、素数と整数の関係が複素平面上に写され、零点が臨界線に関係する。
+
+では、
+
+Prime Appearance Morphing によって観測される境界構造と、
+
+リーマン予想に現れる臨界線構造は、
+
+どの程度まで比較可能なのか。
+
+---
+
+## Important Note
+
+本Verificationでは、両者が同一であるとは主張しない。
+
+主張するのは、
+
+両者がともに
+
+境界・せめぎ合い・現れ方の変換
+
+を扱っているという点で、比較可能な構造を持つということである。
+
+---
+
+## Next Step
+
+Verification017では、Verification015で得られた
+
+- position
+- boundary_distance
+- delta_position
+- delta_boundary_distance
+
+を用いて、
+
+Prime Appearance Morphing の中に
+
+臨界線的な安定境界
+
+または
+
+境界集中構造
+
+が現れるかを調べる。

@@ -1580,3 +1580,9 @@ n → trajectory
 is injective within the tested range because the lcm boundary is far larger than the tested limit.
 
 This establishes the mathematical condition supporting the uniqueness observed in Verification016.
+
+Limit: 1000000
+
+Prime count: 78498
+
+Output: verification018_shape_fingerprint.csv

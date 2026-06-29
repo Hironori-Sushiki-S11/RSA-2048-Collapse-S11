@@ -1718,6 +1718,55 @@ The main targets are:
 
 ---
 ## Observation
+
+
+
+### 1. Boundary Zero Rate
+
+
+
+The value
+
+
+
+boundary_zero_rate × φ(b)
+
+
+
+remains approximately constant.
+
+
+
+Representative values:
+
+
+
+```text
+
+b = 3   → 0.999567
+
+b = 5   → 0.999669
+
+b = 11  → 1.001172
+
+b = 29  → 1.004815
+
+b = 43  → 0.999465
+
+b = 79  → 1.023466
+
+b = 29 → 0.241244
+
+b = 41 → 0.244108
+
+b = 53 → 0.245547
+
+b = 67 → 0.246277
+
+b = 79 → 0.246958
+
+b = 81 → 0.243838
+
 ## Core Question
 
 Does each radix b generate a measurable response function?

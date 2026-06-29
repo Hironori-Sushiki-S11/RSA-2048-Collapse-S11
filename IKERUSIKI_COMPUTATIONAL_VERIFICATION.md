@@ -1717,7 +1717,7 @@ The main targets are:
 - maximum_boundary_distance(b)
 
 ---
-
+## Observation
 ## Core Question
 
 Does each radix b generate a measurable response function?
@@ -1729,8 +1729,7 @@ If so, can this response be described by simple arithmetic structures such as:
 - Euler phi function
 - radix parity
 - boundary symmetry
-
-- ## Result
+## Result
 
 Verification019 confirms that the radix response is not random.
 

@@ -1491,3 +1491,49 @@ LIMIT = 1,000
 Prime count = 168
 Radix = 2–81
 Layer = 1
+
+# Verification016: Trajectory Inversion Test
+
+
+
+## Condition
+
+
+
+```text
+
+Limit = 1,000,000
+
+Prime count = 78,498
+
+Radix range = 2–81
+
+Layer = 1
+
+
+
+Trajectory count = 78,498
+
+Duplicate trajectory count = 0
+
+No duplicate trajectories found.
+
+
+
+For all prime numbers up to 1,000,000, the Prime Appearance Morphing trajectory is unique.
+
+
+
+This means that no two tested primes share the same radix-based trajectory over radix 2–81.
+
+
+
+Therefore, within this range, the trajectory functions as a unique signature for each prime.
+
+
+
+In other words:
+
+
+
+prime → trajectory

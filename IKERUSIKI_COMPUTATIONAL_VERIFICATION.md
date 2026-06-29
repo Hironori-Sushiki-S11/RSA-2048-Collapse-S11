@@ -2067,3 +2067,61 @@ Within the tested range,
 Prime Appearance Morphing is statistically consistent with the arithmetic structure of reduced residue classes.
 
 The present experiments do not detect additional prime-specific bias beyond that structure.
+
+# Research Hypothesis
+
+## Motivation
+
+Verification020–023 shows that the observed Radix Response Functions are accurately explained by the arithmetic structure of reduced residue classes within the tested range.
+
+Specifically,
+
+```text
+boundary_zero_rate(b) ≈ 1 / φ(b)
+```
+
+and
+
+```text
+average_boundary_distance(b)
+≈
+average boundary distance over reduced residue classes modulo b
+```
+
+hold with very small experimental error.
+
+---
+
+## Hypothesis
+
+If these relations continue to hold for arbitrarily large prime ranges,
+
+then the observed Prime Appearance Morphing is principally governed by the arithmetic structure of reduced residue classes.
+
+Conversely,
+
+if systematic deviations emerge beyond finite-range statistical fluctuations,
+
+those deviations may represent prime-specific arithmetic information rather than properties of reduced residue classes alone.
+
+---
+
+## Possible Implication
+
+Should such systematic deviations exist,
+
+their analytical description may be related to the fine structure of prime distribution.
+
+In that case,
+
+connections with the analytic behavior of the Riemann zeta function or Dirichlet L-functions become a natural subject for further investigation.
+
+---
+
+## Current Status
+
+The present work does not establish such a connection.
+
+It identifies the conditions under which such a connection would become mathematically meaningful and experimentally testable.
+
+Future work will determine whether any prime-specific deviations exist beyond the reduced residue framework.

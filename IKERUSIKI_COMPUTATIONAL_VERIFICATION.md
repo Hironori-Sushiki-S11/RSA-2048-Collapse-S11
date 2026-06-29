@@ -1710,7 +1710,7 @@ Verification018 showed that the response of Prime Appearance Morphing changes sy
 
 Verification019 investigates whether these radix responses can be expressed analytically.
 
-The main targets are:
+The main targets are:う
 
 - boundary_zero_rate(b)
 - average_boundary_distance(b)
@@ -1791,3 +1791,279 @@ boundary_zero_rate(b) ≈ 1 / φ(b)
 average_boundary_distance(b) ≈ b / 4
 
 This establishes the first analytical form of the Radix Response Function.
+
+# Verification020
+
+## Purpose
+
+Verification019 proposed two empirical Radix Response Functions:
+
+```text
+boundary_zero_rate(b) ≈ 1 / φ(b)
+
+average_boundary_distance(b) ≈ b / 4
+```
+
+Verification020 evaluates the accuracy of these approximations.
+
+---
+
+## Method
+
+For each radix \(b = 2 \dots 81\), compare the observed values with their theoretical approximations.
+
+Measured quantities:
+
+```text
+error_zero_rate =
+observed_zero_rate
+-
+1 / φ(b)
+
+error_average_distance =
+observed_average_distance
+-
+b / 4
+```
+
+---
+
+## Result
+
+Boundary Zero Rate Error
+
+```text
+Max absolute error  = 0.001022
+
+Mean absolute error = 0.000264
+
+RMSE               = 0.000347
+```
+
+Average Boundary Distance Error
+
+```text
+Max absolute error  = 1.011172
+
+Mean absolute error = 0.508504
+
+RMSE               = 0.578148
+```
+
+---
+
+## Interpretation
+
+The approximation
+
+```text
+boundary_zero_rate(b) ≈ 1 / φ(b)
+```
+
+is strongly supported by the experimental data.
+
+However,
+
+```text
+average_boundary_distance(b) ≈ b / 4
+```
+
+is only a first-order approximation.
+
+The remaining error indicates that an additional arithmetic correction related to the reduced residue structure exists.
+
+---
+
+## Conclusion
+
+Verification020 confirms that the Radix Response Function contains both
+
+- arithmetic structure
+- geometric boundary structure
+
+and motivates the search for a more accurate theoretical model.
+
+# Verification021
+
+## Purpose
+
+Verification020 showed that
+
+```text
+average_boundary_distance(b) ≈ b / 4
+```
+
+is not the exact law.
+
+Verification021 tests whether the average boundary distance is determined by the average over reduced residue classes modulo \(b\).
+
+---
+
+## Method
+
+For every radix \(b\),
+
+compute the theoretical average boundary distance over all reduced residue classes satisfying
+
+```text
+gcd(a,b)=1
+```
+
+and compare it with the observed prime data.
+
+---
+
+## Result
+
+Experimental range
+
+```text
+Limit = 1,000,000
+
+Prime count = 78,498
+
+Radix = 2–81
+```
+
+Error summary
+
+```text
+Max absolute error  = 0.031313
+
+Mean absolute error = 0.005024
+
+RMSE               = 0.007596
+```
+
+---
+
+## Interpretation
+
+The agreement is substantially better than the approximation
+
+```text
+b / 4
+```
+
+showing that the average boundary distance is governed by the reduced residue structure of each radix.
+
+---
+
+## Conclusion
+
+The correct theoretical model is
+
+```text
+average_boundary_distance(b)
+
+≈
+
+average boundary distance over reduced residue classes modulo b
+```
+
+rather than the simpler approximation
+
+```text
+b / 4
+```
+
+# Verification022
+
+## Purpose
+
+Verification021 investigates whether prime numbers are uniformly distributed over reduced residue classes modulo each radix.
+
+---
+
+## Experimental Range
+
+```text
+Limit = 1,000,000
+
+Prime count = 78,498
+
+Radix = 2–81
+```
+
+---
+
+## Method
+
+For each radix:
+
+- Enumerate all reduced residue classes.
+- Count the number of primes in each class.
+- Compare with the expected uniform distribution.
+- Measure deviation using relative deviation and chi-square statistics.
+
+---
+
+## Result
+
+The deviations remain small throughout the tested radix range.
+
+No systematic arithmetic bias beyond the reduced residue structure was observed.
+
+The measured deviations are consistent with ordinary finite-sample fluctuations.
+
+# Verification023
+
+## Purpose
+
+Evaluate the statistical significance of the deviations observed in Verification022.
+
+---
+
+## Method
+
+For every reduced residue class,
+
+```text
+z = (observed − expected) / √expected
+```
+
+was computed.
+
+The maximum absolute z-score for each radix was recorded.
+
+---
+
+## Result
+
+```text
+Maximum absolute z-score = 1.431
+```
+
+No radix exceeded
+
+```text
+|z| = 2
+```
+
+which was adopted as the threshold for statistical significance.
+
+---
+
+## Interpretation
+
+Within
+
+```text
+Limit = 1,000,000
+
+Radix = 2–81
+```
+
+the observed deviations are consistent with ordinary statistical fluctuations.
+
+No statistically significant prime-specific deviation from the reduced residue distribution was detected.
+
+---
+
+## Conclusion
+
+Within the tested range,
+
+Prime Appearance Morphing is statistically consistent with the arithmetic structure of reduced residue classes.
+
+The present experiments do not detect additional prime-specific bias beyond that structure.

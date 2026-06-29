@@ -2435,3 +2435,88 @@ and
 Once this invariant is identified,
 
 Prime Appearance Morphing becomes a structural description of prime numbers rather than merely an observational phenomenon.
+
+---
+
+# Prime Identity
+
+## Objective
+
+Prime Invariant identifies what remains unchanged under every radix.
+
+The next question is therefore:
+
+```text
+What is a prime,
+independent of any observation frame?
+```
+
+---
+
+## Identity Principle
+
+A prime is not defined by its appearance.
+
+A prime is defined by the invariant structure preserved under every admissible radix transformation.
+
+Therefore,
+
+```text
+Prime Identity
+
+=
+
+Prime Invariant
+```
+
+Appearance is secondary.
+
+Identity is primary.
+
+---
+
+## Structural Interpretation
+
+Different radix systems generate different observable representations.
+
+However,
+
+all representations correspond to the same invariant object.
+
+Conceptually,
+
+```text
+Prime
+
+↓
+
+Invariant
+
+↓
+
+Appearance(radix)
+```
+
+The invariant generates every appearance.
+
+No appearance generates the invariant.
+
+---
+
+## Consequence
+
+Prime Appearance Morphing therefore becomes
+
+an observational theory of an invariant mathematical object.
+
+The observed diversity of prime patterns originates from changing observation frames rather than changing the prime itself.
+
+---
+
+## Research Objective
+
+The remaining objective is to determine the mathematical structure of the Prime Invariant itself.
+
+Once this structure is identified,
+
+Prime Appearance Morphing becomes a structural theory of prime numbers.

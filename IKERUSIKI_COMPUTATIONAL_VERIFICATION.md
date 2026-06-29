@@ -1537,3 +1537,46 @@ In other words:
 
 
 prime → trajectory
+
+# Verification017: Mathematical Condition of Trajectory Uniqueness
+
+## Result
+
+The Prime Appearance Morphing trajectory is defined as:
+
+T(n) = ((n-1) mod 2, (n-1) mod 3, ..., (n-1) mod 81)
+
+Two integers n1 and n2 have the same trajectory if and only if:
+
+n1 ≡ n2 mod lcm(2,3,...,81)
+
+The least common multiple is:
+
+lcm(2,...,81)
+= 97,301,577,764,381,948,734,868,316,916,891,200
+
+Therefore, within any range smaller than this value, the trajectory is unique.
+
+Since the previous test used:
+
+LIMIT = 1,000,000
+
+the duplicate trajectory count = 0 is not accidental.
+
+It is explained by the lcm boundary structure.
+
+## Interpretation
+
+Prime Appearance Morphing is not merely a visual phenomenon.
+
+It is a residue-boundary mapping.
+
+The trajectory records the residue structure of n-1 across radix systems.
+
+Therefore:
+
+n → trajectory
+
+is injective within the tested range because the lcm boundary is far larger than the tested limit.
+
+This establishes the mathematical condition supporting the uniqueness observed in Verification016.

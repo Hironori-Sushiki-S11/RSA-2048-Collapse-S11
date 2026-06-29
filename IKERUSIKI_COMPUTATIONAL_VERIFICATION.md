@@ -1,4 +1,4 @@
-# IKERUSIKI Computational Verification
+む# IKERUSIKI Computational Verification
 
 ## Verification Roadmap
 
@@ -1481,3 +1481,13 @@ Prime Appearance Morphing の中に
 境界集中構造
 
 が現れるかを調べる。
+
+## Trajectory Duplicate Test
+
+### Condition
+
+```text
+LIMIT = 1,000
+Prime count = 168
+Radix = 2–81
+Layer = 1

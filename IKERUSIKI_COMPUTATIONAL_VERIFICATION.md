@@ -2520,3 +2520,33 @@ The remaining objective is to determine the mathematical structure of the Prime 
 Once this structure is identified,
 
 Prime Appearance Morphing becomes a structural theory of prime numbers.
+
+# Definitions
+
+## Definition 1 (Prime Nature)
+
+Prime Nature is the intrinsic arithmetic essence of a prime number.
+
+It is independent of radix, notation, representation, and observation frame.
+
+Prime Nature is the object that this theory ultimately seeks to identify.
+
+---
+
+## Definition 2 (Prime Identity)
+
+Prime Identity is the invariant mathematical realization of Prime Nature.
+
+It remains unchanged under every admissible radix transformation.
+
+Prime Identity is the unique identity corresponding to one prime.
+
+---
+
+## Definition 3 (Prime Appearance)
+
+Prime Appearance is the observable representation of a prime under a specified radix frame.
+
+Prime Appearance changes when the radix changes,
+
+while Prime Identity remains unchanged.

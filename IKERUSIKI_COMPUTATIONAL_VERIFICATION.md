@@ -1,4 +1,4 @@
-くうむ# IKERUSIKI Computational Verification
+# IKERUSIKI Computational Verification
 
 ## Verification Roadmap
 
@@ -3111,3 +3111,273 @@ then it uniquely determines one Prime Identity.
 Axiom 5
 
 Prime reconstruction consists of determining the unique integer satisfying the compatible arithmetic constraints induced by the Prime Coordinate.
+
+---
+
+# Theorem 2 (All-Radix Boundary Separation)
+
+## Statement
+
+For any two distinct natural numbers
+
+```text
+p ≠ q
+```
+
+there exists a radix
+
+```text
+b ≥ 2
+```
+
+such that
+
+```text
+BoundaryDistance(p,b,1) ≠ BoundaryDistance(q,b,1)
+```
+
+Therefore,
+
+```text
+BoundaryCoordinate(p) ≠ BoundaryCoordinate(q)
+```
+
+where
+
+```text
+BoundaryCoordinate(p)
+=
+{
+BoundaryDistance(p,b,1)
+|
+b = 2,3,4,...
+}
+```
+
+Thus, the all-radix Boundary Coordinate uniquely separates every natural number, and therefore every prime.
+
+---
+
+## Proof
+
+Assume
+
+```text
+p ≠ q.
+```
+
+Without loss of generality,
+
+```text
+p < q.
+```
+
+Choose a radix satisfying
+
+```text
+b > 2q.
+```
+
+Then both integers lie in the first half of the radix interval.
+
+Hence,
+
+```text
+BoundaryDistance(p,b,1)
+=
+p−1
+```
+
+and
+
+```text
+BoundaryDistance(q,b,1)
+=
+q−1.
+```
+
+Since
+
+```text
+p ≠ q,
+```
+
+it follows immediately that
+
+```text
+p−1 ≠ q−1,
+```
+
+therefore
+
+```text
+BoundaryDistance(p,b,1)
+≠
+BoundaryDistance(q,b,1).
+```
+
+Hence there exists at least one radix at which the Boundary Distance differs.
+
+Therefore,
+
+```text
+BoundaryCoordinate(p)
+≠
+BoundaryCoordinate(q).
+```
+
+This proves that the all-radix Boundary Coordinate is injective.
+
+∎
+
+---
+
+## Corollary
+
+Since every prime is a natural number,
+
+the Boundary Coordinate uniquely separates all prime numbers.
+
+Symbolically,
+
+```text
+Prime
+
+↓
+
+BoundaryCoordinate
+
+↓
+
+Unique
+```
+
+---
+
+## Relation to Verification025
+
+Verification025 experimentally established that
+
+```text
+Limit = 1,000,000
+
+Prime count = 78,498
+
+boundary_only signature count = 78,498
+
+duplicate signature count = 0
+```
+
+Thus,
+
+the finite radix range
+
+```text
+2 ≤ b ≤ 81
+```
+
+already separates every tested prime below one million.
+
+The theorem above extends the same principle to all radices.
+
+---
+
+## Important Remark
+
+This theorem proves uniqueness using the collection of all admissible radices.
+
+It does **not** prove that the finite radix range
+
+```text
+2 ≤ b ≤ 81
+```
+
+separates every prime.
+
+That stronger statement remains an open mathematical problem.
+
+---
+
+## Research Direction
+
+## Research Direction
+
+The previous formulation requires refinement.
+
+A fixed finite radix set
+
+```text
+B={b₁,b₂,…,bₖ}
+```
+
+cannot, by itself, be assumed to separate all prime numbers without proof.
+
+Therefore, the central mathematical problem is formulated as follows.
+
+---
+
+### Finite Boundary Separation Problem
+
+Given a finite radix set
+
+```text
+B={b₁,b₂,…,bₖ},
+```
+
+determine whether
+
+```text
+BoundaryCoordinate_B(p)
+≠
+BoundaryCoordinate_B(q)
+```
+
+holds for every distinct prime
+
+```text
+p ≠ q.
+```
+
+If not, determine the smallest finite radix set capable of separating all primes within a prescribed finite range.
+
+---
+
+### Current Evidence
+
+Verification025 established that
+
+```text
+Limit = 1,000,000
+
+Prime count = 78,498
+
+boundary_only signature count = 78,498
+
+duplicate signature count = 0
+```
+
+using
+
+```text
+B={2,3,…,81}.
+```
+
+Thus, this radix family separates every tested prime below one million.
+
+---
+
+### Future Objective
+
+The next stage is to determine whether this observed uniqueness extends beyond the tested range.
+
+Specifically,
+
+either
+
+1. prove that the chosen finite radix family separates all prime numbers,
+
+or
+
+2. determine the mathematical conditions under which collisions must occur.
+
+Resolving this question constitutes the central mathematical objective of Prime Coordinate Theory.

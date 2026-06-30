@@ -2550,3 +2550,88 @@ Prime Appearance is the observable representation of a prime under a specified r
 Prime Appearance changes when the radix changes,
 
 while Prime Identity remains unchanged.
+
+---
+
+# 定義4（Prime Coordinate）
+
+Prime Coordinate とは、
+
+Prime Identity を有限個の進法観測量によって一意に表現する座標である。
+
+Prime Coordinate は、
+
+少なくとも次の情報から構成される。
+
+- Radix
+- Block
+- Position
+- Boundary Distance
+
+概念的には、
+
+```text
+Prime Identity
+        ↓
+Prime Coordinate
+        ↓
+Prime Appearance
+```
+
+Prime Coordinate は、
+
+Prime Identity と Prime Appearance を結ぶ中間表現である。
+
+研究目的は、
+
+Prime Coordinate が各素数に対して一意となる最小構成を決定することである。
+
+---
+
+# 命題2（Prime Coordinate Uniqueness）
+
+## 命題
+
+異なる二つの素数は、
+
+同一の Prime Coordinate を共有しない。
+
+すなわち、
+
+```text
+p ≠ q
+
+↓
+
+Coordinate(p)
+
+≠
+
+Coordinate(q)
+```
+
+が成立する。
+
+---
+
+## 意味
+
+もしこの命題が成立するなら、
+
+Prime Coordinate は素数の一意な座標となる。
+
+その結果、
+
+Prime Coordinate は
+
+Prime Identity の観測可能な表現となる。
+
+---
+
+## 検証課題
+
+現在は、
+
+この命題を数学的に証明するか、
+
+または反例が存在しないことを実験的に確認することが今後の課題である。

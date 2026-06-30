@@ -3298,7 +3298,7 @@ That stronger statement remains an open mathematical problem.
 
 ---
 
-## Research Direction
+
 
 ## Research Direction
 
@@ -3374,10 +3374,35 @@ Specifically,
 
 either
 
+
 1. prove that the chosen finite radix family separates all prime numbers,
 
 or
 
-2. determine the mathematical conditions under which collisions must occur.
+2. construct a counterexample,
 
-Resolving this question constitutes the central mathematical objective of Prime Coordinate Theory.
+or
+
+3. derive necessary and sufficient conditions for finite-radix uniqueness.
+
+4. Therefore, Prime Coordinate Theory has now been reduced to one central mathematical question:
+
+Central Mathematical Problem
+
+Determine whether there exists a finite radix family
+
+B={b1,b2,...,bk}
+
+such that
+
+BoundaryCoordinate_B(p) ≠ BoundaryCoordinate_B(q)
+
+for every distinct prime
+
+p ≠ q.
+
+If such a finite separating family exists,
+
+then every prime admits a finite Prime Coordinate,
+
+and Prime Reconstruction becomes a finite inverse problem.

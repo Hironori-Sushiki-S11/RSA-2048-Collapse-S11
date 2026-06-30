@@ -3078,3 +3078,36 @@ Prime Coordinate is therefore not merely an address.
 It is a finite collection of arithmetic constraints.
 
 The prime is reconstructed as the unique integer satisfying all compatible constraints simultaneously.
+
+# Fundamental Axioms
+
+Axiom 1
+Prime Identity exists independently of radix representation.
+
+Axiom 2
+Every radix observation is a projection of Prime Identity.
+
+Axiom 3
+A finite collection of compatible radix observations defines a Prime Coordinate.
+
+Axiom 4
+
+
+
+Each Prime Identity admits at least one Prime Coordinate.
+
+
+
+Theorem Candidate
+
+
+
+If the Prime Coordinate is unique,
+
+
+
+then it uniquely determines one Prime Identity.
+
+Axiom 5
+
+Prime reconstruction consists of determining the unique integer satisfying the compatible arithmetic constraints induced by the Prime Coordinate.

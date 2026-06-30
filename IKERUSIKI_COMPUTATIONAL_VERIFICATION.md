@@ -2635,3 +2635,122 @@ Prime Identity の観測可能な表現となる。
 この命題を数学的に証明するか、
 
 または反例が存在しないことを実験的に確認することが今後の課題である。
+
+# Verification024
+
+
+
+## Purpose
+
+
+
+Verification024 tests whether the defined Prime Coordinate is unique for all tested primes.
+
+
+
+The purpose is to verify Proposition 2:
+
+
+
+```text
+
+p ≠ q
+
+
+
+↓
+
+
+
+Coordinate(p) ≠ Coordinate(q)
+
+
+
+Limit = 1,000,000
+
+
+
+Prime count = 78,498
+
+
+
+Radix range = 2–81
+
+
+
+Layer = 1
+
+
+
+## Conclusion
+
+Within the tested range,
+
+no coordinate collisions were detected.
+
+Specifically,
+
+```text
+Prime count = Coordinate count
+
+Duplicate coordinate count = 0
+
+---
+
+# Theorem Candidate 1 (Coordinate Separation Principle)
+
+## Statement
+
+Assume that Prime Coordinate is constructed from a finite collection of radix observations.
+
+If different primes possess different observation histories over the selected radix frames,
+
+then no two distinct primes share the same Prime Coordinate.
+
+Symbolically,
+
+```text
+p ≠ q
+
+↓
+
+Observation(p)
+
+≠
+
+Observation(q)
+
+↓
+
+Coordinate(p)
+
+≠
+
+Coordinate(q)
+```
+
+---
+
+## Interpretation
+
+The uniqueness of Prime Coordinate does not arise from a single radix.
+
+It arises from the combined information carried by multiple radix frames.
+
+Each radix contributes independent observational information.
+
+The complete coordinate is obtained by integrating these observations.
+
+---
+
+## Relation to Verification024
+
+Verification024 experimentally confirmed that
+
+no coordinate collisions were detected
+
+for all primes below one million.
+
+This theorem candidate proposes the structural reason behind that observation.
+
+A complete mathematical proof remains future work.

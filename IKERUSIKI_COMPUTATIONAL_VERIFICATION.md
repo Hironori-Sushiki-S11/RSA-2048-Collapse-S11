@@ -2754,3 +2754,327 @@ for all primes below one million.
 This theorem candidate proposes the structural reason behind that observation.
 
 A complete mathematical proof remains future work.
+
+---
+
+
+
+# Inverse Mapping Problem
+
+
+
+## Objective
+
+
+
+The central objective is no longer only to assign coordinates to primes.
+
+
+
+The objective is to determine whether a prime can be recovered from its Prime Coordinate.
+
+
+
+That is,
+
+
+
+```text
+
+Prime Coordinate
+
+
+
+↓
+
+
+
+Prime
+
+
+
+Prime
+
+
+
+↓
+
+
+
+Prime Coordinate
+
+
+
+Duplicate coordinate count = 0
+
+
+
+Coordinate(p)
+
+
+
+↓
+
+
+
+p
+
+---
+
+# Algorithm 1 (Prime Coordinate Reconstruction)
+
+## Objective
+
+Construct a prime directly from its Prime Coordinate,
+
+without exhaustive search over the natural numbers.
+
+---
+
+## Input
+
+Prime Coordinate
+
+```text
+C(p)
+
+=
+
+{
+
+Radix,
+
+Block,
+
+Position,
+
+Boundary Distance
+
+}
+```
+
+---
+
+## Output
+
+```text
+Prime p
+```
+
+---
+
+## Reconstruction Procedure
+
+Step 1
+
+Collect the coordinate observations obtained under multiple radix frames.
+
+↓
+
+Step 2
+
+Construct the candidate arithmetic constraints implied by each radix observation.
+
+↓
+
+Step 3
+
+Intersect all compatible constraints.
+
+↓
+
+Step 4
+
+Continue refinement until only one natural number satisfies every observation.
+
+↓
+
+Step 5
+
+Verify that the reconstructed integer is prime.
+
+If successful,
+
+```text
+Coordinate(p)
+
+↓
+
+p
+```
+
+is established.
+
+---
+
+## Interpretation
+
+Each radix frame contributes only partial information.
+
+The prime itself is recovered
+
+not from a single radix,
+
+but from the intersection of all compatible radix observations.
+
+Prime Coordinate therefore functions
+
+as an arithmetic address rather than a numerical label.
+
+---
+
+## Central Research Question
+
+Can the reconstruction terminate
+
+after only finitely many radix observations,
+
+independently of the size of the prime?
+
+If yes,
+
+Prime Coordinate becomes a direct indexing system for prime numbers,
+
+eliminating exhaustive search in principle.
+
+---
+
+# Algorithm 2 (Constraint Construction)
+
+## Objective
+
+Transform each radix observation into an arithmetic constraint on the unknown integer.
+
+---
+
+## Input
+
+For radix b,
+
+```text
+(Block, Position, Boundary Distance)
+```
+
+---
+
+## Step 1
+
+Block defines the interval.
+
+```text
+(B−1)b^k < n ≤ Bb^k
+```
+
+Therefore,
+
+```text
+n belongs to one finite radix block.
+```
+
+---
+
+## Step 2
+
+Position defines the congruence class.
+
+```text
+n ≡ Position (mod b^k)
+```
+
+This determines the residue position of n inside the radix block.
+
+---
+
+## Step 3
+
+Boundary Distance determines the symmetry.
+
+```text
+Boundary Distance
+
+=
+
+min(
+
+Position−1,
+
+b^k−Position
+
+)
+```
+
+Hence,
+
+```text
+Position
+
+=
+
+Boundary Distance+1
+
+or
+
+b^k−Boundary Distance
+```
+
+which provides a second arithmetic restriction.
+
+---
+
+## Step 4
+
+Repeat for every radix.
+
+Each radix contributes an independent arithmetic constraint.
+
+```text
+C₂
+
+∩
+
+C₃
+
+∩
+
+C₄
+
+...
+
+∩
+
+C₈₁
+```
+
+---
+
+## Step 5
+
+The remaining compatible integer becomes the reconstructed candidate.
+
+```text
+⋂ Ci
+
+↓
+
+Candidate Integer
+```
+
+If only one candidate survives,
+
+```text
+Candidate Integer
+
+=
+
+Prime
+```
+
+---
+
+## Interpretation
+
+Prime Coordinate is therefore not merely an address.
+
+It is a finite collection of arithmetic constraints.
+
+The prime is reconstructed as the unique integer satisfying all compatible constraints simultaneously.

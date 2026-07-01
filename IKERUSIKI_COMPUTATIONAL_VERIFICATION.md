@@ -3406,3 +3406,15 @@ If such a finite separating family exists,
 then every prime admits a finite Prime Coordinate,
 
 and Prime Reconstruction becomes a finite inverse problem.
+
+# Theorem 3 (Finite Radix Limitation)
+## Statement
+No fixed finite radix set can separate all prime numbers by Boundary Coordinate alone.
+Let
+```text
+B = {b1,b2,...,bk}
+BoundaryCoordinate_B(p) = BoundaryCoordinate_B(q)
+B = {b1,b2,...,bk}
+For each finite bound N,
+determine a finite radix set B_N
+that separates all primes p ≤ N.へ進む。*

@@ -3494,3 +3494,63 @@ R = 26
 
 
 B = {2,3,...,26}
+
+# Theorem 3 (Finite Radix Limitation)
+
+
+
+## Statement
+
+
+
+No fixed finite radix set can separate all prime numbers by Boundary Coordinate alone.
+
+
+
+Let
+
+
+
+```text
+
+B = {b1,b2,...,bk}
+
+
+
+BoundaryCoordinate_B
+
+
+
+BoundaryCoordinate_B(p)
+
+=
+
+BoundaryCoordinate_B(q)
+
+
+
+B = {b1,b2,...,bk}
+
+
+
+For each finite bound N,
+
+determine a finite radix set B_N
+
+that separates all primes p ≤ N.
+
+
+
+b > 2N.
+
+
+
+BoundaryDistance(n,b,1) = n - 1.
+
+
+
+B_N = {b}
+
+
+
+b > 2N

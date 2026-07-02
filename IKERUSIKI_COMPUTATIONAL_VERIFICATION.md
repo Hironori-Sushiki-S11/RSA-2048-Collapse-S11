@@ -3418,3 +3418,79 @@ B = {b1,b2,...,bk}
 For each finite bound N,
 determine a finite radix set B_N
 that separates all primes p ≤ N.へ進む。*
+
+# Verification026
+
+## Purpose
+
+Verification026 tests the smallest consecutive finite radix range
+
+```text
+
+B = {2,3,...,R}
+
+Limit = 1,000,000
+
+Prime count = 78,498
+
+Layer = 1
+
+max_radix,signature_count,duplicate_count
+
+2,1,1
+
+3,2,2
+
+4,4,4
+
+5,12,12
+
+6,13,12
+
+7,49,48
+
+8,97,96
+
+9,241,240
+
+10,322,320
+
+11,1922,1920
+
+12,1922,1920
+
+13,13166,12232
+
+14,19406,17023
+
+15,19406,17023
+
+16,34143,22359
+
+17,71661,6443
+
+18,73929,4476
+
+19,78240,258
+
+20,78240,258
+
+21,78240,258
+
+22,78401,97
+
+23,78493,5
+
+24,78493,5
+
+25,78497,1
+
+26,78498,0
+
+
+
+R = 26
+
+
+
+B = {2,3,...,26}

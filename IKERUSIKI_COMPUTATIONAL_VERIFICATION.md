@@ -3554,3 +3554,151 @@ B_N = {b}
 
 
 b > 2N
+
+---
+
+
+
+# Infinite Radix Completion
+
+
+
+## Purpose
+
+
+
+This section closes the infinite-radix part of Prime Coordinate Theory.
+
+
+
+Finite radix systems are treated as finite approximations.
+
+
+
+The mathematical foundation is given by the all-radix Boundary Coordinate.
+
+
+
+---
+
+
+
+## Definition
+
+
+
+For a natural number n, define the all-radix Boundary Coordinate by
+
+
+
+```text
+
+BoundaryCoordinate∞(n)
+
+=
+
+{ BoundaryDistance(n,b,1) | b = 2,3,4,... }
+
+
+
+n ≠ m
+
+
+
+BoundaryCoordinate∞(n) ≠ BoundaryCoordinate∞(m).
+
+
+
+n < m.
+
+
+
+b > 2m.
+
+
+
+BoundaryDistance(n,b,1) = n - 1
+
+
+
+BoundaryDistance(m,b,1) = m - 1.
+
+
+
+n ≠ m,
+
+
+
+n - 1 ≠ m - 1.
+
+
+
+BoundaryDistance(n,b,1) ≠ BoundaryDistance(m,b,1).
+
+
+
+BoundaryCoordinate∞(n) ≠ BoundaryCoordinate∞(m).
+
+
+
+p ≠ q
+
+
+
+BoundaryCoordinate∞(p) ≠ BoundaryCoordinate∞(q).
+
+
+
+Prime Identity
+
+        ↔
+
+BoundaryCoordinate∞
+
+
+
+Prime Coordinate
+
+=
+
+BoundaryCoordinate∞
+
+
+
+BoundaryCoordinate∞
+
+        ↓
+
+Prime Identity
+
+        ↓
+
+Prime
+
+
+
+BoundaryCoordinate_B(n)
+
+=
+
+{ BoundaryDistance(n,b,1) | b ∈ B }
+
+
+
+BoundaryCoordinate∞(n).
+
+
+
+B = {2,3,...,26}
+
+
+
+Prime
+
+        ↓
+
+BoundaryCoordinate∞
+
+        ↓
+
+Unique Prime Identity

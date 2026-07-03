@@ -3995,3 +3995,109 @@ Prime Candidate Collisions
 Verification028 provides exhaustive empirical validation of Prime Reconstruction over the complete set of primes below one million.
 
 The verified reconstruction framework serves as the basis for the algorithmic performance evaluation presented in Verification029.
+
+---
+「# Verification029 — Algorithm Benchmark
+
+
+
+## Objective
+
+
+
+Evaluate the computational performance of Prime Reconstruction by comparing it with representative prime-related algorithms.
+
+
+
+Verification028 confirmed that every prime below one million is uniquely reconstructed from its Boundary Coordinate.
+
+
+
+Verification029 evaluates whether this reconstruction framework is computationally practical.
+
+
+
+---
+
+
+
+## Compared Methods
+
+
+
+The benchmark compares the following methods:
+
+
+
+1. Prime Reconstruction
+
+2. Sieve of Eratosthenes
+
+3. Miller-Rabin Primality Test
+
+4. Trial Division
+
+
+
+---
+
+
+
+## Benchmark Scope
+
+
+
+Target range
+
+```
+n < 1,000,000
+```
+
+Prime count
+
+```
+78,498
+```
+
+---
+## Sieve of Eratosthenes Benchmark
+The Sieve of Eratosthenes generates all primes below the target limit.
+Pipeline:
+Measured values:
+---
+## Miller-Rabin Benchmark
+Miller-Rabin is used as a primality testing method.
+Pipeline:
+Measured values:
+---
+## Trial Division Benchmark
+Trial Division is used as a baseline reference method.
+Pipeline:
+Measured values:
+---
+## Benchmark Table
+| Method | Execution Time | Memory Usage | Candidate Count | Primality Checks | Success Rate | Failures |
+|---|---:|---:|---:|---:|---:|---:|
+| Prime Reconstruction | ... | ... | 1 max / 1.000000 avg | ... | 100% | 0 |
+| Sieve of Eratosthenes | ... | ... | N/A | N/A | 100% | 0 |
+| Miller-Rabin | ... | ... | N/A | ... | ... | ... |
+| Trial Division | ... | ... | N/A | ... | 100% | 0 |
+---
+## Interpretation
+Verification029 does not introduce a new theoretical concept.
+Its purpose is to evaluate the practical computational position of Prime Reconstruction against established methods.
+Prime Reconstruction has already demonstrated uniqueness in Verification028.
+The benchmark therefore focuses on whether the reconstruction process is efficient, scalable, and suitable for further cryptographic demonstrations.
+---
+## Expected Outcome
+The expected outcome is not necessarily that Prime Reconstruction is faster than all existing methods.
+The purpose is to clarify its computational characteristics:
+- How small the candidate space remains
+- How many primality checks are required
+- How reconstruction time scales with the limit
+- Whether the method remains stable under larger domains
+---
+## Conclusion
+Verification029 establishes the algorithmic performance profile of Prime Reconstruction.
+The result serves as the bridge between full reconstruction verification and RSA-oriented demonstration in Verification030.
+

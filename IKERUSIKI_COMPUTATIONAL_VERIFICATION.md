@@ -5052,8 +5052,11 @@ Mathematical proof refinement
 
 ↓
 
-Applications
-```
+## Application Scope
+
+Applications presented below investigate how the completed IKERUSIKI framework behaves in practical computational settings.
+
+They do not modify or extend the mathematical foundation established in the Theory section.
 
 ---
 

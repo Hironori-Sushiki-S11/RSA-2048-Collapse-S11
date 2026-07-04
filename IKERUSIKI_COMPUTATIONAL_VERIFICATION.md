@@ -4907,3 +4907,168 @@ The progression documented in this repository should therefore be understood as 
 The theoretical framework concludes here.
 
 Future developments belong to implementation, computational verification, optimization, and interdisciplinary applications rather than to further expansion of the mathematical foundation.
+
+---
+
+# IKERUSIKI Research Atlas
+
+## Position in Modern Mathematics
+
+IKERUSIKI Theory introduces a coordinate-based framework for representing and reconstructing prime numbers.
+
+Rather than replacing existing number theory, it proposes an additional structural viewpoint based on Boundary Coordinates.
+
+---
+
+## Position Map
+
+```text
+Modern Number Theory
+
+├── Prime Testing
+│      • AKS
+│      • Miller–Rabin
+│
+├── Integer Factorization
+│      • Trial Division
+│      • Pollard Rho
+│      • ECM
+│      • GNFS
+│
+├── Analytic Number Theory
+│      • Prime Distribution
+│      • Riemann Zeta Function
+│
+├── Cryptography
+│      • RSA
+│      • Public-Key Systems
+│
+└── IKERUSIKI Theory
+       • Boundary Distance
+       • Boundary Coordinate
+       • Infinite Boundary Coordinate
+       • Prime Identity
+       • Prime Reconstruction
+```
+
+---
+
+## Current Research Position
+
+```text
+Discovery
+
+↓
+
+Theory Construction
+
+↓
+
+Mathematical Formulation
+
+↓
+
+Verification
+
+↓
+
+Theory Completion
+
+↓
+
+Independent Verification
+
+↓
+
+Applications
+
+↓
+
+Long-Term Evaluation
+```
+
+The present repository currently stands between
+
+```text
+Theory Completion
+
+↓
+
+Independent Verification
+```
+
+---
+
+## Relationship to Existing Methods
+
+Existing algorithms primarily determine whether an integer is prime or search for factors.
+
+Examples include
+
+- AKS
+- Miller–Rabin
+- Trial Division
+- Pollard Rho
+- ECM
+- GNFS
+
+IKERUSIKI Theory approaches the problem from a different perspective.
+
+Instead of beginning with primality testing,
+
+it introduces a coordinate representation of prime numbers,
+
+followed by reconstruction through arithmetic constraints.
+
+---
+
+## Current Status
+
+Completed
+
+- Mathematical framework
+- Boundary Coordinate
+- Prime Identity
+- Prime Reconstruction
+- Verification025
+- Verification026
+- Verification027
+- Verification028
+- Verification029
+- Verification030
+
+Current objective
+
+```text
+Independent verification
+
+↓
+
+Mathematical proof refinement
+
+↓
+
+Applications
+```
+
+---
+
+## Long-Term Perspective
+
+Future research may include
+
+- Larger integer verification
+- Computational complexity analysis
+- RSA-oriented studies
+- Algorithm optimization
+- Independent mathematical validation
+
+These investigations extend the applications of the theory without changing its mathematical foundation.
+
+---
+
+## Final Position
+
+IKERUSIKI Theory is presented as a coordinate-based mathematical framework for prime representation and reconstruction.
+
+Its long-term position within mathematics will ultimately be determined through independent verification, mathematical analysis, and continued research by the wider community.

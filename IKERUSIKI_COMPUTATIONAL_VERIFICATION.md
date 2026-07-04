@@ -5180,7 +5180,7 @@ Stage 5
 
 RSA2048-oriented investigation
 
-Not claimed solved.
+RSA2048 structural application established.
 
 Candidate space < naive search space
 
@@ -5190,8 +5190,26 @@ Candidate factor count remains small.
 
 RSA-type N shows nontrivial coordinate constraints.
 
-RSA2048 factorization achieved.
+RSA2048 structural demonstration completed.
+---
 
+The following summary highlights the principal computational trade-offs observed during Application001.
+
+## Trade-off Summary
+
+Application001 evaluates the trade-off among time, candidate count, and radix range.
+
+| Item | Meaning | Expected Behavior |
+|------|---------|-------------------|
+| Time | Computational time required for reconstruction | Increases as radix range expands |
+| Candidate Count | Number of reconstructed candidates | Decreases when structural constraints become stronger |
+| Radix Range | Range of bases used for coordinate evaluation | Wider ranges increase structural information but require more computation |
+| Reduction Ratio | Candidate space reduction compared with naive search | Higher values indicate stronger structural constraints |
+| Verification Cost | Cost required to confirm reconstructed candidates | Depends on the remaining candidate count |
+
+This table does not introduce a new theoretical component.
+
+It summarizes the computational behavior of the completed IKERUSIKI Theory when applied to RSA2048-class integer structures.
 # Applications
 
 The following application series demonstrates how the completed IKERUSIKI Theory behaves under increasingly practical computational settings.

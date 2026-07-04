@@ -5083,3 +5083,128 @@ Its long-term position within mathematics will ultimately be determined through 
 Research is an ongoing process.
 
 Future progress will depend on independent verification, mathematical analysis, and practical applications contributed by the wider research community.
+
+## Application Scope
+
+
+Applications presented below investigate how the completed IKERUSIKI framework behaves in practical computational settings.
+
+They do not modify or extend the mathematical foundation established in the Theory section.
+
+---
+
+# Applications — RSA2048 Structural Demonstration
+
+## Purpose
+
+This section begins the application phase of IKERUSIKI Theory.
+
+The mathematical foundation has already been closed in the Theory Completion section.
+
+From this point forward, the purpose is not to extend the theory, but to investigate how the completed framework behaves when applied to RSA-class integer structures.
+
+---
+
+## Application Target
+
+RSA2048 is based on an integer of the form
+
+```text
+
+N = p × q
+
+p and q are large prime numbers.
+
+
+
+Can Boundary Coordinate constraints reduce the factor candidate space of an RSA2048-type integer?
+
+Given N = p × q,
+
+can IKERUSIKI-derived coordinate constraints provide information about possible p and q?
+
+RSA integer
+
+↓
+
+Boundary Coordinate structure
+
+↓
+
+Constraint extraction
+
+↓
+
+Candidate factor reduction
+
+↓
+
+Factor verification
+
+Stage 1
+
+Small semiprimes
+
+↓
+
+Stage 2
+
+Medium semiprimes
+
+↓
+
+Stage 3
+
+Large controlled semiprimes
+
+↓
+
+Stage 4
+
+RSA-size structural analysis
+
+↓
+
+Stage 5
+
+RSA2048-oriented investigation
+
+Not claimed solved.
+
+Candidate space < naive search space
+
+Reduction persists as integer size increases.
+
+Candidate factor count remains small.
+
+RSA-type N shows nontrivial coordinate constraints.
+
+RSA2048 factorization achieved.
+
+Application001
+
+Small semiprime factor reconstruction
+
+↓
+
+Application002
+
+Medium semiprime candidate reduction
+
+↓
+
+Application003
+
+Large controlled semiprime testing
+
+↓
+
+Application004
+
+RSA-like structural benchmark
+
+↓
+
+Application005
+
+RSA2048 structural investigation

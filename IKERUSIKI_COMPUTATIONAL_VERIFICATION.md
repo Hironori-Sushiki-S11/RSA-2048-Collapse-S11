@@ -5191,6 +5191,7 @@ Candidate factor count remains small.
 RSA-type N shows nontrivial coordinate constraints.
 
 RSA2048 structural demonstration completed.
+
 ---
 
 The following summary highlights the principal computational trade-offs observed during Application001.

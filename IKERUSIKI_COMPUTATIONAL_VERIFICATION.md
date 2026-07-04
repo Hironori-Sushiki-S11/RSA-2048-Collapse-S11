@@ -4914,6 +4914,10 @@ Future developments belong to implementation, computational verification, optimi
 
 ## Position in Modern Mathematics
 
+This section places IKERUSIKI Theory within the landscape of modern number theory.
+
+It summarizes the relationship between the proposed framework and representative existing research areas.
+
 IKERUSIKI Theory introduces a coordinate-based framework for representing and reconstructing prime numbers.
 
 Rather than replacing existing number theory, it proposes an additional structural viewpoint based on Boundary Coordinates.
@@ -4953,7 +4957,7 @@ Modern Number Theory
 
 ---
 
-## Current Research Position
+Current Research Stage
 
 ```text
 Discovery

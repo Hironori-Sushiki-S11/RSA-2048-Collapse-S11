@@ -4099,5 +4099,251 @@ The purpose is to clarify its computational characteristics:
 ---
 ## Conclusion
 Verification029 establishes the algorithmic performance profile of Prime Reconstruction.
-The result serves as the bridge between full reconstruction verification and RSA-oriented demonstration in Verification030.
+The result serves as the bridge between full reconstruction verification and RSA-oriented demonstration in ---
 
+# Verification030 — RSA Demonstration
+
+## Objective
+
+Evaluate whether Prime Reconstruction can be applied to RSA-oriented integer structures.
+
+Verification028 established full reconstruction correctness below one million.
+
+Verification029 defined the benchmark framework against existing prime-related algorithms.
+
+Verification030 investigates whether the reconstruction framework can be extended toward RSA-type composite integers.
+
+---
+
+## Target Structure
+
+RSA integers are constructed as
+
+```text
+N = p × q
+```
+
+where
+
+```text
+p and q are large primes.
+```
+
+The purpose of this verification is not to claim immediate RSA-2048 factorization.
+
+The purpose is to test whether Boundary Coordinate methods can provide useful structural constraints for RSA-type numbers.
+
+---
+
+## Demonstration Scope
+
+Initial test range:
+
+```text
+Small RSA-type semiprimes
+```
+
+Example:
+
+```text
+N = p × q
+
+p < 1,000,000
+
+q < 1,000,000
+```
+
+The test begins with controlled semiprimes whose prime factors are already known.
+
+---
+
+## Procedure
+
+### Step 1
+
+Select prime factors.
+
+```text
+p, q
+```
+
+---
+
+### Step 2
+
+Construct the semiprime.
+
+```text
+N = p × q
+```
+
+---
+
+### Step 3
+
+Compute Boundary Coordinate information.
+
+```text
+BoundaryCoordinate(N)
+
+BoundaryCoordinate(p)
+
+BoundaryCoordinate(q)
+```
+
+---
+
+### Step 4
+
+Generate candidate factors.
+
+```text
+Boundary Coordinate Constraints
+
+↓
+
+Candidate Factor Space
+
+↓
+
+Possible p, q
+
+↓
+
+N = p × q
+```
+
+---
+
+## Evaluation Metrics
+
+Record:
+
+- Candidate factor count
+- Search space reduction
+- Reconstruction success
+- Factor collision count
+- Execution time
+- Memory usage
+
+---
+
+## Baseline Comparison
+
+Compare against:
+
+1. Trial Division
+2. Miller-Rabin assisted search
+3. Standard semiprime factor search
+4. Prime Reconstruction assisted search
+
+---
+
+## Expected Result
+
+Expected observations:
+
+```text
+Candidate factor space < naive factor space
+```
+
+```text
+Candidate factor count remains small
+```
+
+Ideal result:
+
+```text
+p and q are uniquely reconstructed
+```
+
+---
+
+## Demonstration Example
+
+```text
+Original factors
+
+p = 1009
+q = 1013
+
+Constructed integer
+
+N = 1022117
+```
+
+Compute
+
+```text
+BoundaryCoordinate(N)
+
+BoundaryCoordinate(p)
+
+BoundaryCoordinate(q)
+```
+
+Evaluate
+
+```text
+Can the coordinate constraints recover p and q?
+```
+
+Expected report
+
+```text
+Original factors
+
+p = 1009
+q = 1013
+
+Constructed integer
+
+N = 1022117
+
+Candidate factor count
+
+...
+
+Recovered factors
+
+...
+
+Result
+
+PASS / FAIL
+```
+
+---
+
+## Interpretation
+
+Verification030 is the first RSA-oriented demonstration of Prime Reconstruction.
+
+It investigates whether Boundary Coordinate information can constrain the factor structure of RSA-type composite integers.
+
+---
+
+## Important Limitation
+
+Verification030 does not claim practical RSA-2048 factorization.
+
+Its purpose is to evaluate structural feasibility on controlled semiprime examples.
+
+---
+
+## Success Criteria
+
+Verification030 is considered successful if one or more of the following are observed:
+
+- Candidate factor space is reduced.
+- Coordinate constraints reveal factor structure.
+- Small semiprimes are reconstructed successfully.
+- The method outperforms naive trial division within the tested range.
+
+---
+
+## Conclusion
+
+Verification030 evaluates the first RSA-oriented application of Prime Reconstruction.
+
+If successful, it establishes the foundation for future investigations of larger RSA-class integers.

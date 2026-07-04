@@ -5076,3 +5076,9 @@ These investigations extend the applications of the theory without changing its 
 IKERUSIKI Theory is presented as a coordinate-based mathematical framework for prime representation and reconstruction.
 
 Its long-term position within mathematics will ultimately be determined through independent verification, mathematical analysis, and continued research by the wider community.
+
+Research is an ongoing process.
+
+The present repository documents one completed mathematical framework together with its computational verification.
+
+Future progress will depend on independent examination, mathematical refinement where necessary, and practical applications developed by the wider research community.

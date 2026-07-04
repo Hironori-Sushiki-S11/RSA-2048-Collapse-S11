@@ -5079,6 +5079,4 @@ Its long-term position within mathematics will ultimately be determined through 
 
 Research is an ongoing process.
 
-The present repository documents one completed mathematical framework together with its computational verification.
-
-Future progress will depend on independent examination, mathematical refinement where necessary, and practical applications developed by the wider research community.
+Future progress will depend on independent verification, mathematical analysis, and practical applications contributed by the wider research community.

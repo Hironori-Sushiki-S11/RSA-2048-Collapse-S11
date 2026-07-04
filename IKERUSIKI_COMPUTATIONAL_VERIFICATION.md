@@ -5192,6 +5192,12 @@ RSA-type N shows nontrivial coordinate constraints.
 
 RSA2048 factorization achieved.
 
+# Applications
+
+The following application series demonstrates how the completed IKERUSIKI Theory behaves under increasingly practical computational settings.
+
+---
+
 Application001
 
 Small semiprime factor reconstruction

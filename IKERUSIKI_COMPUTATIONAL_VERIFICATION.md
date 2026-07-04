@@ -5092,6 +5092,17 @@ Applications presented below investigate how the completed IKERUSIKI framework b
 They do not modify or extend the mathematical foundation established in the Theory section.
 
 ---
+# Theory Completion
+
+Verification001–030 establish the complete mathematical framework of IKERUSIKI Theory.
+
+From this point onward, no additional mathematical components are introduced.
+
+Subsequent sections investigate practical applications of the completed framework.
+
+The purpose is not to extend the theory, but to evaluate its behavior under larger computational and structural problems.
+
+---
 
 # Applications — RSA2048 Structural Demonstration
 

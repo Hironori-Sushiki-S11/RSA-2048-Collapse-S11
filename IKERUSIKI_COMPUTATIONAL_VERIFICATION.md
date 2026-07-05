@@ -5211,36 +5211,30 @@ Application001 evaluates the trade-off among time, candidate count, and radix ra
 This table does not introduce a new theoretical component.
 
 It summarizes the computational behavior of the completed IKERUSIKI Theory when applied to RSA2048-class integer structures.
+
+
 # Applications
 
-The following application series demonstrates how the completed IKERUSIKI Theory behaves under increasingly practical computational settings.
+The following applications extend the practical evaluation of the completed IKERUSIKI Theory beyond Application001.
+
+Application001 established the RSA2048 structural demonstration.
+
+The following sections investigate scalability, optimization, and benchmark performance of the completed framework.
 
 ---
 
-Application001
-
-Small semiprime factor reconstruction
-
-↓
-
 Application002
 
-Medium semiprime candidate reduction
+Large Integer Demonstration
 
 ↓
 
 Application003
 
-Large controlled semiprime testing
+Computational Optimization
 
 ↓
 
 Application004
 
-RSA-like structural benchmark
-
-↓
-
-Application005
-
-RSA2048 structural investigation
+Benchmark Analysis

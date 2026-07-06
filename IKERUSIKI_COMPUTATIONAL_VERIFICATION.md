@@ -5238,3 +5238,124 @@ Computational Optimization
 Application004
 
 Benchmark Analysis
+
+Application002
+
+Purpose
+
+Background
+
+Experimental Conditions
+
+Large Integer Tests
+
+Results
+Discussion
+
+Application002 extends the completed IKERUSIKI Theory from RSA2048-scale semiprimes to significantly larger integers.
+
+The purpose is not to claim integer factorization, but to evaluate whether the structural coordinate framework remains consistent as integer size increases.
+
+The investigation focuses on structural scalability.
+
+The following properties are evaluated.
+
+- Boundary Coordinate stability
+- Candidate space reduction
+- Coordinate uniqueness
+- Reconstruction consistency
+- Computational scalability
+
+Expected observations include
+
+- Structural constraints remain valid.
+- Candidate growth is slower than naive search growth.
+- Boundary-derived information continues to reduce the candidate space.
+- Reconstruction remains structurally consistent.
+
+No additional mathematical assumptions are introduced.
+
+Application002 evaluates the scalability of the completed framework under larger integer conditions.
+
+---
+
+Conclusion
+
+Application002 investigates whether the completed IKERUSIKI framework preserves its structural properties beyond RSA2048-sized examples.
+
+The objective is to evaluate scalability rather than introduce new mathematical theory.
+
+Subsequent experimental sections provide quantitative measurements using increasingly larger integers.
+
+---
+
+## Initial Experimental Scope
+
+Application002 extends the completed IKERUSIKI Theory toward increasingly larger integer structures.
+
+The objective is to evaluate whether the structural framework established in the Theory section continues to behave consistently beyond RSA2048-scale examples.
+
+The investigation proceeds incrementally.
+
+Stage 1
+
+- 512-bit integers
+
+↓
+
+Stage 2
+
+- 1024-bit integers
+
+↓
+
+Stage 3
+
+- 2048-bit integers
+
+↓
+
+Stage 4
+
+- 4096-bit integers
+
+↓
+
+Stage 5
+
+- Larger controlled integer structures
+
+No modification of IKERUSIKI Theory is introduced during this progression.
+
+Only the integer size changes.
+
+---
+
+## Evaluation Metrics
+
+Each experiment records
+
+- Integer size
+- Coordinate generation time
+- Candidate count
+- Reduction ratio
+- Reconstruction consistency
+- Memory usage
+- Total execution time
+
+These measurements evaluate computational scalability without modifying the completed mathematical framework.
+
+---
+
+## Expected Structural Behavior
+
+As integer size increases,
+
+- Boundary Coordinates remain uniquely defined.
+- Structural constraints remain consistent.
+- Candidate reduction continues to outperform naive search.
+- Reconstruction remains mathematically consistent.
+
+The purpose of Application002 is to determine how these structural properties scale with integer size.
+
+Future sections present quantitative experimental results.

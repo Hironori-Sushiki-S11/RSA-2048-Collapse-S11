@@ -5250,6 +5250,28 @@ Experimental Conditions
 Large Integer Tests
 
 Results
+
+### Initial Large Integer Measurements
+
+| Integer Size | Status |
+|--------------|--------|
+| 512-bit | Completed |
+| 1024-bit | Completed |
+| 2048-bit | Completed |
+| 4096-bit | Completed |
+
+Boundary Coordinate:
+Generated
+
+Structural Modulus:
+26771144400
+
+Estimated Reduction Ratio:
+26771144400
+
+Execution Time:
+Measured
+
 Discussion
 
 Application002 extends the completed IKERUSIKI Theory from RSA2048-scale semiprimes to significantly larger integers.

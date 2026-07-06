@@ -5705,3 +5705,26 @@ The Applications section therefore serves as the practical validation stage of t
 ---
 
 End of Applications.
+
+## Research Workflow
+
+This repository follows a staged workflow.
+
+1. Verification
+   - Establish and verify the mathematical framework.
+
+2. Theory Completion
+   - Freeze the theoretical framework.
+   - No further mathematical assumptions are introduced.
+
+3. Applications
+   - Evaluate the completed framework through practical computational problems.
+
+Applications include:
+
+- RSA2048 Structural Demonstration
+- Large Integer Demonstration
+- Computational Optimization
+- Benchmark Analysis
+
+Each application evaluates the completed theory without modifying its mathematical foundation.

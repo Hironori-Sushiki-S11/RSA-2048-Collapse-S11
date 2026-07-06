@@ -5292,7 +5292,7 @@ Subsequent experimental sections provide quantitative measurements using increas
 ## Initial Experimental Scope
 
 Application002 extends the completed IKERUSIKI Theory toward increasingly larger integer structures.
-
+ふ
 The objective is to evaluate whether the structural framework established in the Theory section continues to behave consistently beyond RSA2048-scale examples.
 
 The investigation proceeds incrementally.
@@ -5359,3 +5359,154 @@ As integer size increases,
 The purpose of Application002 is to determine how these structural properties scale with integer size.
 
 Future sections present quantitative experimental results.
+
+---
+
+## Large Integer Experiment 001
+
+### Objective
+
+Evaluate whether IKERUSIKI structural coordinates remain stable when applied to integers significantly larger than those used in Application001.
+
+### Experimental Configuration
+
+Test Categories
+
+- 512-bit integers
+- 1024-bit integers
+- 2048-bit integers
+- 4096-bit integers
+
+Evaluation Items
+
+- Boundary Coordinate generation
+- Candidate count
+- Reconstruction consistency
+- Execution time
+- Memory usage
+
+### Expected Outcome
+
+The completed IKERUSIKI framework predicts that increasing integer size alone should not alter the structural definitions established in the Theory section.
+
+Instead,
+
+- computational cost increases,
+- candidate reduction remains effective,
+- coordinate uniqueness is preserved,
+- reconstruction consistency is maintained.
+
+This experiment evaluates whether these expectations remain valid across progressively larger integer structures.
+
+---
+
+Status
+
+Initial implementation in progress.
+
+Initial experiments are ongoing.
+
+---
+
+## Planned Experimental Results
+
+| Integer Size | Candidate Count | Reduction Ratio | Reconstruction | Status |
+|--------------|----------------:|----------------:|---------------|--------|
+| 512-bit | Pending | Pending | Pending | Planned |
+| 1024-bit | Pending | Pending | Pending | Planned |
+| 2048-bit | Pending | Pending | Pending | Planned |
+| 4096-bit | Pending | Pending | Pending | Planned |
+
+---
+
+These entries will be replaced by measured computational results as experiments are completed.
+
+The purpose of this section is to document reproducible scalability measurements of the completed IKERUSIKI framework.
+
+---
+
+## Future Work
+
+The experiments described in Application002 establish the initial scalability evaluation of the completed IKERUSIKI framework.
+
+Future work will include:
+
+- Larger controlled integer datasets
+- Higher radix ranges
+- Parallel computation
+- Memory optimization
+- Quantitative benchmark comparison
+- Reproducible performance reports
+
+No modification of the mathematical framework is introduced.
+
+These studies extend practical evaluation while preserving the completed theoretical foundation.
+
+---
+
+Application002 completed.
+
+---
+
+# Application003
+
+## Computational Optimization
+
+### Purpose
+
+Application003 investigates computational optimization of the completed IKERUSIKI framework.
+
+The objective is not to modify the mathematical theory.
+
+Instead, this application evaluates implementation techniques that improve computational efficiency while preserving all structural definitions established in the Theory section.
+
+---
+
+## Optimization Targets
+
+The following implementation aspects are investigated.
+
+- Coordinate generation speed
+- Candidate filtering
+- Memory efficiency
+- Parallel execution
+- Cache locality
+- Radix iteration efficiency
+
+---
+
+## Optimization Principle
+
+The completed mathematical framework remains unchanged.
+
+Only implementation methods are optimized.
+
+Structural correctness always takes priority over computational speed.
+
+---
+
+## Evaluation Metrics
+
+Each optimization records
+
+- Execution time
+- Memory usage
+- Candidate count
+- Reconstruction consistency
+- Structural preservation
+
+---
+
+## Expected Outcome
+
+Successful optimization should
+
+- reduce execution time,
+- reduce memory consumption,
+- preserve reconstruction accuracy,
+- preserve Boundary Coordinate consistency,
+- preserve Prime Coordinate uniqueness.
+
+No mathematical assumptions are modified.
+
+Application003 evaluates implementation efficiency only.

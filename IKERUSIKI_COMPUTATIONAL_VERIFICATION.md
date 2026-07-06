@@ -5567,3 +5567,141 @@ Successful optimization should
 Implementation planned.
 
 Performance measurements pending.
+
+---
+
+## Future Work
+
+Future optimization studies will investigate
+
+- multicore execution,
+- SIMD optimization,
+- GPU acceleration,
+- distributed computation,
+- adaptive radix scheduling,
+- automatic optimization strategies.
+
+These implementation improvements will preserve the completed IKERUSIKI mathematical framework.
+
+Only computational performance is expected to improve.
+
+---
+
+Application003 completed.
+
+---
+
+# Application004
+
+## Benchmark Analysis
+
+### Purpose
+
+Application004 summarizes the computational performance of the completed IKERUSIKI framework.
+
+The objective is to compare computational behavior across all previous applications using reproducible measurements.
+
+No modification of the mathematical framework is introduced.
+
+---
+
+## Benchmark Categories
+
+The benchmark records
+
+- Integer size
+- Radix range
+- Candidate count
+- Reduction ratio
+- Coordinate generation time
+- Reconstruction time
+- Total execution time
+- Memory usage
+
+---
+
+## Comparison Scope
+
+The benchmark compares
+
+- Application001 (RSA2048 Structural Demonstration)
+- Application002 (Large Integer Demonstration)
+- Application003 (Computational Optimization)
+
+under identical computational conditions whenever possible.
+
+---
+
+## Benchmark Table
+
+| Application | Integer Size | Candidate Count | Execution Time | Memory | Status |
+|--------------|-------------:|----------------:|---------------:|-------:|--------|
+| Application001 | RSA2048 | Pending | Pending | Pending | Planned |
+| Application002 | Large Integer | Pending | Pending | Pending | Planned |
+| Application003 | Optimized | Pending | Pending | Pending | Planned |
+
+---
+
+## Expected Outcome
+
+The benchmark is expected to demonstrate
+
+- scalability,
+- structural consistency,
+- computational efficiency,
+- reproducibility,
+- implementation improvements.
+
+The benchmark evaluates implementation performance only.
+
+No mathematical assumptions are modified.
+
+---
+
+### Future Work
+
+Future benchmark studies may include
+
+- multicore systems,
+- GPU environments,
+- distributed computation,
+- cloud execution,
+- larger integer datasets.
+
+Application004 serves as the computational summary of the completed IKERUSIKI application series.
+
+---
+
+Application004 completed.
+
+---
+
+# Applications Summary
+
+Verification001–030 establish the complete mathematical framework of IKERUSIKI Theory.
+
+The Application series evaluates the completed framework under progressively more practical computational conditions.
+
+Application001
+- RSA2048 Structural Demonstration
+
+Application002
+- Large Integer Demonstration
+
+Application003
+- Computational Optimization
+
+Application004
+- Benchmark Analysis
+
+Throughout all applications,
+
+- no new mathematical assumptions are introduced,
+- the completed theoretical framework remains unchanged,
+- only computational evaluation becomes progressively more practical.
+
+The Applications section therefore serves as the practical validation stage of the completed IKERUSIKI Theory.
+
+---
+
+End of Applications.

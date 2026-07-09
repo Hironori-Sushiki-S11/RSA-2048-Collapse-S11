@@ -186,6 +186,7 @@ Completed:
 
 Next:
 
-- Application003
-- Application004
 - GitHub v1.0 Release
+- Paper
+- DOI
+- External Verification

@@ -306,3 +306,54 @@ Application001 confirmed that the completed IKERUSIKI mathematical framework suc
 The experiment serves as the first computational validation beyond the theoretical verification stages.
 
 Rather than extending the theory, Application001 demonstrates the applicability of the completed framework.
+
+---
+
+## 5.2 Application 2: Large Integer Demonstration
+
+### Objective
+
+Application 2 evaluates the scalability of the completed IKERUSIKI mathematical framework on large integers.
+
+Unlike Application 1, which focuses on RSA-oriented structural reconstruction, this experiment evaluates computational behavior as the integer size increases.
+
+---
+
+### Experimental Configuration
+
+The experiment was performed using randomly generated integers with bit lengths of
+
+- 512 bits
+- 1024 bits
+- 2048 bits
+- 4096 bits
+
+For each integer, the following quantities were measured.
+
+- Candidate Count
+- Reduction Ratio
+- Reconstruction Consistency
+- Peak Memory Usage
+- Execution Time
+
+The mathematical framework remained identical to the framework established through Verification001–030.
+
+---
+
+### Experimental Results
+
+The framework successfully reconstructed structural candidates for every tested integer size.
+
+No modification of the mathematical formulation was required as the integer size increased.
+
+Execution time remained sufficiently small while memory consumption stayed nearly constant.
+
+These observations indicate that the proposed structural framework scales efficiently to large integers.
+
+---
+
+### Summary
+
+Application 2 demonstrates that IKERUSIKI Theory is not limited to small computational examples.
+
+The completed mathematical framework remains applicable to practical large integer computations up to at least 4096 bits.

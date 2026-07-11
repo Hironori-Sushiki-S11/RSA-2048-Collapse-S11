@@ -252,3 +252,49 @@ The resulting framework consists of:
 - Core Mathematical Equation
 
 These components form the theoretical basis for the computational applications presented in the following chapters.
+
+---
+
+# 5. Application001 — RSA2048 Structural Demonstration
+
+## 5.1 Objective
+
+Application001 evaluates the completed mathematical framework on RSA2048-oriented composite integers.
+
+The objective is not to factor RSA2048 through a new cryptographic algorithm, but to demonstrate that Boundary Coordinates preserve sufficient structural information for candidate reconstruction.
+
+---
+
+## 5.2 Experimental Configuration
+
+The experiment applies the mathematical framework established through Verification001–030 without modification.
+
+The computational procedure consists of
+
+1. Boundary Coordinate generation.
+
+2. Candidate Reconstruction.
+
+3. Structural consistency verification.
+
+No mathematical definitions were altered during the application stage.
+
+---
+
+## 5.3 Structural Reconstruction
+
+Boundary Coordinates generated from RSA-oriented integers were transformed into finite candidate reconstruction sets.
+
+The reconstruction process confirmed that structural constraints derived from multiple radix systems significantly reduced the candidate space while preserving reconstruction consistency.
+
+The experiment therefore demonstrated that the proposed mathematical framework remains applicable to practical large composite integers.
+
+---
+
+## 5.4 Result
+
+Application001 confirmed that the completed IKERUSIKI mathematical framework successfully reconstructs structural candidates for RSA-oriented integers.
+
+The experiment serves as the first computational validation beyond the theoretical verification stages.
+
+Rather than extending the theory, Application001 demonstrates the applicability of the completed framework.

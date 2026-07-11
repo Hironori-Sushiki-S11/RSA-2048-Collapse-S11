@@ -400,3 +400,46 @@ These observations indicate that computational optimization improves implementat
 ### Summary
 
 Application 3 demonstrates that implementation-level optimization can improve computational performance while leaving the mathematical structure completely unchanged.
+
+---
+
+## 5.3 Application 3: Computational Optimization
+
+### Objective
+
+Application 3 evaluates computational optimization while preserving the completed mathematical framework.
+
+Unlike previous applications, this stage does not introduce new mathematical definitions. Instead, it evaluates implementation-level improvements.
+
+---
+
+### Optimization Strategy
+
+The optimization focused on reducing computational overhead while maintaining identical mathematical behavior.
+
+The following implementation techniques were evaluated.
+
+- Cache optimization
+- Efficient residue handling
+- Memory reuse
+- Reduction of redundant computations
+
+No modification was made to the mathematical formulation.
+
+---
+
+### Experimental Results
+
+The optimized implementation produced identical reconstruction results to the baseline implementation.
+
+Execution time was reduced while preserving reconstruction consistency.
+
+Memory consumption remained nearly constant throughout all tested integer sizes.
+
+These observations indicate that computational optimization improves implementation efficiency without affecting the theoretical framework.
+
+---
+
+### Summary
+
+Application 3 demonstrates that implementation-level optimization can improve computational performance while leaving the mathematical structure completely unchanged.

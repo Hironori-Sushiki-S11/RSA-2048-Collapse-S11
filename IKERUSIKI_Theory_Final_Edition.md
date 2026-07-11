@@ -138,3 +138,42 @@ D_b(n)
 b\ge2
 \right\}.
 $$
+
+---
+
+## Definition 4 (Candidate Reconstruction)
+
+For a finite radix family \(B\), define the candidate reconstruction set by
+
+$$
+Cand_B(n)=
+\left\{
+x\in\mathbb{N}
+\mid
+\forall b\in B,\,
+(x-1)\bmod b
+\in
+\left\{
+D_b(n),
+b-1-D_b(n)
+\right\}
+\right\}.
+$$
+
+---
+
+## Definition 5 (Core Mathematical Equation)
+
+The structural reconstruction is obtained by
+
+$$
+\Phi_B(n)
+=
+Cand_B(n)
+\cap
+[1,LIMIT]
+\cap
+\mathbb{P},
+$$
+
+where \(\mathbb{P}\) denotes the set of prime numbers.

@@ -403,12 +403,6 @@ Application 3 demonstrates that implementation-level optimization can improve co
 
 ---
 
-### Summary
-
-Application 3 demonstrates that implementation-level optimization can improve computational performance while leaving the mathematical structure completely unchanged.
-
----
-
 ## 5.4 Application 4: Benchmark Analysis
 
 ### Objective

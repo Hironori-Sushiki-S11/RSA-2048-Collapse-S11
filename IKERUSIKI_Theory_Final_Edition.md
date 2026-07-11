@@ -144,13 +144,7 @@ $$
 The structural reconstruction is obtained by
 
 $$
-\Phi_B(n)
-=
-Cand_B(n)
-\cap
-[1,LIMIT]
-\cap
-\mathbb{P},
+\Phi_B(n)=Cand_B(n)\cap[1,LIMIT]\cap\mathbb{P}.
 $$
 
 where $\mathbb{P}$ denotes the set of prime numbers.

@@ -605,33 +605,30 @@ Benchmark Analysis.
 
 ---
 
+---
+
 # Appendix C
+
 ## Repository Structure
 
-README.md
+The repository contains the following principal components.
 
-IKERUSIKI_THEORY.md
-
-IKERUSIKI_Theory_Final_Edition.md
-
-verification001.py
-
-...
-
-verification030.py
-
-application002_large_integer.py
-
-application003_computational_optimization.py
-
-application004_benchmark_analysis.py
+- README.md
+- IKERUSIKI_THEORY.md
+- IKERUSIKI_Theory_Final_Edition.md
+- verification001.py
+- ...
+- verification030.py
+- application002_large_integer.py
+- application003_computational_optimization.py
+- application004_benchmark_analysis.py
 
 ---
 
 # Reproducibility
 
-All computational experiments were performed using the implementation contained in the public GitHub repository.
+All computational experiments reported in this paper were performed using the public implementation contained in the IKERUSIKI Theory GitHub repository.
 
 The mathematical framework remained unchanged throughout Verification001–030 and Applications001–004.
 
-This repository therefore serves as the complete reproducible implementation of IKERUSIKI Theory.
+All reported computational results were obtained using the same mathematical definitions presented in this paper, ensuring complete reproducibility of the structural framework.

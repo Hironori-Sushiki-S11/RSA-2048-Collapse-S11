@@ -104,7 +104,12 @@ $$
 The finite Boundary Coordinate is
 
 $$
-BC_B(n)=\{D_b(n)\midb\in B,\}.
+BC_B(n)=
+\{
+D_b(n)
+\mid
+b\in B
+\}.
 $$
 
 ---

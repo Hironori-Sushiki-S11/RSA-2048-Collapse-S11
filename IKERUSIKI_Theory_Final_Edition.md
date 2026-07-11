@@ -255,7 +255,15 @@ These components form the theoretical basis for the computational applications p
 
 ---
 
-# 5. Application001 — RSA2048 Structural Demonstration
+5. Applications
+
+5.1 Application 1: RSA2048 Structural Demonstration
+
+5.2 Application 2: Large Integer Demonstration
+
+5.3 Application 3: Computational Optimization
+
+5.4 Application 4: Benchmark Analysis
 
 ## 5.1 Objective
 

@@ -78,7 +78,7 @@ For each radix \(b\), an integer is represented by its Boundary Distance.
 ---
 
 ## Definition 1 (Boundary Distance)
-
+···
 For an integer \(n\) and radix \(b\),
 
 $$
@@ -99,7 +99,7 @@ $$
 ---
 
 ## Definition 2 (Finite Boundary Coordinate)
-
+···
 Let
 
 $$
@@ -120,7 +120,7 @@ $$
 ---
 
 ## Definition 3 (Infinite Boundary Coordinate)
-
+···
 The Infinite Boundary Coordinate extends the radix family to every integer satisfying
 
 $$
@@ -142,7 +142,7 @@ $$
 ---
 
 ## Definition 4 (Candidate Reconstruction)
-
+···
 For a finite radix family \(B\), define the candidate reconstruction set by
 
 $$
@@ -163,7 +163,7 @@ $$
 ---
 
 ## Definition 5 (Core Mathematical Equation)
-
+···
 The structural reconstruction is obtained by
 
 $$
@@ -177,3 +177,39 @@ Cand_B(n)
 $$
 
 where \(\mathbb{P}\) denotes the set of prime numbers.
+
+---
+
+# 3. Core Mathematical Equation
+
+The Core Mathematical Equation provides the mathematical foundation of IKERUSIKI Theory.
+
+Rather than identifying an integer directly by its numerical value, the framework reconstructs a finite candidate set from Boundary Coordinates.
+
+For a finite radix family \(B\),
+
+$$
+\Phi_B(n)
+=
+Cand_B(n)
+\cap
+[1,LIMIT]
+\cap
+\mathbb{P},
+$$
+
+where \(\mathbb{P}\) denotes the set of prime numbers.
+
+The reconstruction process consists of three consecutive stages.
+
+1. Boundary Coordinate generation.
+
+2. Candidate reconstruction from modular boundary constraints.
+
+3. Structural verification within the computational range.
+
+Unlike exhaustive search, the proposed framework progressively reduces the candidate space through independent modular constraints.
+
+The mathematical framework itself remains unchanged throughout Verification001–030 and Application001–004.
+
+The computational applications therefore evaluate the completed mathematical framework rather than modifying it.

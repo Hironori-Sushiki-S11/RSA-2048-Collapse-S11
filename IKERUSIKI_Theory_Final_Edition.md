@@ -341,7 +341,14 @@ The mathematical framework remained identical to the framework established throu
 ---
 
 ### Experimental Results
+**Table 1. Experimental Results for Large Integer Demonstration**
 
+| Integer Size | Reduction Ratio | Reconstruction | Peak Memory | Execution Time |
+|--------------|----------------:|:--------------:|------------:|---------------:|
+| 512-bit | 1673196525.000000 | True | 8.270 KB | 0.006547 sec |
+| 1024-bit | 1673196525.000000 | True | 4.480 KB | 0.060700 sec |
+| 2048-bit | 1673196525.000000 | True | 4.500 KB | 0.044700 sec |
+| 4096-bit | 836598262.500000 | True | 5.773 KB | 0.044300 sec |
 The framework successfully reconstructed structural candidates for every tested integer size.
 
 No modification of the mathematical formulation was required as the integer size increased.

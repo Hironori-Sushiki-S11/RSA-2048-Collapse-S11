@@ -132,9 +132,9 @@ Thus,
 $$
 BC_\infty(n)
 =
-\{
+\left\{
 D_b(n)
 \mid
 b\ge2
-\}.
+\right\}.
 $$

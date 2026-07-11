@@ -488,3 +488,25 @@ Future work includes
 - independent external verification,
 - publication with DOI,
 - and further investigation of structural representations derived from Boundary Coordinates.
+
+---
+
+# 7. Conclusion
+
+This paper presented IKERUSIKI Theory as a structural mathematical framework for representing integers through Boundary Coordinates.
+
+The theoretical framework was established through Verification001–030, where Boundary Distance, Boundary Coordinate, Candidate Reconstruction, and the Core Mathematical Equation were progressively constructed and validated.
+
+Four computational applications subsequently evaluated the completed framework without modifying its mathematical structure.
+
+Application 1 demonstrated structural reconstruction for RSA2048-oriented composite integers.
+
+Application 2 extended the framework to randomly generated integers up to 4096 bits.
+
+Application 3 confirmed that implementation-level optimization improves computational efficiency while preserving identical mathematical behavior.
+
+Application 4 benchmarked the baseline and optimized implementations, demonstrating reproducible computational performance.
+
+Collectively, these results indicate that Boundary Coordinates provide a reproducible structural representation of integers suitable for computational reconstruction.
+
+The mathematical framework remains unchanged throughout all verification and application stages, providing a unified foundation for future computational investigations.

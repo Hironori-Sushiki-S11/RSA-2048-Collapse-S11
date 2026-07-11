@@ -88,12 +88,7 @@ $$
 The Boundary Distance is defined as
 
 $$
-D_b(n)=
-\min
-\left(
-r_b(n),
-b-1-r_b(n)
-\right).
+D_b(n)=\min\left(r_b(n),b-1-r_b(n)\right).
 $$
 
 ---
@@ -109,12 +104,7 @@ $$
 The finite Boundary Coordinate is
 
 $$
-BC_B(n)=
-\{
-D_b(n)
-\mid
-b\in B
-\}.
+BC_B(n)=\{D_b(n)\midb\in B\}.
 $$
 
 ---

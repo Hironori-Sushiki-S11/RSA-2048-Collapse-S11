@@ -401,7 +401,7 @@ Execution time was reduced while preserving reconstruction consistency.
 Memory consumption remained nearly constant throughout all tested integer sizes.
 
 These observations indicate that computational optimization improves implementation efficiency without affecting the theoretical framework.
-
+# 5.4 Application 4: Benchmark Analysis
 ---
 
 ### Summary

@@ -64,3 +64,77 @@ The mathematical framework was established through Verification001–030. These 
 Following completion of the theoretical framework, four computational applications were conducted. Application001 demonstrated structural reconstruction for RSA2048. Application002 extended the framework to integers up to 4096 bits. Application003 evaluated computational optimization without modifying the mathematical framework. Application004 compared the baseline and optimized implementations through benchmark analysis.
 
 The purpose of this paper is to present the completed mathematical framework, summarize its computational verification, and provide a reproducible structural representation of integers based on Boundary Coordinates.
+
+---
+
+# 2. Mathematical Framework
+
+## 2.1 Structural Observation
+
+IKERUSIKI Theory represents integers by structural information derived from modular boundary relationships rather than by numerical value alone.
+
+For each radix \(b\), an integer is represented by its Boundary Distance.
+
+---
+
+## Definition 1 (Boundary Distance)
+
+For an integer \(n\) and radix \(b\),
+
+$$
+r_b(n)=((n-1)\bmod b)
+$$
+
+The Boundary Distance is defined as
+
+$$
+D_b(n)=
+\min
+\left(
+r_b(n),
+b-1-r_b(n)
+\right).
+$$
+
+---
+
+## Definition 2 (Finite Boundary Coordinate)
+
+Let
+
+$$
+B=\{2,3,\ldots,26\}.
+$$
+
+The finite Boundary Coordinate is
+
+$$
+BC_B(n)=
+\{
+D_b(n)
+\mid
+b\in B
+\}.
+$$
+
+---
+
+## Definition 3 (Infinite Boundary Coordinate)
+
+The Infinite Boundary Coordinate extends the radix family to every integer satisfying
+
+$$
+b\ge2.
+$$
+
+Thus,
+
+$$
+BC_\infty(n)
+=
+\{
+D_b(n)
+\mid
+b\ge2
+\}.
+$$

@@ -513,3 +513,22 @@ Application 4 benchmarked the baseline and optimized implementations, demonstrat
 Collectively, these results indicate that Boundary Coordinates provide a reproducible structural representation of integers suitable for computational reconstruction.
 
 The mathematical framework remains unchanged throughout all verification and application stages, providing a unified foundation for future computational investigations.
+
+## References
+
+[1] R. Crandall and C. Pomerance,
+Prime Numbers: A Computational Perspective,
+Springer.
+
+[2] D. E. Knuth,
+The Art of Computer Programming,
+Vol. 2: Seminumerical Algorithms,
+Addison-Wesley.
+
+[3] T. H. Cormen, C. E. Leiserson,
+R. L. Rivest, C. Stein,
+Introduction to Algorithms,
+MIT Press.
+
+[4] IKERUSIKI Theory GitHub Repository.
+https://github.com/Hironori-Sushiki-S11/RSA-2048-Collapse-S11

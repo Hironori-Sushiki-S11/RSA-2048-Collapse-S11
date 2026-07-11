@@ -118,7 +118,7 @@ $$
 ···
 The Infinite Boundary Coordinate extends the radix family to every integer satisfying
 
-$$$
+$$
 BC_\infty(n)=\{D_b(n)\mid b\ge2\}.
 $$
 

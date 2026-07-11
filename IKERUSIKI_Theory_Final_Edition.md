@@ -532,3 +532,106 @@ MIT Press.
 
 [4] IKERUSIKI Theory GitHub Repository.
 https://github.com/Hironori-Sushiki-S11/RSA-2048-Collapse-S11
+---
+
+# List of Tables
+
+Table 1. Experimental Results for Large Integer Demonstration
+
+Table 2. Computational Optimization Results
+
+Table 3. Benchmark Comparison
+
+---
+
+# List of Figures
+
+Figure 1. Boundary Distance
+
+Figure 2. Finite Boundary Coordinate
+
+Figure 3. Infinite Boundary Coordinate
+
+Figure 4. Candidate Reconstruction
+
+Figure 5. Core Mathematical Equation
+
+Figure 6. Verification Workflow
+
+Figure 7. Application Workflow
+
+Figure 8. RSA2048 Structural Reconstruction
+
+Figure 9. Large Integer Demonstration
+
+Figure 10. Benchmark Comparison
+
+---
+
+# Appendix A
+## Verification Summary
+
+Verification001–014:
+Boundary Observation.
+
+Verification015–024:
+Boundary Coordinate Construction.
+
+Verification025–028:
+Candidate Reconstruction.
+
+Verification029:
+Benchmark Framework.
+
+Verification030:
+RSA-oriented Structural Reconstruction.
+
+---
+
+# Appendix B
+## Applications Summary
+
+Application001:
+RSA2048 Structural Demonstration.
+
+Application002:
+Large Integer Demonstration (512–4096 bits).
+
+Application003:
+Computational Optimization.
+
+Application004:
+Benchmark Analysis.
+
+---
+
+# Appendix C
+## Repository Structure
+
+README.md
+
+IKERUSIKI_THEORY.md
+
+IKERUSIKI_Theory_Final_Edition.md
+
+verification001.py
+
+...
+
+verification030.py
+
+application002_large_integer.py
+
+application003_computational_optimization.py
+
+application004_benchmark_analysis.py
+
+---
+
+# Reproducibility
+
+All computational experiments were performed using the implementation contained in the public GitHub repository.
+
+The mathematical framework remained unchanged throughout Verification001–030 and Applications001–004.
+
+This repository therefore serves as the complete reproducible implementation of IKERUSIKI Theory.

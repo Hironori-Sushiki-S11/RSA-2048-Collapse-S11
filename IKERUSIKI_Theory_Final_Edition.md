@@ -444,3 +444,47 @@ These observations confirm that implementation-level optimization improves compu
 Application 4 completes the computational evaluation of IKERUSIKI Theory.
 
 Together, Applications 1–4 demonstrate the applicability, scalability, optimization, and reproducibility of the completed mathematical framework.
+
+---
+
+# 6. Discussion
+
+## 6.1 Interpretation of the Framework
+
+IKERUSIKI Theory represents integers through structural information derived from Boundary Coordinates rather than solely by their numerical values.
+
+The completed framework demonstrates that modular boundary information provides a consistent structural representation across multiple radix systems.
+
+This interpretation differs from conventional computational approaches, which primarily operate on numerical magnitude.
+
+---
+
+## 6.2 Computational Characteristics
+
+The computational experiments demonstrated that the mathematical framework remains unchanged across all verification stages and applications.
+
+Implementation-level optimization improved execution efficiency while preserving identical reconstruction results.
+
+The experimental observations therefore separate mathematical structure from implementation strategy.
+
+---
+
+## 6.3 Scope and Limitations
+
+The present study establishes a computational framework for structural reconstruction based on Boundary Coordinates.
+
+The current applications include RSA-oriented composite integers and randomly generated large integers up to 4096 bits.
+
+Further investigation is required to evaluate broader computational domains and additional mathematical applications.
+
+---
+
+## 6.4 Future Work
+
+Future work includes
+
+- larger computational experiments,
+- additional optimization techniques,
+- independent external verification,
+- publication with DOI,
+- and further investigation of structural representations derived from Boundary Coordinates.

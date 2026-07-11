@@ -123,20 +123,8 @@ $$
 ···
 The Infinite Boundary Coordinate extends the radix family to every integer satisfying
 
-$$
-b\ge2.
-$$
-
-Thus,
-
-$$
-BC_\infty(n)
-=
-\left\{
-D_b(n)
-\mid
-b\ge2
-\right\}.
+$$$
+BC_\infty(n)=\{D_b(n)\mid b\ge2\}.
 $$
 
 ---
@@ -146,19 +134,7 @@ $$
 For a finite radix family \(B\), define the candidate reconstruction set by
 
 $$
-Cand_B(n)
-=
-\left\{
-x\in\mathbb{N}
-\;\middle|\;
-\forall b\in B,\,
-(x-1)\bmod b
-\in
-\left\{
-D_b(n),
-\,b-1-D_b(n)
-\right\}
-\right\}.
+Cand_B(n)=\{x\in\mathbb{N}\mid\forall b\in B,\ (x-1)\bmod b\in\{D_b(n),\,b-1-D_b(n)\}\}.
 $$
 
 ---

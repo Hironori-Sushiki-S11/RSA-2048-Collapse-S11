@@ -160,13 +160,7 @@ Rather than identifying an integer directly by its numerical value, the framewor
 For a finite radix family \(B\),
 
 $$
-\Phi_B(n)
-=
-Cand_B(n)
-\cap
-[1,LIMIT]
-\cap
-\mathbb{P},
+\Phi_B(n)=Cand_B(n)\cap[1,LIMIT]\cap\mathbb{P}.
 $$
 
 where \(\mathbb{P}\) denotes the set of prime numbers.

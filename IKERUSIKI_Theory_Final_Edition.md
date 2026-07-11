@@ -403,18 +403,6 @@ Application 3 demonstrates that implementation-level optimization can improve co
 
 ---
 
-### Experimental Results
-
-The optimized implementation produced identical reconstruction results to the baseline implementation.
-
-Execution time was reduced while preserving reconstruction consistency.
-
-Memory consumption remained nearly constant throughout all tested integer sizes.
-
-These observations indicate that computational optimization improves implementation efficiency without affecting the theoretical framework.
-
----
-
 ### Summary
 
 Application 3 demonstrates that implementation-level optimization can improve computational performance while leaving the mathematical structure completely unchanged.

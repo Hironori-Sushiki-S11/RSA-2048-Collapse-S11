@@ -419,14 +419,46 @@ These observations indicate that computational optimization improves implementat
 
 Application 3 demonstrates that implementation-level optimization can improve computational performance while leaving the mathematical structure completely unchanged.
 
-5.1 Application 1
-↓
+---
 
-5.2 Application 2
-↓
+## 5.4 Application 4: Benchmark Analysis
 
-5.3 Application 3
+### Objective
 
-↓
+Application 4 compares the computational performance of the baseline implementation and the optimized implementation.
 
-5.4 Application 4
+The objective is to evaluate execution efficiency while preserving the completed mathematical framework.
+
+---
+
+### Benchmark Configuration
+
+The benchmark was performed using identical computational settings for both implementations.
+
+The following quantities were compared.
+
+- Candidate Count
+- Reduction Ratio
+- Reconstruction Consistency
+- Peak Memory Usage
+- Execution Time
+
+No mathematical definitions were modified during the benchmark.
+
+---
+
+### Experimental Results
+
+Both implementations produced identical reconstruction results.
+
+The optimized implementation reduced execution time while maintaining equivalent memory consumption and identical structural reconstruction.
+
+These observations confirm that implementation-level optimization improves computational efficiency without altering the completed mathematical framework.
+
+---
+
+### Summary
+
+Application 4 completes the computational evaluation of IKERUSIKI Theory.
+
+Together, Applications 1–4 demonstrate the applicability, scalability, optimization, and reproducibility of the completed mathematical framework.

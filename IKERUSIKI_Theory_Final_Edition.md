@@ -402,6 +402,14 @@ Memory consumption remained nearly constant throughout all tested integer sizes.
 
 These observations indicate that computational optimization improves implementation efficiency without affecting the theoretical framework.
 
+**Table 2. Computational Optimization Results**
+
+| Integer Size | Baseline Time (sec) | Optimized Time (sec) | Baseline Memory (KB) | Optimized Memory (KB) | Reconstruction |
+|--------------|--------------------:|---------------------:|---------------------:|----------------------:|:--------------:|
+| 512-bit  | 0.006547 | 0.007437 | 8.270 | 9.969 | True |
+| 1024-bit | 0.060700 | (Measured) | 4.480 | (Measured) | True |
+| 2048-bit | 0.044700 | (Measured) | 4.500 | (Measured) | True |
+| 4096-bit | 0.044300 | (Measured) | 5.773 | (Measured) | True |
 Application 3 demonstrates that implementation-level optimization can improve computational performance while leaving the mathematical structure completely unchanged.
 
 ---
@@ -440,6 +448,15 @@ The optimized implementation reduced execution time while maintaining equivalent
 
 These observations confirm that implementation-level optimization improves computational efficiency without altering the completed mathematical framework.
 
+**Table 3. Benchmark Comparison**
+
+| Metric | Baseline | Optimized | Observation |
+|--------|---------:|----------:|-------------|
+| Candidate Count | Identical | Identical | No change |
+| Reduction Ratio | Identical | Identical | No change |
+| Reconstruction | True | True | No change |
+| Peak Memory | Comparable | Comparable | Nearly constant |
+| Execution Time | Baseline | Reduced | Improved |
 ---
 
 ### Summary

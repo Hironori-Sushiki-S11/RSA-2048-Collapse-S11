@@ -488,49 +488,97 @@ Application 4 completes the computational evaluation of IKERUSIKI Theory.
 Together, Applications 1–4 demonstrate the applicability, scalability, optimization, and reproducibility of the completed mathematical framework.
 
 ---
-
 # 6. Discussion
+
+
 
 ## 6.1 Interpretation of the Framework
 
-IKERUSIKI Theory represents integers through structural information derived from Boundary Coordinates rather than solely by their numerical values.
+
+
+IKERUSIKI Theory represents integers through structural information derived from Boundary Coordinates rather than solely through their numerical values.
+
+
 
 The completed framework demonstrates that modular boundary information provides a consistent structural representation across multiple radix systems.
 
-This interpretation differs from conventional computational approaches, which primarily operate on numerical magnitude.
 
----
+
+Unlike conventional computational number theory, which primarily analyzes numerical magnitude, the proposed framework reconstructs finite candidate sets from independent modular boundary constraints.
+
+
+
+Verification001–030 established the mathematical framework, while Applications001–004 evaluated its computational applicability without modifying any mathematical definitions.
+
+
 
 ## 6.2 Computational Characteristics
 
-The computational experiments demonstrated that the mathematical framework remains unchanged across all verification stages and applications.
 
-Implementation-level optimization improved execution efficiency while preserving identical reconstruction results.
 
-The experimental observations therefore separate mathematical structure from implementation strategy.
+Application002 established baseline computational measurements on randomly generated integers from 512 bits to 4096 bits.
 
----
+
+
+Application003 demonstrated that implementation-level optimization reduced computational overhead while preserving identical reconstruction results.
+
+
+
+Application004 compared the baseline and optimized implementations under identical computational settings.
+
+
+
+As summarized in Table 2 and Table 3, implementation-level optimization reduced execution time while preserving identical structural reconstruction, reduction ratios, and reconstruction consistency.
+
+
+
+These observations indicate that computational efficiency can be improved independently of the completed mathematical framework.
+
+
+
+The benchmark therefore separates mathematical structure from implementation strategy, demonstrating that algorithmic optimization does not alter the underlying mathematical formulation.
+
+
 
 ## 6.3 Scope and Limitations
 
+
+
 The present study establishes a computational framework for structural reconstruction based on Boundary Coordinates.
 
-The current applications include RSA-oriented composite integers and randomly generated large integers up to 4096 bits.
 
-Further investigation is required to evaluate broader computational domains and additional mathematical applications.
 
----
+Current applications include RSA-oriented composite integers and randomly generated large integers up to 4096 bits.
+
+
+
+The present work evaluates structural reconstruction rather than proposing a practical factorization algorithm for cryptographic applications.
+
+
+
+Further investigation is required to evaluate broader computational domains, larger integer sizes, and additional mathematical applications.
+
+
 
 ## 6.4 Future Work
 
+
+
 Future work includes
 
-- larger computational experiments,
-- additional optimization techniques,
-- independent external verification,
-- publication with DOI,
-- and further investigation of structural representations derived from Boundary Coordinates.
 
+
+- larger computational experiments,
+
+- additional optimization techniques,
+
+- independent external verification,
+
+- publication with DOI,
+
+- reproducibility studies by third parties,
+
+- and further investigation of structural representations derived from Boundary Coordinates.
 ---
 
 # 7. Conclusion

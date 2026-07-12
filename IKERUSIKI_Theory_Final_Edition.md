@@ -580,27 +580,25 @@ Future work includes
 
 - and further investigation of structural representations derived from Boundary Coordinates.
 ---
-
 # 7. Conclusion
 
 This paper presented IKERUSIKI Theory as a structural mathematical framework for representing integers through Boundary Coordinates.
 
-The theoretical framework was established through Verification001–030, where Boundary Distance, Boundary Coordinate, Candidate Reconstruction, and the Core Mathematical Equation were progressively constructed and validated.
+The mathematical framework was established through Verification001–030, during which Boundary Distance, Boundary Coordinates, Candidate Reconstruction, and the Core Mathematical Equation were progressively constructed and computationally verified.
 
-Four computational applications subsequently evaluated the completed framework without modifying its mathematical structure.
+Application001 demonstrated that the completed framework reconstructs structural candidates for RSA-oriented composite integers without modifying the mathematical formulation.
 
-Application 1 demonstrated structural reconstruction for RSA2048-oriented composite integers.
+Application002 extended the computational evaluation to randomly generated integers from 512 bits to 4096 bits, demonstrating that the framework scales to substantially larger integer sizes while preserving structural consistency.
 
-Application 2 extended the framework to randomly generated integers up to 4096 bits.
+Application003 showed that implementation-level optimization improves computational efficiency while leaving the mathematical framework completely unchanged.
 
-Application 3 confirmed that implementation-level optimization improves computational efficiency while preserving identical mathematical behavior.
+Application004 benchmarked the baseline and optimized implementations, confirming that computational improvements can be achieved without altering reconstruction consistency, reduction ratios, or the underlying mathematical formulation.
 
-Application 4 benchmarked the baseline and optimized implementations, demonstrating reproducible computational performance.
+Collectively, Verification001–030 and Applications001–004 establish a unified computational framework in which mathematical structure remains invariant while implementation strategy can evolve independently.
 
-Collectively, these results indicate that Boundary Coordinates provide a reproducible structural representation of integers suitable for computational reconstruction.
+These results indicate that Boundary Coordinates provide a reproducible structural representation of integers suitable for computational reconstruction across multiple computational settings.
 
-The mathematical framework remains unchanged throughout all verification and application stages, providing a unified foundation for future computational investigations.
-
+The completed framework therefore provides a reproducible mathematical foundation for future computational investigations based on Boundary Coordinates, including larger computational experiments, independent verification, and further mathematical applications.
 ## References
 
 [1] R. Crandall and C. Pomerance,

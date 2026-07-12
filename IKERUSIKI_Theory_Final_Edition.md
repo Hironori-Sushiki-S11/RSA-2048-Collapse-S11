@@ -392,22 +392,21 @@ No modification was made to the mathematical formulation.
 
 ### Experimental Results
 
-The optimized implementation produced identical reconstruction results to the baseline implementation.
+The optimized implementation preserved reconstruction consistency for all tested integer sizes.
 
-Execution time was reduced while preserving reconstruction consistency.
+Execution time decreased for the 1024-bit, 2048-bit, and 4096-bit cases, while the 512-bit case showed a small increase.
 
-Memory consumption remained nearly constant throughout all tested integer sizes.
+Peak memory increased for the 512-bit, 1024-bit, and 2048-bit cases and decreased slightly for the 4096-bit case.
 
-These observations indicate that computational optimization improves implementation efficiency without affecting the theoretical framework.
-
+The results therefore demonstrate that cache optimization changes implementation performance without modifying the mathematical framework.
 **Table 2. Computational Optimization Results**
 
 | Integer Size | Baseline Time (sec) | Optimized Time (sec) | Baseline Memory (KB) | Optimized Memory (KB) | Reconstruction |
 |--------------|--------------------:|---------------------:|---------------------:|----------------------:|:--------------:|
 | 512-bit  | 0.006547 | 0.007437 | 8.270 | 9.969 | True |
-| 1024-bit | 0.060700 | 4.480 | True |
-| 2048-bit | 0.044700 | 4.500 | True |
-| 4096-bit | 0.044300 | 5.773 | True |
+| 1024-bit | 0.060700 | 0.013608 | 4.480 | 8.152 | True |
+| 2048-bit | 0.044700 | 0.011046 | 4.500 | 8.184 | True |
+| 4096-bit | 0.009481 | 0.008236 | 8.227 | 8.160 | True |
 Application 3 demonstrates that implementation-level optimization can improve computational performance while leaving the mathematical structure completely unchanged.
 
 ---

@@ -255,15 +255,15 @@ These components form the theoretical basis for the computational applications p
 
 ---
 
-5. Applications
+# 5. Applications
 
-5.1 Application 1: RSA2048 Structural Demonstration
+## 5.1 Application 1: RSA2048 Structural Demonstration
 
-5.2 Application 2: Large Integer Demonstration
+## 5.2 Application 2: Large Integer Demonstration
 
-5.3 Application 3: Computational Optimization
-
-5.4 Application 4: Benchmark Analysis
+## 5.3 Application 3: Computational Optimization
+ 
+## 5.4 Application 4: Benchmark Analysis
 
 ## 5.1 Objective
 
@@ -342,8 +342,7 @@ The mathematical framework remained identical to the framework established throu
 
 ### Experimental Results
 **Table 1. Experimental Results for Large Integer Demonstration**
-
-| Integer Size | Reduction Ratio | Reconstruction | Peak Memory | Execution Time |
+| Integer Size | Candidate Count | Reduction Ratio | Reconstruction | Peak Memory | Execution Time |わ
 |--------------|----------------:|:--------------:|------------:|---------------:|
 | 512-bit | 1673196525.000000 | True | 8.270 KB | 0.006547 sec |
 | 1024-bit | 1673196525.000000 | True | 4.480 KB | 0.060700 sec |
@@ -407,9 +406,9 @@ These observations indicate that computational optimization improves implementat
 | Integer Size | Baseline Time (sec) | Optimized Time (sec) | Baseline Memory (KB) | Optimized Memory (KB) | Reconstruction |
 |--------------|--------------------:|---------------------:|---------------------:|----------------------:|:--------------:|
 | 512-bit  | 0.006547 | 0.007437 | 8.270 | 9.969 | True |
-| 1024-bit | 0.060700 | (Measured) | 4.480 | (Measured) | True |
-| 2048-bit | 0.044700 | (Measured) | 4.500 | (Measured) | True |
-| 4096-bit | 0.044300 | (Measured) | 5.773 | (Measured) | True |
+| 1024-bit | 0.060700 | 4.480 | True |
+| 2048-bit | 0.044700 | 4.500 | True |
+| 4096-bit | 0.044300 | 5.773 | True |
 Application 3 demonstrates that implementation-level optimization can improve computational performance while leaving the mathematical structure completely unchanged.
 
 ---

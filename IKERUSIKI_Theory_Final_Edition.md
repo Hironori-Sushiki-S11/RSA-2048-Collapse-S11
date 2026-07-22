@@ -299,7 +299,7 @@ The experiment therefore demonstrated that the proposed mathematical framework r
 
 ---
 
-## 5.4 Result
+### Result
 
 Application001 confirmed that the completed IKERUSIKI mathematical framework successfully reconstructs structural candidates for RSA-oriented integers.
 

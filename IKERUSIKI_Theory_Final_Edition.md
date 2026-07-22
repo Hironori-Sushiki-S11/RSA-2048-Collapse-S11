@@ -265,7 +265,9 @@ These components form the theoretical basis for the computational applications p
  
 ## 5.4 Application 4: Benchmark Analysis
 
-## 5.1 Objective
+## 5.1 Application001 — RSA2048 Structural Demonstration
+
+### Objective
 
 Application001 evaluates the completed mathematical framework on RSA2048-oriented composite integers.
 

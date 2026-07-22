@@ -283,7 +283,7 @@ No mathematical definitions were altered during the application stage.
 
 ---
 
-## 5.3 Structural Reconstruction
+### Structural Reconstruction
 
 Boundary Coordinates generated from RSA-oriented integers were transformed into finite candidate reconstruction sets.
 

@@ -257,7 +257,7 @@ These components form the theoretical basis for the computational applications p
 
 # 5. Applications
 
-
+## 5.1 Application001: RSA2048 Structural Demonstration
 
 ### Objective
 
@@ -293,7 +293,7 @@ The experiment therefore demonstrated that the proposed mathematical framework r
 
 ---
 
-### Result
+### Experimental Results
 
 Application001 confirmed that the completed IKERUSIKI mathematical framework successfully reconstructs structural candidates for RSA-oriented integers.
 

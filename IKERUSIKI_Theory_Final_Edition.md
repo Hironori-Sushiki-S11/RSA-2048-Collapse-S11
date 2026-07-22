@@ -273,7 +273,7 @@ The objective is not to factor RSA2048 through a new cryptographic algorithm, bu
 
 ---
 
-## 5.2 Experimental Configuration
+### Experimental Configuration
 
 The experiment applies the mathematical framework established through Verification001–030 without modification.
 

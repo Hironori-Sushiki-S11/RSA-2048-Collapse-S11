@@ -303,7 +303,7 @@ Rather than extending the theory, Application001 demonstrates the applicability 
 
 ---
 
-## 5.2 Application 2: Large Integer Demonstration
+## 5.2 Application002: Large Integer Demonstration
 
 ### Objective
 
@@ -406,7 +406,7 @@ Application 3 demonstrates that implementation-level optimization can improve co
 
 ---
 
-## 5.4 Application 4: Benchmark Analysis
+## 5.4 Application004: Benchmark Analysis
 
 ### Objective
 

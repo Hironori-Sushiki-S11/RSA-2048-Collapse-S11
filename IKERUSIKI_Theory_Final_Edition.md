@@ -307,10 +307,8 @@ Rather than extending the theory, Application001 demonstrates the applicability 
 
 ### Objective
 
+Unlike Application001, which focuses on RSA-oriented structural reconstruction,
 Application002 evaluates the scalability of the completed IKERUSIKI mathematical framework on large integers.
-
-Unlike Application 1, which focuses on RSA-oriented structural reconstruction, this experiment evaluates computational behavior as the integer size increases.
-
 ---
 
 ### Experimental Configuration
@@ -402,7 +400,7 @@ The results therefore demonstrate that cache optimization changes implementation
 | 1024-bit | 0.060700 | 0.013608 | 4.480 | 8.152 | True |
 | 2048-bit | 0.044700 | 0.011046 | 4.500 | 8.184 | True |
 | 4096-bit | 0.009481 | 0.008236 | 8.227 | 8.160 | True |
-Application 3 demonstrates that implementation-level optimization can improve computational performance while leaving the mathematical structure completely unchanged.
+Application003 demonstrates that implementation-level optimization can improve computational performance while leaving the mathematical structure completely unchanged.
 
 ---
 
@@ -477,7 +475,7 @@ This separation between mathematical structure and implementation strategy repre
 
 Application004 completes the computational evaluation of IKERUSIKI Theory.
 
-Together, Applications 1–4 demonstrate the applicability, scalability, optimization, and reproducibility of the completed mathematical framework.
+Together, Applications001–4 demonstrate the applicability, scalability, optimization, and reproducibility of the completed mathematical framework.
 
 ---
 # 6. Discussion

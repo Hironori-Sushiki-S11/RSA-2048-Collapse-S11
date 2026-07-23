@@ -360,7 +360,7 @@ The completed mathematical framework remains applicable to practical large integ
 
 ---
 
-## 5.3 Application 3: Computational Optimization
+## 5.3 Application003: Computational Optimization
 
 ### Objective
 

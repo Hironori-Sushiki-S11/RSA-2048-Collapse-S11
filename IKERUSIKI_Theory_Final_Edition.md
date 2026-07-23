@@ -354,7 +354,7 @@ These observations indicate that the proposed structural framework scales effici
 
 ### Summary
 
-Application 2 demonstrates that IKERUSIKI Theory is not limited to small computational examples.
+Application002 demonstrates that IKERUSIKI Theory is not limited to small computational examples.
 
 The completed mathematical framework remains applicable to practical large integer computations up to at least 4096 bits.
 
@@ -364,7 +364,7 @@ The completed mathematical framework remains applicable to practical large integ
 
 ### Objective
 
-Application 3 evaluates computational optimization while preserving the completed mathematical framework.
+Application003 evaluates computational optimization while preserving the completed mathematical framework.
 
 Unlike previous applications, this stage does not introduce new mathematical definitions. Instead, it evaluates implementation-level improvements.
 
@@ -410,7 +410,7 @@ Application 3 demonstrates that implementation-level optimization can improve co
 
 ### Objective
 
-Application 4 compares the computational performance of the baseline implementation and the optimized implementation.
+Application004 compares the computational performance of the baseline implementation and the optimized implementation.
 
 The objective is to evaluate execution efficiency while preserving the completed mathematical framework.
 
@@ -475,7 +475,7 @@ This separation between mathematical structure and implementation strategy repre
 
 ### Summary
 
-Application 4 completes the computational evaluation of IKERUSIKI Theory.
+Application004 completes the computational evaluation of IKERUSIKI Theory.
 
 Together, Applications 1–4 demonstrate the applicability, scalability, optimization, and reproducibility of the completed mathematical framework.
 

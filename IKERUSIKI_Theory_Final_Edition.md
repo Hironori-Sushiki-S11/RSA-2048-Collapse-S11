@@ -307,7 +307,7 @@ Rather than extending the theory, Application001 demonstrates the applicability 
 
 ### Objective
 
-Application 2 evaluates the scalability of the completed IKERUSIKI mathematical framework on large integers.
+Application002 evaluates the scalability of the completed IKERUSIKI mathematical framework on large integers.
 
 Unlike Application 1, which focuses on RSA-oriented structural reconstruction, this experiment evaluates computational behavior as the integer size increases.
 

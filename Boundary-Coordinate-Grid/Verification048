@@ -1,0 +1,203 @@
+# IKERUSIKI 検証 048
+# 階層境界グリッドによるプライムアドレス識別
+#
+＃ 客観的：
+# 完全な有限空間内で境界アドレスのみから素数を識別する
+# 素数領域。インデックス付き母集団は完全な素数集合 [2, LIMIT] です。
+#
+# これは素数のみを対象とした再構成テストであり、一般的な整数ベンチマークではありません。
+
+CSVファイルをインポート
+import math
+ランダムなインポート
+輸入統計
+インポート時間
+
+制限値 = [100_000, 500_000, 1_000_000]
+AXES = list(range(2, 65))
+ターゲット数（制限ごと）= 500
+シード = 48026
+
+
+def sieve_primes(limit):
+    sieve = bytearray(b"\x01") * (limit + 1)
+    sieve[0:2] = b"\x00\x00"
+
+    for number in range(2, math.isqrt(limit) + 1):
+        ふるい[番号]の場合：
+            開始 = 数値 * 数値
+            count = ((limit - start) // number) + 1
+            sieve[start:limit + 1:number] = b"\x00" * count
+
+    sieve[n] の場合、[n for n in range(2, limit + 1)] を返します。
+
+
+def boundary_component(number, axis):
+    残差 = (数値 - 1) % 軸
+    反射 = 軸 - 1 - 残差
+    距離 = min(残差、反射値)
+
+    残差が反射値より小さい場合：
+        方向 = 0
+    elif 残基 > 反射:
+        方向 = 1
+    それ以外：
+        方向 = 2
+
+    戻り距離、方向
+
+
+def prime_address(prime):
+    return tuple(boundary_component(prime, axis) for axis in AXES)
+
+
+def build_prime_inverted_index(primes):
+    インデックス = {i: {} for i in range(len(AXES))}
+
+    for prime_index, prime in enumerate(primes):
+        for axis_index, axis in enumerate(AXES):
+            コンポーネント = boundary_component(prime, axis)
+            index[axis_index].setdefault(component, set()).add(prime_index)
+
+    インデックスを返す
+
+
+def reconstruct_prime_candidates(address, index):
+    候補者 = なし
+    収束 = []
+
+    for axis_index, component in enumerate(address):
+        bucket = index[axis_index].get(component, set())
+        candidates = set(bucket) if candidates is None else candidates & bucket
+        convergence.append(len(candidates))
+
+        if len(candidates) == 1:
+            壊す
+
+    ソート済み(候補またはセット())を返す、収束
+
+
+def select_targets(primes, count, seed):
+    素数 len(primes) <= count の場合:
+        素数のリストを返します
+
+    rng = random.Random(seed)
+    選択されたもの = {0, len(primes)//4, len(primes)//2, 3*len(primes)//4, len(primes)-1}
+
+    while len(selected) < count:
+        selected.add(rng.randrange(len(primes)))
+
+    return [primes[i] for i in sorted(selected)]
+
+
+def benchmark_limit(limit):
+    t0 = time.perf_counter()
+    素数 = sieve_primes(limit)
+    sieve_seconds = time.perf_counter() - t0
+
+    t0 = time.perf_counter()
+    index = build_prime_inverted_index(primes)
+    index_seconds = time.perf_counter() - t0
+
+    ターゲット = select_targets(primes, TARGETS_PER_LIMIT, SEED + limit)
+    行 = []
+    convergence_sum = [0] * len(AXES)
+    convergence_n = [0] * len(AXES)
+
+    t0 = time.perf_counter()
+
+    ターゲット内のターゲットについて：
+        ids、convergence = reconstruct_prime_candidates(prime_address(target), index)
+        candidate_primes = [primes[i] for i in ids]
+
+        for i, count in enumerate(vergence):
+            convergence_sum[i] += count
+            convergence_n[i] += 1
+
+        rows.append({
+            「制限」: 制限、
+            "target_prime": ターゲット、
+            "axes_used": len(convergence)、
+            "last_axis": AXES[len(convergence)-1],
+            "final_candidate_count": convergence[-1],
+            "target_preserved": candidate_primes のターゲット、
+            "unique_identification": candidate_primes == [target],
+        })
+
+    query_seconds = time.perf_counter() - t0
+    unique_axes = [r["axes_used"] for r in rows if r["unique_identification"]]
+
+    曲線 = []
+    for i, axis in enumerate(AXES):
+        convergence_n[i] == 0 の場合:
+            壊す
+        曲線.append({
+            「制限」: 制限、
+            "axis_position": i + 1,
+            「軸」：軸、
+            "mean_candidate_count": convergence_sum[i] / convergence_n[i]、
+        })
+
+    概要 = {
+        「制限」: 制限、
+        "prime_count": len(primes)、
+        "tested_targets": len(rows),
+        "target_preservation_rate": sum(r["target_preserved"] for r in rows) / len(rows),
+        "unique_identification_rate": sum(r["unique_identification"] for r in rows) / len(rows),
+        "median_axes_for_unique": statistics.median(unique_axes) if unique_axes else None,
+        "max_axes_for_unique": max(unique_axes) if unique_axes else None,
+        "sieve_seconds": sieve_seconds、
+        "index_build_seconds": index_seconds、
+        "query_seconds": query_seconds、
+        "mean_query_microseconds": query_seconds / len(rows) * 1_000_000,
+    }
+    行、曲線、要約を返す
+
+
+def write_csv(path, rows):
+    with open(path, "w", newline="", encoding="utf-8") as file:
+        writer = csv.DictWriter(file, fieldnames=list(rows[0].keys()))
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def main():
+    結果 = []
+    曲線 = []
+    要約 = []
+
+    print("IKERUSIKI Verification048")
+    print("プライムアドレス識別情報")
+    プリント()
+
+    total_start = time.perf_counter()
+
+    LIMITS 内の制限について:
+        行、曲線、要約 = benchmark_limit(limit)
+        結果.extend(rows)
+        曲線.extend(曲線)
+        要約.append(要約)
+
+        プリント(
+            f'LIMIT={limit:,} | primes={summary["prime_count"]:,} | '
+            f'targets={summary["tested_targets"]} | '
+            f'preserved={summary["target_preservation_rate"]:.3f} | '
+            f'unique={summary["unique_identification_rate"]:.3f} | '
+            f'median axes={summary["median_axes_for_unique"]} | '
+            f'max axes={summary["max_axes_for_unique"]} | '
+            f'query={summary["mean_query_microseconds"]:.2f} us'
+        ）
+
+    write_csv("verification048_results.csv", results)
+    write_csv("verification048_convergence.csv", curves)
+    write_csv("verification048_summary.csv", summaries)
+
+    プリント()
+    print("検証048の概要")
+    print("保存されたすべてのターゲット素数:", all(s["target_preservation_rate"] == 1.0 for s in summaries))
+    print("テストされたすべての素数アドレスが一意に識別されました:", all(s["unique_identification_rate"] == 1.0 for s in summaries))
+    print("経過時間合計秒数:", f"{time.perf_counter() - total_start:.6f}")
+
+
+if __name__ == "__main__":
+    主要（）

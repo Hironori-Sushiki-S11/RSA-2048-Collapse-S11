@@ -1,0 +1,232 @@
+# IKERUSIKI 認証 049
+# 徹底的なプライムアドレス衝突テスト
+#
+＃ 客観的：
+# 有限個の素数のすべての素数について、素数アドレスの一意性を網羅的に検証する
+# ターゲット素数のサンプルをテストするのではなく、ドメインをテストします。
+#
+# すべての素数 p <= LIMIT に対して:
+# 1. 軸2～64に沿って階層的な境界アドレスを構築します。
+# 2. すべての素数間で完全なアドレス衝突をカウントします。
+# 3. 各素数が一意になる最も早い軸接頭辞を決定します。
+#
+# 範囲:
+# - 最大 1,000,000 個の素数セットを完成させる
+# - ランダムなターゲットサンプリングなし
+# - 素数のみのアドレス空間
+# - 有限領域における網羅的検証
+# - 無制限の証明ではない
+
+CSVファイルをインポート
+import math
+輸入統計
+インポート時間
+from collections import Counter, defaultdict
+
+制限値 = [100_000, 500_000, 1_000_000]
+AXES = list(range(2, 65))
+
+
+def sieve_primes(limit):
+    sieve = bytearray(b"\x01") * (limit + 1)
+    sieve[0:2] = b"\x00\x00"
+
+    for number in range(2, math.isqrt(limit) + 1):
+        ふるい[番号]の場合：
+            開始 = 数値 * 数値
+            count = ((limit - start) // number) + 1
+            sieve[start:limit + 1:number] = b"\x00" * count
+
+    sieve[number]が真の場合、number for number in range(2, limit + 1)を返します。
+
+
+def boundary_component(number, axis):
+    残差 = (数値 - 1) % 軸
+    反射 = 軸 - 1 - 残差
+    距離 = min(残差、反射値)
+
+    残差が反射値より小さい場合：
+        方向 = 0
+    elif 残基 > 反射:
+        方向 = 1
+    それ以外：
+        方向 = 2
+
+    戻り距離、方向
+
+
+def prime_address(prime):
+    タプルを返す(
+        boundary_component(prime, axis)
+        for axis in AXES
+    ）
+
+
+def exhaustive_limit(limit):
+    start = time.perf_counter()
+    素数 = sieve_primes(limit)
+    sieve_seconds = time.perf_counter() - 開始
+
+    start = time.perf_counter()
+    addresses = [prime_address(prime) for prime in primes]
+    address_seconds = time.perf_counter() - 開始
+
+    full_counts = Counter(addresses)
+    衝突グループ = {
+        アドレス: カウント
+        アドレスごとに、full_counts.items() 内の項目数をカウントします。
+        カウントが1より大きい場合
+    }
+
+    unique_at_axis = [None] * len(primes)
+    未解決 = set(range(len(primes)))
+    convergence_rows = []
+
+    start = time.perf_counter()
+
+    for prefix_length, axis in enumerate(AXES, start=1):
+        prefix_counts = カウンター(
+            アドレス[:プレフィックス長]
+            アドレス内のアドレスについて
+        ）
+
+        新しくユニークになったもの = []
+
+        for prime_index in unresolved:
+            接頭辞 = addresses[prime_index][:prefix_length]
+
+            prefix_counts[prefix] == 1 の場合:
+                unique_at_axis[prime_index] = prefix_length
+                newly_unique.append(prime_index)
+
+        未解決の差分更新(新規一意)
+
+        convergence_rows.append({
+            「制限」: 制限、
+            "axis_position": prefix_length、
+            「軸」：軸、
+            "remaining_nonunique_primes": len(unresolved)、
+            "newly_unique_primes": len(newly_unique),
+            "unique_fraction": (
+                (len(primes) - len(unresolved)) / len(primes)
+            )
+        })
+
+        未解決でない場合：
+            壊す
+
+    prefix_seconds = time.perf_counter() - 開始
+
+    result_rows = []
+
+    zip(primes, unique_at_axis) 内の prime、axes_used について:
+        result_rows.append({
+            「制限」: 制限、
+            「プライム」: プライム、
+            「ユニーク」: axes_used は None ではありません。
+            "axes_used": axes_used、
+            "last_axis": (
+                AXES[axes_used - 1]
+                axes_usedがNoneでない場合
+                それ以外の場合はなし
+            )
+        })
+
+    unique_axes = [
+        使用した軸
+        unique_at_axis内のaxes_usedについて
+        axes_usedがNoneでない場合
+    ]
+
+    概要 = {
+        「制限」: 制限、
+        "prime_count": len(primes)、
+        "full_address_count": len(full_counts)、
+        "collision_group_count": len(collision_groups),
+        "colliding_prime_count": sum(collision_groups.values()),
+        "all_primes_unique": len(collision_groups) == 0,
+        「all_primes_prefix_unique」: 未解決ではありません、
+        "median_axes_for_unique": (
+            統計情報.中央値(ユニーク軸)
+            ユニーク軸の場合
+            それ以外の場合はなし
+        )
+        「mean_axes_for_unique」: (
+            統計情報.mean(unique_axes)
+            ユニーク軸の場合
+            それ以外の場合はなし
+        )
+        "max_axes_for_unique": (
+            max(unique_axes)
+            ユニーク軸の場合
+            それ以外の場合はなし
+        )
+        "sieve_seconds": sieve_seconds、
+        "address_build_seconds": address_seconds、
+        "prefix_analysis_seconds": prefix_seconds、
+    }
+
+    結果行数、収束行数、要約を返します。
+
+
+def write_csv(path, rows):
+    with open(path, "w", newline="", encoding="utf-8") as file:
+        writer = csv.DictWriter(
+            ファイル、
+            fieldnames=list(rows[0].keys()),
+        ）
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def main():
+    all_results = []
+    all_convergence = []
+    要約 = []
+
+    print("IKERUSIKI Verification049")
+    print("徹底的な素アドレス衝突テスト")
+    プリント()
+
+    total_start = time.perf_counter()
+
+    LIMITS 内の制限について:
+        結果、収束、要約 = exhaustive_limit(limit)
+
+        all_results.extend(results)
+        all_convergence.extend(convergence)
+        要約.append(要約)
+
+        プリント(
+            f'LIMIT={limit:,} | '
+            f'primes={summary["prime_count"]:,} | '
+            f'addresses={summary["full_address_count"]:,} | '
+            f'衝突グループ={summary["衝突グループ数"]} | '
+            f'衝突する素数={summary["衝突する素数数"]} | '
+            f'all unique={summary["all_primes_unique"]} | '
+            f'median axes={summary["median_axes_for_unique"]} | '
+            f'max axes={summary["max_axes_for_unique"]}'
+        ）
+
+    write_csv("verification049_results.csv", all_results)
+    write_csv("verification049_convergence.csv", all_convergence)
+    write_csv("verification049_summary.csv", summaries)
+
+    プリント()
+    print("検証049の概要")
+    プリント(
+        「すべての有限領域におけるすべての素数は、衝突のない完全なアドレスを持つ。」
+        all(summary["all_primes_unique"] for summary in summaries)
+    ）
+    プリント(
+        「すべての素数はアドレス接頭辞の下で一意になった」
+        all(summary["all_primes_prefix_unique"] for summary in summaries)
+    ）
+    プリント(
+        「経過秒数:」
+        f"{time.perf_counter() - total_start:.6f}",
+    ）
+
+
+if __name__ == "__main__":
+    主要（）

@@ -189,3 +189,9 @@ Next:
 - Paper
 - DOI
 - External Verification
+
+---
+
+## Latest Research
+
+- [Structural Address Inertia — Verification061–064](./IKERUSIKI_STRUCTURAL_ADDRESS_INERTIA.md)

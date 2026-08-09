@@ -176,3 +176,29 @@ Hironori Ikeru
 # License
 
 MIT License
+
+---
+
+## Adaptive Boundary Address Demonstration
+
+The adaptive behavior of the Boundary Address framework can be observed directly in:
+
+- [IKERUSIKI_ADAPTIVE_ADDRESS_DEMO.py](./IKERUSIKI_ADAPTIVE_ADDRESS_DEMO.py)
+
+This demonstration shows the transition:
+
+**Current finite Address  
+→ Collision detection  
+→ Candidate structural axes  
+→ Axis selection  
+→ Minimal Address expansion  
+→ Collision re-evaluation**
+
+The purpose is not to predefine an infinite Address.
+
+Instead, the Address remains finite at each stage and expands only when the current structural information becomes insufficient.
+
+Related verification:
+
+- [Verification061.py](./Verification061.py)
+- [Verification062.py](./Verification062.py)

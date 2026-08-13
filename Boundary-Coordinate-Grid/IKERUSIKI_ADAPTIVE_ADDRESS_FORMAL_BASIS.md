@@ -1,70 +1,70 @@
-# IKERUSIKI Adaptive Boundary Address — Formal Mathematical Basis
+# IKERUSIKI 適応型境界アドレス 形式的な数学的基礎
 
-## Scope
+## 範囲
 
-This document gives a finite-corpus mathematical basis for the adaptive selection process implemented in:
+この文書は、以下のシステムで実装されている適応選択プロセスの有限コーパス数学的基礎を示しています。
 
 - `Verification061.py`
 - `Verification062.py`
 - `IKERUSIKI_ADAPTIVE_ADDRESS_DEMO.py`
 
-It formalizes the following process:
+これは以下のプロセスを形式化するものです。
 
-**Current finite corpus  
-→ Collision detection  
-→ Candidate-axis evaluation  
-→ Select  
-→ Address update  
-→ Collision re-evaluation  
-→ EXPAND only when the current candidate family is insufficient**
+**現在の有限コーパス  
+衝突検出  
+候補者軸評価  
+「選択」  
+住所更新  
+衝突再評価  
+現在の候補ファミリーが不十分な場合にのみ展開します**
 
-This document does **not** claim universal one-shot identification over an unbounded integer range. The object of analysis is always a **current finite corpus**.
+この文書は、無制限の整数範囲にわたる普遍的なワンショット識別を主張するものではありません。分析対象は常に、現在の有限コーパスです。
 
 ---
 
-## 1. Finite Corpus and Address
+## 1. 有限コーパスとアドレス
 
-Let
+させて
 
 \[
 S=\{x_1,\dots,x_m\}
 \]
 
-be a finite set of distinct integers.
+互いに異なる整数の有限集合とする。
 
-For every admissible axis \(b\), let
+許容されるすべての軸 \(b\) に対して、
 
 \[
 f_b:S\to Y_b
 \]
 
-be the structural component returned by that axis.
+その軸によって返される構造要素とする。
 
-In the current demonstration implementation,
+現在のデモンストレーション実装では、
 
 \[
 f_b(n)=(D_b(n),\operatorname{direction}_b(n)),
 \]
 
-where
+どこ
 
 \[
-r_b(n)=(n-1)\bmod b,
+r_b(n)=(n-1)\bmod b、
 \]
 
 \[
-D_b(n)=\min\{r_b(n),\,b-1-r_b(n)\}.
+D_b(n)=\min\{r_b(n),\,b-1-r_b(n)\}。
 \]
 
-The `direction` component records which side of the reflected boundary produced the distance. Therefore the pair `(distance, direction)` preserves the full residue state for that axis.
+`direction`コンポーネントは、反射境界のどちら側で距離が生じたかを記録します。したがって、`(distance, direction)`のペアは、その軸に関する完全な残差状態を保持します。
 
-For a finite selected axis set
+選択された軸セットが有限の場合
 
 \[
 B_t=\{b_1,\dots,b_t\},
 \]
 
-define the current Address by
+現在のアドレスを定義する
 
 \[
 A_t(x)=\bigl(f_{b_1}(x),\dots,f_{b_t}(x)\bigr).
@@ -72,46 +72,46 @@ A_t(x)=\bigl(f_{b_1}(x),\dots,f_{b_t}(x)\bigr).
 
 ---
 
-## 2. Current Partition
+## 2. 現在のパーティション
 
-The current Address induces an equivalence relation
+現在のアドレスは同値関係を誘導する
 
 \[
 x\sim_t y
 \iff
-A_t(x)=A_t(y).
+A_t(x)=A_t(y)。
 \]
 
-Let
+させて
 
 \[
-\Pi_t
+\ピット
 \]
 
-be the corresponding partition of \(S\).
+\(S\)の対応する分割とする。
 
-Every block of \(\Pi_t\) is a set of values that are still indistinguishable under the current Address.
+\(\Pi_t\) の各ブロックは、現在のアドレスの下では区別できない値の集合です。
 
-A block of size greater than one is a **Collision group**.
+サイズが1より大きいブロックは**衝突グループ**です。
 
 ---
 
-## 3. Collision Set and Collision Potential
+## 3. 衝突セットと衝突可能性
 
-Define the unresolved pair set
+未解決のペアセットを定義する
 
 \[
 C_t=
-\{\{x,y\}\subset S:x\neq y,\ A_t(x)=A_t(y)\}.
+\{\{x,y\}\subset S:x\neq y,\ A_t(x)=A_t(y)\}。
 \]
 
-Define the **Collision Potential**
+**衝突の可能性**を定義する
 
 \[
-\Phi_t=|C_t|.
+\Phi_t=|C_t|。
 \]
 
-Equivalently, if \(\Pi_t\) has blocks \(G\),
+同様に、\(\Pi_t\) にブロック \(G\) がある場合、
 
 \[
 \boxed{
@@ -121,27 +121,27 @@ Equivalently, if \(\Pi_t\) has blocks \(G\),
 }
 \]
 
-This is exactly the number of unresolved pairs used by the adaptive demonstration.
+これは、適応型デモンストレーションで使用される未解決ペアの数と全く同じです。
 
-For an empty Address and a corpus of size \(m\),
+空のアドレスとサイズ \(m\) のコーパスの場合、
 
 \[
 \Phi_0=\binom{m}{2}.
 \]
 
-For a fully collision-free Address,
+完全に衝突のないアドレスの場合、
 
 \[
-\Phi_T=0.
+\Phi_T=0。
 \]
 
 ---
 
-## 4. Theorem 1 — Partition Refinement
+## 4. 定理 1 分割細分化
 
-### Statement
+＃＃＃ 声明
 
-If a new axis \(b\) is appended without deleting the existing Address components, then
+既存のアドレスコンポーネントを削除せずに新しい軸 \(b\) を追加すると、
 
 \[
 \boxed{
@@ -149,31 +149,31 @@ If a new axis \(b\) is appended without deleting the existing Address components
 }
 \]
 
-where \(\preceq\) denotes partition refinement.
+ここで、\(\preceq\)は分割細分化を表す。
 
-### Proof
+＃＃＃ 証拠
 
-The updated Address is
+更新された住所は
 
 \[
 A_{t+1}(x)=\bigl(A_t(x),f_b(x)\bigr).
 \]
 
-If
+もし
 
 \[
-A_t(x)\neq A_t(y),
+A_t(x)\neq A_t(y)
 \]
 
-then the first components of \(A_{t+1}(x)\) and \(A_{t+1}(y)\) already differ. Therefore they cannot become equal after appending a new component.
+すると、\(A_{t+1}(x)\)と\(A_{t+1}(y)\)の最初の成分は既に異なっています。したがって、新しい成分を追加しても、それらは等しくなることはありません。
 
-Hence a previously separated pair can never be merged by Address extension. Each old block may remain intact or split into smaller blocks, but distinct old blocks never merge. ∎
+したがって、以前に分離されたペアはアドレス拡張によってマージされることはありません。各古いブロックはそのまま残るか、より小さなブロックに分割される可能性がありますが、異なる古いブロックは決してマージされません。
 
 ---
 
-## 5. Corollary — Collision Monotonicity
+## 5. 系 衝突単調性
 
-From Theorem 1,
+定理1より、
 
 \[
 \boxed{
@@ -181,23 +181,23 @@ C_{t+1}\subseteq C_t
 }
 \]
 
-and therefore
+そのため
 
 \[
 \boxed{
-\Phi_{t+1}\le\Phi_t.
+\Phi_{t+1}\le\Phi_t。
 }
 \]
 
-Thus Adaptive Address extension is **information-preserving with respect to already achieved separation**.
+したがって、適応型アドレス拡張は、**既に達成された分離に関して情報を保持する**。
 
 ---
 
-## 6. Theorem 2 — Strict Decrease Under an Effective Axis
+## 6. 定理 2 有効軸の下での厳密な減少
 
-### Statement
+＃＃＃ 声明
 
-If a candidate axis splits at least one current Collision group, then
+候補軸が少なくとも１つの現在の衝突グループを分割する場合、
 
 \[
 \boxed{
@@ -205,9 +205,9 @@ If a candidate axis splits at least one current Collision group, then
 }
 \]
 
-### Proof
+＃＃＃ 証拠
 
-Consider one current block \(G\) of size \(n\). Suppose the new axis splits it into nonempty children of sizes
+サイズ \(n\) の現在のブロック \(G\) を考えます。新しい軸がそれをサイズが空でない子に分割するとします。
 
 \[
 n_1,\dots,n_r,
@@ -216,21 +216,21 @@ n_1,\dots,n_r,
 \qquad r\ge2.
 \]
 
-Before the split, the block contributes
+分割前は、ブロックは貢献する
 
 \[
 \binom n2
 \]
 
-unresolved pairs.
+未解決のペア。
 
-After the split it contributes
+分割後は貢献する
 
 \[
 \sum_{i=1}^{r}\binom{n_i}{2}.
 \]
 
-The reduction is
+削減額は
 
 \[
 \binom n2-
@@ -239,139 +239,139 @@ The reduction is
 \sum_{i<j}n_in_j.
 \]
 
-Because \(r\ge2\) and all children are nonempty,
+\(r\ge2\)であり、すべての子が空ではないため、
 
 \[
 \sum_{i<j}n_in_j>0.
 \]
 
-Therefore at least one unresolved pair disappears and no resolved pair can return. Hence
+したがって、少なくとも1つの未解決ペアが消滅し、解決済みのペアは戻らない。
 
 \[
 \Phi_{t+1}<\Phi_t.
 \]
 
-∎
+竏
 
 ---
 
-## 7. Candidate-Axis Reduction Score
+## 7. 候補軸削減スコア
 
-For a candidate axis \(b\), define
+候補軸 \(b\) に対して、以下のように定義する。
 
 \[
 R_t(b)=
-\Phi_t-\Phi_t^{(b)},
+\Phi_t-\Phi_t^{(b)}、
 \]
 
-where \(\Phi_t^{(b)}\) is the Collision Potential after hypothetically appending \(b\).
+ここで、\(\Phi_t^{(b)}\) は、\(b\) を仮に追加した後の衝突ポテンシャルです。
 
-The current adaptive implementation selects the axis with maximum lexicographic score:
+現在の適応型実装では、辞書式スコアが最大となる軸を選択します。
 
-1. maximum unresolved-pair reduction \(R_t(b)\),
-2. higher Shannon entropy as first tie-break,
-3. smaller axis as final tie-break.
+1. 最大未解決ペア削減 \(R_t(b)\)
+2. シャノンエントロピーが高い方が最初のタイブレークとなり、
+3. 最終的なタイブレークは、より小さい軸を使用する。
 
-If any candidate satisfies
+候補者が条件を満たしている場合
 
 \[
-R_t(b)>0,
+R_t(b)>0、
 \]
 
-then the selected axis also satisfies
+すると、選択された軸も以下を満たす。
 
 \[
-R_t(b_{\mathrm{selected}})>0,
+R_t(b_{\mathrm{selected}})>0、
 \]
 
-so Theorem 2 guarantees strict progress.
+したがって、定理2は厳密な進歩を保証する。
 
 ---
 
-## 8. Theorem 3 — Logical Role of EXPAND
+## 8. 定理 3 EXPAND の論理的役割
 
-### Statement
+＃＃＃ 声明
 
-Suppose Collision remains,
-
-\[
-\Phi_t>0,
-\]
-
-but every currently available candidate axis satisfies
+衝突が残っていると仮定すると、
 
 \[
-R_t(b)=0.
+\Phi_t>0、
 \]
 
-Then no axis in the current candidate family can refine the current Collision partition.
-
-### Consequence
-
-If further identification is required, the candidate family itself must change.
-
-This is the logical role of
+しかし、現在利用可能なすべての候補軸は
 
 \[
-\boxed{\text{EXPAND}}
+R_t(b)=0。
 \]
 
-in the Adaptive Address framework.
+すると、現在の候補ファミリー内のどの軸も、現在の衝突パーティションを細分化できなくなります。
 
-EXPAND does not mean that a future Address should be predefined in advance. It means only that the **current observation family has reached a Blind Spot** for the present Collision structure.
+＃＃＃ 結果
+
+さらなる身元確認が必要な場合は、候補者の家族自体を変更する必要があります。
+
+これは論理的な役割です
+
+\[
+\boxed{\text{展開}}
+\]
+
+適応型アドレスフレームワークにおいて。
+
+EXPANDは、将来のアドレスを事前に定義する必要があるという意味ではありません。これは単に、現在の衝突構造において、**現在の観測ファミリーがブラインドスポット**に達したことを意味します。
 
 ---
 
-## 9. Theorem 4 — Finite Convergence Under Separability
+## 9. 定理 4 分離可能性の下での有限収束
 
-### Assumption
+＃＃＃ 予測
 
-Whenever \(\Phi_t>0\), either:
+\(\Phi_t>0\)の場合、以下のいずれかが成り立つ。
 
-1. the current candidate family contains an axis with \(R_t(b)>0\), or
-2. EXPAND eventually makes such an axis available.
+1. 現在の候補ファミリーには、\(R_t(b)>0\) の軸が含まれているか、
+2. EXPANDは最終的にそのような軸を利用可能にする。
 
-This is a **separability assumption** on the admissible observation family.
+これは、許容観測群に関する**分離可能性の仮定**です。
 
-### Statement
+＃＃＃ 声明
 
-Under this assumption, Adaptive Address reaches a collision-free partition after finitely many effective Address updates.
+この仮定の下では、アダプティブアドレスは有限回の有効なアドレス更新後に衝突のないパーティションに到達する。
 
-### Proof
+＃＃＃ 証拠
 
-The corpus \(S\) is finite, so
+コーパス\(S\)は有限なので、
 
 \[
-0\le\Phi_t\le\binom m2.
+0\le\Phi_t\le\binom m2。
 \]
 
-By Theorem 2, every effective Address update strictly decreases the nonnegative integer \(\Phi_t\).
+定理2によれば、すべての有効なアドレス更新は非負整数\(\Phi_t\)を厳密に減少させる。
 
-A strictly decreasing sequence of nonnegative integers cannot continue indefinitely.
+非負整数の厳密に減少する数列は、無限に続くことはできない。
 
-Because the separability assumption prevents termination at a positive \(\Phi_t\), the process must eventually reach
+分離可能性の仮定により正の \(\Phi_t\) での終了が妨げられるため、プロセスは最終的に次の値に到達しなければならない。
 
 \[
 \boxed{\Phi_T=0}
 \]
 
-for some finite \(T\). ∎
+ある有限の \(T\) に対して。
 
 ---
 
-## 10. Stronger Update-Count Bound from Partition Refinement
+## 10. パーティションの精緻化による更新回数の上限の強化
 
-Let \(k_t=|\Pi_t|\) be the number of current partition blocks.
+\(k_t=|\Pi_t|\) を現在のパーティションブロックの数とする。
 
-Every effective axis splits at least one block, so
+有効な軸はすべて少なくとも1つのブロックを分割するので、
 
 \[
 k_{t+1}\ge k_t+1.
 \]
 
-A partition of \(m\) objects has at most \(m\) singleton blocks.
+m 個のオブジェクトのパーティションには、最大で m 個のシングルトンブロックが含まれます。
 
-Therefore, starting from \(k_0\) blocks,
+したがって、\(k_0\)ブロックから始めて、
 
 \[
 \boxed{
@@ -379,32 +379,32 @@ T\le m-k_0
 }
 \]
 
-effective updates are sufficient under the separability assumption.
+分離可能性の仮定の下では、有効な更新で十分である。
 
-For an empty Address, \(k_0=1\), giving the coarse universal bound
+空のアドレスの場合、\(k_0=1\)となり、粗い普遍的境界が得られます。
 
 \[
 \boxed{T\le m-1.}
 \]
 
-Importantly, this bound depends on the **current finite corpus size**, not directly on the bit length or magnitude of its integers.
+重要なのは、この上限は**現在の有限コーパスのサイズ**に依存し、ビット長や整数の大きさには直接依存しないということです。
 
 ---
 
-## 11. Adaptive Structural Contraction Principle
+## 11. 適応構造収縮原理
 
-The preceding results imply the following finite-corpus principle.
+以上の結果は、以下の有限コーパス原理を示唆している。
 
-> **Adaptive Structural Contraction Principle.**  
-> In a finite corpus, if new Address components preserve previously acquired distinctions and effective components are selected from the currently unresolved structure, then unresolved relations decrease monotonically. After every effective update, the next problem is not the original ambient search space but only the residual Collision structure. Under eventual separability, the process reaches a collision-free state in finitely many effective updates.
+**適応型構造収縮原理**  
+有限のコーパスにおいて、新しいアドレス要素が以前に取得した区別を保持し、有効な要素が現在未解決の構造から選択される場合、未解決の関係は単調に減少します。有効な更新が行われるたびに、次の問題は元の周辺探索空間ではなく、残りの衝突構造のみとなります。最終的な分離可能性の下では、プロセスは有限回の有効な更新で衝突のない状態に到達します。
 
-Symbolically,
+象徴的に言えば、
 
 \[
 \boxed{
 S
 \rightarrow
-\Pi_t
+\ピット
 \rightarrow
 C_t
 \rightarrow
@@ -414,87 +414,202 @@ C_t
 }
 \]
 
-with
+と
 
 \[
 \Phi_{t+1}<\Phi_t
 \]
 
-for every effective Select.
+すべての効果的な選択のために。
 
-The central shift is therefore:
+したがって、中心的な変化は次のとおりである。
 
 \[
 \boxed{
-\text{ambient size}
+\text{周囲サイズ}
 \quad\longrightarrow\quad
-\text{current unresolved structural information}
+\text{現在未解決の構造情報}
 }
 \]
 
-The next computation is governed by the residual Collision structure, not by a requirement to pre-address the entire unbounded integer space.
+次の計算は、無限の整数空間全体を事前にアドレス指定する必要性ではなく、残余衝突構造によって規定される。
 
 ---
 
-## 12. Information-Theoretic Form
+## 12. 電流有限観測可能性原理
 
-Let a random variable \(X\) be uniformly distributed over the current finite corpus \(S\).
+有限なコーパスは、単なる計算上の制約ではない。それは、衝突や残存する構造的差異を測定可能にする、現在の観測枠組みを提供する。
 
-The remaining ambiguity after observing the current Address is
+境界のない領域は、単に境界がないとみなされるだけでは、アドレス、同値関係、衝突分割、または削減スコアを規定しません。これらの構造は、現在の有限観測規則が指定された後にのみ生じます。
+
+現在のアドレス \(A_t\) の場合、
 
 \[
-H(X\mid A_t).
+x\sim_t y
+\iff
+A_t(x)=A_t(y)
 \]
 
-After appending a new component,
+そのアドレスを基準として衝突を観測可能にする。
+
+もし
+
+\[
+A_t(x)=A_t(y)
+\]
+
+しかし、許容される未使用のコンポーネントは以下を満たす。
+
+\[
+f_b(x)\neq f_b(y)、
+\]
+
+したがって、現在の衝突は構造的な差異がないことを意味するものではありません。それは単に、現在のアドレスがまだその差異を表現していないことを意味するだけです。
+
+したがって、未解決の衝突は、より豊富な許容観測群に関連する**残存構造情報**を保持する可能性がある。
+
+したがって、適応プロセスは次のように記述できる。
+
+\[
+\boxed{
+\text{現在の有限構造}
+\rightarrow
+観測可能な衝突
+\rightarrow
+\text{残余構造情報}
+\rightarrow
+\text{選択}
+\rightarrow
+\text{次の有限構造}
+}
+\]
+
+この原理は、無限集合が数学的構造を担えないと主張するものではありません。むしろ、**無限性そのものが、このフレームワークで使用される観測構造ではない**ことを述べています。適応アドレス機構は、明示的に指定された有限の観測状態を通して動作します。
+
+したがって、現在の有限状態は、事前に計算された無限アドレスの不完全な近似値として扱われるのではなく、次に必要な改良が観測可能となる操作構造として扱われる。
+
+---
+
+## 13. 選択の構造的関連性
+
+Selectの役割は、単に格納されるアドレスコンポーネントの数を減らすことだけではありません。
+
+\(\mathcal{B}_t\) を現在利用可能な候補軸群とする。候補群が大きいほど、**可能な観測値の数**は増えるが、候補は現在の未解決構造に対して必ずしも同じ値を持つ必要はない。
+
+各候補 \(b\in\mathcal{B}_t\) について、削減スコア
+
+\[
+R_t(b)=\Phi_t-\Phi_t^{(b)}
+\]
+
+このコンポーネントによって、現在未解決のペア構造のうちどれだけが除去されるかを測定します。
+
+したがって、Select は変換を実行します
+
+\[
+\boxed{
+候補数
+\rightarrow
+衝突条件付き評価
+\rightarrow
+構造的に関連する情報
+}
+\]
+
+現在の有限コーパスおよび現在のアドレスに関して。
+
+候補となる構成要素は、現在の衝突構造に新たな特徴をもたらさないにもかかわらず、数学的に妥当である可能性がある。
+
+\[
+R_t(b)=0。
+\]
+
+逆に、大きな \(R_t(b)\) を持つ単一のコンポーネントは、他の多くの候補が存在する場合でも、現在の状態に対して高い構造的関連性を持つ可能性があります。
+
+したがって、適応目標は単に
+
+\[
+\text{その他のコンポーネント}
+\]
+
+むしろ
+
+\[
+\boxed{
+\text{差別化価値を示すために選択されたコンポーネント}。
+}
+\]
+
+現在の実装で使用されている辞書式規則は、未解決ペアの削減を優先し、次にエントロピー、最後に小軸のタイブレークを優先することで、この原則を具体化しています。
+
+これにより、2 つの同時役割を選択できます。
+
+1. **収縮** 未解決の衝突構造を縮小します。
+2. **情報の選択** 実装されたスコアの下で、現在利用可能な観測値のうち、最も識別価値の高いものを特定します。
+
+したがって、アドレス深度と候補ファミリーサイズは、有用な構造情報を直接示す指標として解釈すべきではありません。運用上重要なのは、現在未解決のパーティションに寄与する情報です。
+
+---
+
+## 14. 情報理論的形式
+
+確率変数 \(X\) は、現在の有限コーパス \(S\) 上で一様に分布しているとします。
+
+現在のアドレスを観察した後の残りの曖昧さは
+
+\[
+H(X\mid A_t)
+\]
+
+新しいコンポーネントを追加した後、
 
 \[
 A_{t+1}=(A_t,f_b),
 \]
 
-and conditioning on more information cannot increase conditional entropy:
+また、より多くの情報に基づいて条件付けを行っても、条件付きエントロピーは増加しない。
 
 \[
 \boxed{
 H(X\mid A_{t+1})
 \le
-H(X\mid A_t).
+H(X\mid A_t)
 }
 \]
 
-If the new axis produces a genuine refinement with positive information gain, the inequality is strict.
+新しい軸が、正の情報利得を伴う真の改良をもたらす場合、不等式は厳密に成り立つ。
 
-At complete identification,
+完全な識別では、
 
 \[
 \boxed{
-H(X\mid A_T)=0.
+H(X\mid A_T)=0。
 }
 \]
 
-This gives an information-theoretic counterpart to Collision Potential monotonicity.
+これは、衝突ポテンシャルの単調性に対応する情報理論的な概念を与えるものである。
 
 ---
 
-## 13. Empirical Trajectories Are Examples, Not Universal Constants
+## 15. 経験的軌跡は一例であり、普遍的な定数ではない
 
-The adaptive demonstration may produce trajectories such as
+適応型デモンストレーションでは、次のような軌跡が生成される可能性があります。
 
 \[
 4950\rightarrow4\rightarrow0
 \]
 
-or
+または
 
 \[
-4950\rightarrow6\rightarrow0.
+4950\rightarrow6\rightarrow0。
 \]
 
-These particular intermediate values are **corpus-dependent empirical outcomes**.
+これらの特定の中間値は、**コーパスに依存する経験的結果**である。
 
-The formal claim is not that a specific value such as 4 or 6 must occur.
+正式な主張は、4や6といった特定の値が必ず発生しなければならないというものではない。
 
-The general statement is
+一般的な声明は
 
 \[
 \boxed{
@@ -502,95 +617,117 @@ The general statement is
 \rightarrow
 \Phi_1
 \rightarrow
-\cdots
+…
 \rightarrow
 \Phi_T=0
 }
 \]
 
-with monotonic decrease whenever an effective axis is selected.
+有効な軸が選択されるたびに、単調減少する。
 
-Thus the adaptive rule responds to the Collision structure that actually appears, rather than requiring a predetermined future Address.
-
----
-
-## 14. Relationship to Verification061 / Verification062
-
-### Verification061
-
-Operationally demonstrates:
-
-- Collision detection,
-- candidate-axis evaluation,
-- unresolved-pair reduction,
-- adaptive Select.
-
-Theorems 1 and 2 formalize why an effective Select cannot undo previous separation and must strictly reduce the unresolved structure.
-
-### Verification062
-
-Operationally demonstrates the `EXPAND` decision when the current candidate family is insufficient.
-
-Theorem 3 formalizes why EXPAND is logically required when Collision remains but all currently available candidates have zero reduction.
-
-### Adaptive Address Demonstration
-
-Makes the full finite process visible:
-
-**Current finite  
-→ Collision  
-→ Candidate axes  
-→ Select  
-→ Address Update  
-→ Re-evaluate  
-→ Repeat / EXPAND as required**
-
-Theorem 4 supplies the finite-convergence guarantee under eventual separability.
+したがって、適応ルールは、あらかじめ定められた将来のアドレスを必要とするのではなく、実際に発生する衝突構造に対応する。
 
 ---
 
-## 15. Scope Boundary
+## 16. 検証061 / 検証062 との関係
 
-These results establish a formal basis for **adaptive identification within a current finite corpus**.
+### 検証061
 
-They do not by themselves claim:
+運用面で実証される内容：
 
-- a fixed finite Address that uniquely identifies every integer in an unbounded domain,
-- universal two-axis identification,
-- a specific intermediate Collision count,
-- RSA factorization,
-- or recovery of an arbitrary unknown integer from a finite-corpus Address without the corpus context.
+- 衝突検出、
+- 候補軸評価、
+- 未解決ペア削減、
+- アダプティブセレクト。
 
-The formal object is the adaptive refinement of a finite current candidate set.
+定理1と定理2は、有効なSelectが以前の分離を元に戻すことができず、未解決の構造を厳密に縮小しなければならない理由を形式的に説明しています。
+
+### 検証062
+
+現在の候補ファミリーが不十分な場合に「EXPAND」決定を行う手順を、運用面で実証します。
+
+定理3は、衝突が残っているが現在利用可能なすべての候補がゼロ削減である場合に、EXPANDが論理的に必要となる理由を形式化している。
+
+### 適応型アドレス指定のデモンストレーション
+
+有限なプロセス全体を可視化する：
+
+**電流有限  
+「衝突」  
+候補軸  
+「選択」  
+住所更新  
+再評価  
+必要に応じて繰り返し/拡張してください**
+
+定理4は、最終的な分離可能性の下での有限収束の保証を提供する。
 
 ---
 
-## Conclusion
+## 17. スコープ境界
 
-The Adaptive Boundary Address mechanism can be described as a monotone finite refinement process.
+これらの結果は、**現在の有限コーパス内での適応的識別**のための正式な基礎を確立するものである。
 
-Its essential mathematical structure is:
+それらはそれ自体では主張しない。
+
+- 無限領域内のすべての整数を一意に識別する固定有限アドレス、
+- ユニバーサル2軸識別、
+- 特定の中間衝突回数、
+- RSA因数分解、
+- または、コーパスコンテキストなしで有限コーパスアドレスから任意の未知の整数を復元する。
+
+形式的な対象は、有限な現在の候補集合の適応的な洗練である。
+
+---
+
+＃＃ 結論
+
+適応型境界アドレス機構は、単調な有限細分化プロセスとして説明できる。
+
+その基本的な数学的構造は次のとおりです。
 
 \[
 \boxed{
-\text{Current finite}
+電流有限
 \rightarrow
-\text{Collision}
+衝突
 \rightarrow
-\text{Structural difference}
+構造的な違い
 \rightarrow
-\text{Select}
+\text{選択}
 \rightarrow
-\text{Refinement}
+\text{改良}
 \rightarrow
-\text{Reduced Collision Potential}
+衝突可能性の低減
 }
 \]
 
-The key invariant is that previously acquired distinctions are preserved.
+重要な不変条件は、以前に獲得した区別が保持されるということである。
 
-The key dynamic is that every effective update strictly contracts the unresolved structure.
+重要な点は、有効な更新を行うたびに、未解決の構造が厳密に縮小されるということである。
 
-The key boundary rule is that, when no current candidate can reduce Collision, the observation family—not the already resolved structure—must be expanded.
+重要な境界ルールは、現在の候補が衝突を減らすことができない場合、既に解決された構造の観測ファミリーを拡張する必要があるということです。
 
-This is the formal mathematical basis of the current IKERUSIKI Adaptive Boundary Address demonstration.
+したがって、現在の有限状態は単なるサイズ制限ではない。それは、衝突が定義され、残存構造情報を選択可能となる観測状態なのである。
+
+選択は、単なる量の削減にとどまりません。実装されたスコアに基づいて、現在最も識別価値の高い候補観測値を特定し、可能性のある観測値の集合を、現在の未解決構造に関連する情報に変換します。
+
+したがって、正式なプロセスは次のように要約できます。
+
+\[
+\boxed{
+電流有限
+\rightarrow
+衝突
+\rightarrow
+\text{残余構造情報}
+\rightarrow
+\text{選択}
+\rightarrow
+レスポンシブ・リファインメント
+}
+\]
+
+これは有限集合に関する形式的な結果に過ぎません。それ自体では、素数の出現、無限領域における普遍的同一性、あるいは完全な無限アドレスに関する主張を確立するものではありません。
+
+これは、現在実施されているIKERUSIKI適応型境界アドレスの実証実験における、正式な数学的基礎となるものです。

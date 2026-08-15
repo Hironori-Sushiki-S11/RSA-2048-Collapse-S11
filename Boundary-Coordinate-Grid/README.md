@@ -202,3 +202,20 @@ Related verification:
 
 - [Verification061.py](./Verification061.py)
 - [Verification062.py](./Verification062.py)
+---
+
+## Adaptive Address Formal Basis and Efficiency Cross-Checks
+
+Formal basis:
+
+- [IKERUSIKI_ADAPTIVE_ADDRESS_FORMAL_BASIS.md](./IKERUSIKI_ADAPTIVE_ADDRESS_FORMAL_BASIS.md)
+
+Efficiency and implementation cross-checks:
+
+- [AA_EFFICIENCY_COROLLARIES_20260816.md](./AA_EFFICIENCY_COROLLARIES_20260816.md)
+- [AA_EFFICIENCY_VALIDATION_20260816.py](./AA_EFFICIENCY_VALIDATION_20260816.py)
+- [AA_LCM_SELECTOR_VALIDATION_20260816.py](./AA_LCM_SELECTOR_VALIDATION_20260816.py)
+
+These materials concern the current finite-corpus Adaptive Address model and its collision-resolution structure.
+
+They do not claim universal indexing, arbitrary-integer uniqueness, unknown-factor recovery, or bit-length-independent CPU runtime.

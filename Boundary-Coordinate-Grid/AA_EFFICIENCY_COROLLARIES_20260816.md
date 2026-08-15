@@ -191,3 +191,43 @@ None of the results above proves:
 - direct recovery of unknown factors or RSA factorization.
 
 The current result is narrower and exact: **Address history can be collapsed to the current LCM for Collision state, candidate axes can be collapsed to quotient-equivalence classes, and current Collision reduction is exactly a residual divisibility problem.**
+
+---
+
+## 8. Current Finite Observation Modulus — Implementation Corollary
+
+Let the current selected-axis LCM be `L_t`, and let the current finite candidate-axis family be `G_t`.
+
+Define the current finite observation modulus by
+
+`M_obs(t) = lcm(L_t, {b : b in G_t})`.
+
+For every current candidate `b in G_t`,
+
+`lcm(L_t, b) | M_obs(t)`.
+
+Therefore, `x mod M_obs(t)` determines `x mod lcm(L_t, b)` for every candidate in the current finite family.
+
+A current Collision pair `e={x,y}` survives candidate `b` exactly when
+
+`lcm(L_t, b) | (x-y)`.
+
+Thus the current candidate refinements can, in principle, be evaluated from the finite residue state `x mod M_obs(t)` without materializing every full-size residual integer
+
+`k_t(e) = |x-y| / L_t`.
+
+This is exact state-relative compression, not arbitrary high-bit truncation. It preserves the residue information required by the current finite candidate family.
+
+If an EXPAND step changes `G_t`, then `M_obs(t)` must also be updated.
+
+For the tested fixed candidate family `2..512`, when the selected axes are drawn from that same family,
+
+`M_obs = lcm(2,...,512)`
+
+has bit length **743**.
+
+The 743-bit value is not universal. It is a property of that particular finite observation family.
+
+This corollary does not prove bit-length-independent preprocessing time. Computing `x mod M_obs(t)` from an input of bit length `B` still has `B`-dependent arithmetic cost.
+
+It also does not remove corpus-size scaling by itself. For large corpora, implementations should prefer residue grouping and partition counts over explicit enumeration of all Collision pairs whenever equivalent.

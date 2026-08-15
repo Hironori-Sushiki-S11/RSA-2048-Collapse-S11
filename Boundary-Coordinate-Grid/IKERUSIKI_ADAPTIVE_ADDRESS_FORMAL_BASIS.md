@@ -1,4 +1,4 @@
-# IKERUSIKI Adaptive Boundary Address - Formal Mathematical Basis
+Restore clean Formal Basis as canonical file# IKERUSIKI Adaptive Boundary Address - Formal Mathematical Basis
 
 **Revision:** 2026-08-15 (refactored)  
 **Scope:** finite-corpus adaptive identification  

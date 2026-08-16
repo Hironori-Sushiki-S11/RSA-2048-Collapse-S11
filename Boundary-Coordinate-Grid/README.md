@@ -167,6 +167,24 @@ This directory focuses on executable structural indexing.
 
 ---
 
+## Design Principle — Knife, Sheath, and Shield
+
+Adaptive Address is designed to retain only the structural information required by the current finite state, and to expand only when unresolved Collisions require more distinction.
+
+As a design metaphor, the same principle can act as:
+
+- **a knife** — removing what is unnecessary while preserving what is useful, like a kitchen knife used in support of family health;
+- **a sheath** — containing information that does not need to remain fully exposed;
+- **a shield** — reducing unnecessary exposure while preserving the distinctions required for reliable identification.
+
+The principle is not to discard information arbitrarily.
+
+It is to preserve the information required by the current structural task, and to expand the representation when the current boundary becomes insufficient.
+
+These are design metaphors, not claims of cryptographic or security guarantees.
+
+---
+
 # Author
 
 Hironori Ikeru

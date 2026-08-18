@@ -233,6 +233,7 @@ Efficiency and implementation cross-checks:
 - [AA_EFFICIENCY_COROLLARIES_20260816.md](./AA_EFFICIENCY_COROLLARIES_20260816.md)
 - [AA_EFFICIENCY_VALIDATION_20260816.py](./AA_EFFICIENCY_VALIDATION_20260816.py)
 - [AA_LCM_SELECTOR_VALIDATION_20260816.py](./AA_LCM_SELECTOR_VALIDATION_20260816.py)
+- [HOW_TO_APPLY_ADAPTIVE_ADDRESS.md](./HOW_TO_APPLY_ADAPTIVE_ADDRESS.md)
 
 These materials concern the current finite-corpus Adaptive Address model and its collision-resolution structure.
 

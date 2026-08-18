@@ -163,7 +163,6 @@ In a finite prime-search problem, the current items may be candidate integers; C
 The same Select / Address Update / EXPAND procedure can then be used to reduce the unresolved candidate set.
 
 ---
----
 
 ## Relation to IKERUSIKI Theory
 

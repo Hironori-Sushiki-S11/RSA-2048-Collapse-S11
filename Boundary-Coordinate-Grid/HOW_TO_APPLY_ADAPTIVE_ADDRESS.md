@@ -156,6 +156,13 @@ The goal is not maximal information.
 
 The goal is sufficient structural information for the current task.
 
+## Example — Prime Search
+
+In a finite prime-search problem, the current items may be candidate integers; Collisions are candidates not yet distinguished by the current Address; and candidate observables may include additional modular or Boundary relations.
+
+The same Select / Address Update / EXPAND procedure can then be used to reduce the unresolved candidate set.
+
+---
 ---
 
 ## Relation to IKERUSIKI Theory

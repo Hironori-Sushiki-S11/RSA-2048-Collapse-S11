@@ -1,10 +1,10 @@
-# IKERUSIKI Adaptive Address Scaling — Reproducibility Guide
+# IKERUSIKI Adaptive Address Scaling - Reproducibility Guide
 
 ## Purpose
 
-This package closes the public reproducibility gap for the finite-corpus scaling runs reported in Verification063 and Verification064.
+This package provides a directly runnable public reproducer for the finite-corpus scaling results archived as Verification063 and Verification064.
 
-It reproduces the observed Adaptive Address trajectories at:
+It reproduces the observed Adaptive Address structural trajectories at:
 
 - 32768-bit
 - 65536-bit
@@ -16,13 +16,44 @@ They do **not** establish universal depth 2, a universal `2..512` axis bound, bi
 
 ---
 
-## Fixed protocol
+## Public Reproducer
 
-The two scripts use the same experimental structure:
+Run:
+
+```bash
+python ADAPTIVE_ADDRESS_SCALING_REPRODUCER.py
+```
+
+The public reproducer is:
+
+- `ADAPTIVE_ADDRESS_SCALING_REPRODUCER.py`
+
+It reproduces the deterministic structural outputs archived for Verification063 and Verification064.
+
+### Provenance note
+
+The public reproducer uses the formally equivalent LCM-state selector.
+
+It is **not claimed to be a byte-for-byte copy of the historical `Verification063.py` or `Verification064.py` scripts**.
+
+The public validation target is the deterministic structural output:
+
+- generated corpus for each `(bit_size, seed)`
+- selected axes
+- Collision trajectory
+- Address depth
+- collision-free status
+
+Runtime is machine-dependent and is not an identity check.
+
+---
+
+## Fixed Protocol
+
+The reproducer uses:
 
 - finite corpus size: `100`
 - candidate axes: `2..512`
-- component: `(distance, direction)`
 - Select rule:
   1. maximum unresolved-pair reduction
   2. higher Shannon entropy
@@ -43,65 +74,99 @@ Thus the selected axes and Collision trajectories are reproducible from the publ
 
 ---
 
-## Files
+## Minimal Commands
 
-### Verification063.py
+### Verification063 structural reproduction
 
-Tests:
+```bash
+python ADAPTIVE_ADDRESS_SCALING_REPRODUCER.py --verification 063
+```
+
+This runs:
 
 - 32768-bit
 - 65536-bit
 - 5 seeds each
 
-Run:
+### Verification064 structural reproduction
 
 ```bash
-python Verification063.py
+python ADAPTIVE_ADDRESS_SCALING_REPRODUCER.py --verification 064
 ```
 
-Expected structural results:
-
-| bit | seed | selected axes | Collision trajectory | depth |
-|---:|---:|---|---|---:|
-| 32768 | 20260812 | 477 → 5 | 4950 → 3 → 0 | 2 |
-| 32768 | 20260813 | 505 → 9 | 4950 → 5 → 0 | 2 |
-| 32768 | 20260814 | 365 → 8 | 4950 → 6 → 0 | 2 |
-| 32768 | 20260815 | 467 → 7 | 4950 → 4 → 0 | 2 |
-| 32768 | 20260816 | 449 → 7 | 4950 → 6 → 0 | 2 |
-| 65536 | 20260812 | 493 → 5 | 4950 → 5 → 0 | 2 |
-| 65536 | 20260813 | 417 → 7 | 4950 → 4 → 0 | 2 |
-| 65536 | 20260814 | 483 → 5 | 4950 → 4 → 0 | 2 |
-| 65536 | 20260815 | 511 → 5 | 4950 → 5 → 0 | 2 |
-| 65536 | 20260816 | 425 → 7 | 4950 → 4 → 0 | 2 |
-
-### Verification064.py
-
-Tests:
+This runs:
 
 - 131072-bit
 - 5 seeds
 
-Run:
+### Smallest single published case
 
 ```bash
-python Verification064.py
+python ADAPTIVE_ADDRESS_SCALING_REPRODUCER.py --bits 32768 --seed 20260812
 ```
 
-Expected structural results:
+Expected:
 
-| seed | selected axes | Collision trajectory | depth |
-|---:|---|---|---:|
-| 20260812 | 455 → 3 | 4950 → 5 → 0 | 2 |
-| 20260813 | 511 → 11 | 4950 → 3 → 0 | 2 |
-| 20260814 | 499 → 11 | 4950 → 3 → 0 | 2 |
-| 20260815 | 493 → 7 | 4950 → 5 → 0 | 2 |
-| 20260816 | 413 → 12 | 4950 → 4 → 0 | 2 |
+```text
+axes=477|5
+phi=4950->3->0
+depth=2
+collision_free=True
+match=True
+```
+
+### One 131072-bit case
+
+```bash
+python ADAPTIVE_ADDRESS_SCALING_REPRODUCER.py --bits 131072 --seed 20260812
+```
+
+Expected:
+
+```text
+axes=455|3
+phi=4950->5->0
+depth=2
+collision_free=True
+match=True
+```
+
+This one-case command is useful when a constrained execution environment cannot complete all 15 runs at once.
 
 ---
 
-## What should reproduce exactly?
+## Expected Verification063 Structural Results
 
-The following are deterministic under the same Python integer arithmetic and script:
+| bit | seed | selected axes | Collision trajectory | depth |
+|---:|---:|---|---|---:|
+| 32768 | 20260812 | 477 -> 5 | 4950 -> 3 -> 0 | 2 |
+| 32768 | 20260813 | 505 -> 9 | 4950 -> 5 -> 0 | 2 |
+| 32768 | 20260814 | 365 -> 8 | 4950 -> 6 -> 0 | 2 |
+| 32768 | 20260815 | 467 -> 7 | 4950 -> 4 -> 0 | 2 |
+| 32768 | 20260816 | 449 -> 7 | 4950 -> 6 -> 0 | 2 |
+| 65536 | 20260812 | 493 -> 5 | 4950 -> 5 -> 0 | 2 |
+| 65536 | 20260813 | 417 -> 7 | 4950 -> 4 -> 0 | 2 |
+| 65536 | 20260814 | 483 -> 5 | 4950 -> 4 -> 0 | 2 |
+| 65536 | 20260815 | 511 -> 5 | 4950 -> 5 -> 0 | 2 |
+| 65536 | 20260816 | 425 -> 7 | 4950 -> 4 -> 0 | 2 |
+
+---
+
+## Expected Verification064 Structural Results
+
+| seed | selected axes | Collision trajectory | depth |
+|---:|---|---|---:|
+| 20260812 | 455 -> 3 | 4950 -> 5 -> 0 | 2 |
+| 20260813 | 511 -> 11 | 4950 -> 3 -> 0 | 2 |
+| 20260814 | 499 -> 11 | 4950 -> 3 -> 0 | 2 |
+| 20260815 | 493 -> 7 | 4950 -> 5 -> 0 | 2 |
+| 20260816 | 413 -> 12 | 4950 -> 4 -> 0 | 2 |
+
+---
+
+## What Should Reproduce Exactly?
+
+Under the same Python integer arithmetic and public script, the deterministic fields are:
 
 - generated corpus for each `(bit_size, seed)`
 - selected axes
@@ -120,44 +185,27 @@ Runtime should therefore be treated as a machine-dependent measurement, not as a
 
 ---
 
-## Independent rerun performed from this package
+## Package Self-Check
 
-A fresh rerun reproduced the structural outputs exactly.
-
-### Verification063 fresh rerun
+Before publication of this reproducer, a fresh run of the script reproduced all 15 archived structural cases:
 
 ```text
-32768-bit:
-[477|5]   4950->3->0
-[505|9]   4950->5->0
-[365|8]   4950->6->0
-[467|7]   4950->4->0
-[449|7]   4950->6->0
+Verification063:
+32768-bit: 5/5 matched
+65536-bit: 5/5 matched
 
-65536-bit:
-[493|5]   4950->5->0
-[417|7]   4950->4->0
-[483|5]   4950->4->0
-[511|5]   4950->5->0
-[425|7]   4950->4->0
+Verification064:
+131072-bit: 5/5 matched
+
+TOTAL: 15/15 matched
+All runs collision-free at Address depth 2.
 ```
 
-### Verification064 fresh rerun
-
-```text
-131072-bit:
-[455|3]    4950->5->0
-[511|11]   4950->3->0
-[499|11]   4950->3->0
-[493|7]    4950->5->0
-[413|12]   4950->4->0
-```
-
-All 15 runs were collision-free at Address depth 2.
+This is a package self-check, not third-party independent validation.
 
 ---
 
-## Interpretation boundary
+## Interpretation Boundary
 
 The reproducible empirical statement is:
 
@@ -172,20 +220,21 @@ It does not prove that depth 2 persists universally.
 
 ---
 
-## Suggested external-validation report
+## Suggested External-Validation Report
 
-A third party can report only the following minimal fields:
+A third party can report:
 
 ```text
 Python version:
 OS / hardware:
-Verification:
+command:
 bit size:
 seed:
 selected axes:
 Collision trajectory:
 depth:
 collision-free:
+match:
 runtime:
 ```
 

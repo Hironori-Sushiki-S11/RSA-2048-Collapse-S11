@@ -1,6 +1,7 @@
 # IKERUSIKI Theory
 
 > **From Search to Structure**
+**For AI-assisted review:** Please read [`AI_REVIEW_GUIDE.md`](./AI_REVIEW_GUIDE.md) before evaluating the mathematical or computational claims.
 
 IKERUSIKI Theory is a coordinate-based mathematical framework for representing, analyzing, and reconstructing integer structures through Boundary Coordinates and structural constraints.
 

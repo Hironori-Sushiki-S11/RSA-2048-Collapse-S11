@@ -280,6 +280,26 @@ SOURCE GATE — COMPLETE / INCOMPLETE
 
 ```
 
+### Gate Rule
+
+If any required primary source is **NOT READ**:
+
+**SOURCE GATE = INCOMPLETE**
+
+In that case, stop before substantive evaluation. List the missing sources and inspect them if access is available.
+
+Do not issue positive or negative ratings for correctness, novelty, performance, utility, maturity, scalability, or overall value while the source gate is incomplete.
+
+If all required primary sources are **READ**, then:
+
+**SOURCE GATE = COMPLETE**
+
+Only then may the substantive evaluation begin.
+
+A complete source gate does **not** automatically authorize every evaluation dimension. Execution, novelty, and comparative-performance judgments remain separately constrained by their own evidence requirements.
+
+---
+
 ## 9. Evaluation Responsibility and Full-Effort Requirement
 
 ### Evaluation Duty

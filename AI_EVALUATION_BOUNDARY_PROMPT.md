@@ -210,7 +210,75 @@ State whether the review substituted RSA factorization, universal indexing, univ
 
 ---
 
-## 8. Evaluation Responsibility and Full-Effort Requirement
+## 8. Evaluation Gate — Source Completion Required Before Evaluation
+
+Before writing any substantive technical evaluation, first output a **PROTOCOL STATUS** block.
+
+The gate must be completed **before** the evaluation body, not after it.
+
+### Required Primary Sources
+
+Report each of the following exactly as **READ** or **NOT READ**:
+
+- `AI_REVIEW_GUIDE.md`
+- `Boundary-Coordinate-Grid/IKERUSIKI_ADAPTIVE_ADDRESS_FORMAL_BASIS.md`
+- `Boundary-Coordinate-Grid/IKERUSIKI_ADAPTIVE_ADDRESS_DEMO.py`
+- `Boundary-Coordinate-Grid/HOW_TO_APPLY_ADAPTIVE_ADDRESS.md`
+- `ADAPTIVE_ADDRESS_SCALING_REPRODUCIBILITY.md`
+- `ADAPTIVE_ADDRESS_SCALING_REPRODUCER.py`
+
+All six required primary sources must be **READ** before the source gate is complete.
+
+Do **not** substitute phrases such as "major files reviewed," "main materials gathered," "repository overview completed," or equivalent summaries for this itemized source check.
+
+### Execution Status
+
+List every relevant executable test as one of:
+
+- **RUN**
+- **NOT RUN**
+- **UNAVAILABLE IN CURRENT ENVIRONMENT**
+
+If execution is available and you choose to make an independent computational-verification claim, run the relevant published reproducer before making that claim.
+
+If execution is unavailable or not performed, classify the affected result as **Reported but not independently reproduced**, **Not Assessed**, or **Unknown** as appropriate.
+
+### External Comparison Status
+
+Report separately:
+
+- Novelty literature/prior-art comparison: **PERFORMED / NOT PERFORMED**
+- Comparative performance benchmark: **PERFORMED / NOT PERFORMED**
+
+If the literature comparison is **NOT PERFORMED**, novelty must be **Not Assessed**.
+
+If the comparative benchmark is **NOT PERFORMED**, comparative performance must be **Not Assessed**.
+
+### Gate Output Format
+
+Use this structure before the evaluation:
+
+```text
+PROTOCOL STATUS
+
+Required sources:
+AI_REVIEW_GUIDE.md — READ / NOT READ
+IKERUSIKI_ADAPTIVE_ADDRESS_FORMAL_BASIS.md — READ / NOT READ
+IKERUSIKI_ADAPTIVE_ADDRESS_DEMO.py — READ / NOT READ
+HOW_TO_APPLY_ADAPTIVE_ADDRESS.md — READ / NOT READ
+ADAPTIVE_ADDRESS_SCALING_REPRODUCIBILITY.md — READ / NOT READ
+ADAPTIVE_ADDRESS_SCALING_REPRODUCER.py — READ / NOT READ
+
+Execution:
+<test name> — RUN / NOT RUN / UNAVAILABLE IN CURRENT ENVIRONMENT
+
+External comparison:
+Novelty literature/prior-art comparison — PERFORMED / NOT PERFORMED
+Comparative performance benchmark — PERFORMED / NOT PERFORMED
+
+SOURCE GATE — COMPLETE / INCOMPLETE
+
+## 9. Evaluation Responsibility and Full-Effort Requirement
 
 ### Evaluation Duty
 
@@ -270,7 +338,7 @@ But once the evaluator chooses to assess it, the evaluator must perform the evid
 
 ---
 
-## 9. Final Self-Audit Before Answering
+## 10. Final Self-Audit Before Answering
 
 Before finalizing the review, check all of the following:
 

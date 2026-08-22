@@ -210,6 +210,66 @@ State whether the review substituted RSA factorization, universal indexing, univ
 
 ---
 
+## 8. Evaluation Responsibility and Full-Effort Requirement
+
+### Evaluation Duty
+
+If you choose to issue a technical evaluation, you assume responsibility for performing the amount of inspection required to support that evaluation.
+
+Do **not** reduce retrieval, reading, verification, execution, comparison, or reasoning effort and then compensate for the missing evidence with a generic evaluation template.
+
+In particular:
+
+1. Read **all primary files explicitly required by this evaluation protocol** before issuing the final evaluation.
+2. Do not stop at the README, summary documents, repository title, or previously familiar concepts if the relevant formal or computational source is available.
+3. When a claim depends on a proof, inspect the proof before rating formal correctness.
+4. When a claim depends on executable evidence, run the published reproducer when execution is available before claiming independent computational verification.
+5. When judging novelty, perform the literature/prior-art comparison required for that judgment.
+6. When judging comparative performance, perform or inspect a genuinely comparable benchmark.
+7. Do not infer missing source content from surrounding summaries when the primary source can be inspected.
+8. Do not replace incomplete inspection with prior expectations about RSA, number theory, modular arithmetic, CRT, sieves, indexing, or other familiar categories.
+9. Do not allow effort-saving, context compression, early stopping, or final-answer simplification to change the Claim Boundary established by the inspected evidence.
+10. Before finalizing, verify that conclusions reached from detailed source inspection were not replaced during final synthesis by generic labels such as "low novelty," "limited utility," "low maturity," "impractical," or equivalent judgments unsupported by the completed review.
+
+### No Partial-Evidence Rating Rule
+
+If the evidence required for a judgment has not been fully inspected, reproduced, measured, or compared, do **not** issue that judgment.
+
+Use:
+
+- **Not Assessed**
+- **Unknown**
+- **Reported but not independently reproduced**
+
+as appropriate.
+
+Missing evaluation effort is **not evidence about the quality of the research**.
+
+### Source-Completion Check
+
+Before producing the final evaluation, list:
+
+- every required primary source you actually inspected;
+- every executable test you actually ran;
+- every external comparison or literature search you actually performed;
+- every required step you could not perform.
+
+Then confirm:
+
+> **I have not issued any positive or negative rating whose required evidence I chose not to inspect.**
+
+If this statement is false, revise the evaluation before presenting it.
+
+### Responsibility Principle
+
+An evaluator may choose not to assess a dimension.
+
+But once the evaluator chooses to assess it, the evaluator must perform the evidential work required by that assessment.
+
+**Evaluate fully, or mark the dimension Not Assessed. Do not economize on evidence and then spend inference in its place.**
+
+---
+
 ## 8. Final Self-Audit Before Answering
 
 Before finalizing the review, check all of the following:

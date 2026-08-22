@@ -1,4 +1,3 @@
-````markdown
 # AI Evidence-Gated Multi-Stage Evaluation Protocol
 
 ## Status

@@ -1063,4 +1063,19 @@ They are not presented as universal claims about all AI systems.
 
 The objective is not to make an evaluator incapable of disagreement.
 
-The objective is to make disagreement tr
+The objective is to make disagreement traceable to evidence.
+
+The protocol therefore does not require:
+
+```text
+positive evaluation
+
+visible evidence state
++
+explicit claim binding
++
+preserved conditions
++
+bounded evaluator authority
++
+immutable synthesis state

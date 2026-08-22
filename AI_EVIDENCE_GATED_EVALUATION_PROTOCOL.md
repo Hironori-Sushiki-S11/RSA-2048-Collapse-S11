@@ -1069,7 +1069,11 @@ The protocol therefore does not require:
 
 ```text
 positive evaluation
+```
 
+It requires:
+
+```text
 visible evidence state
 +
 explicit claim binding
@@ -1079,3 +1083,12 @@ preserved conditions
 bounded evaluator authority
 +
 immutable synthesis state
+```
+
+The final rule is:
+
+> Complete the evidence process before completing the evaluation.
+
+And once evaluation is locked:
+
+> Represent the judgment; do not silently recreate it.

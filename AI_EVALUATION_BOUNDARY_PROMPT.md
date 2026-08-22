@@ -278,6 +278,8 @@ Comparative performance benchmark — PERFORMED / NOT PERFORMED
 
 SOURCE GATE — COMPLETE / INCOMPLETE
 
+```
+
 ## 9. Evaluation Responsibility and Full-Effort Requirement
 
 ### Evaluation Duty

@@ -45,6 +45,71 @@ Before making a performance or scalability judgment:
 
 Unexecuted performance assumptions are assumptions, not experimental results.
 
+## Evidence Rules for Comparative Judgments
+
+Apply the following rules before assigning positive or negative comparative labels.
+
+### 1. Not demonstrated does not mean demonstrated false
+
+If a property has not been proved or experimentally established, report it as unproved, unverified, or not assessed.
+
+Do not convert absence of evidence into evidence of failure.
+
+A limitation of the current claim boundary is not, by itself, a refutation of the claim that is actually made.
+
+### 2. No benchmark does not mean low performance
+
+If no comparable benchmark exists, relative performance is not established.
+
+Do not infer "slow", "inefficient", "low scalability", or the opposite from the absence of a benchmark.
+
+A valid comparative performance judgment should identify:
+
+- the comparator;
+- the same or meaningfully comparable task;
+- corpus size and input distribution;
+- bit size or relevant problem scale;
+- implementation conditions;
+- measured quantities.
+
+If these are unavailable, state that relative performance is not assessed.
+
+### 3. Resemblance does not establish lack of novelty
+
+Similarity to CRT, modular arithmetic, sieves, partition refinement, indexing, or another known technique is relevant context, but similarity alone does not establish that the complete Adaptive Address mechanism is already known.
+
+Before concluding that the work lacks novelty or is merely a rediscovery, identify the closest prior work and compare the actual mechanisms, including where relevant:
+
+- maintained state;
+- Collision definition;
+- residual information;
+- candidate quotient or equivalent refinement condition;
+- Select rule;
+- Blind Spot condition;
+- EXPAND rule;
+- stopping condition;
+- proved scope.
+
+If no literature or prior-art comparison has been performed, state that novelty has not been established rather than assigning a definitive novelty score.
+
+### 4. Value ratings require an explicit rubric
+
+Labels such as "high", "low", "scientifically valuable", "not useful", "practical", or "not publication-level" are evaluative conclusions, not direct observations.
+
+When using such labels, state the criteria and evidence used.
+
+Separate at least the following dimensions when relevant:
+
+- mathematical correctness;
+- novelty;
+- reproducibility;
+- computational performance;
+- practical utility;
+- maturity of evidence;
+- scope of the demonstrated claim.
+
+Do not collapse these dimensions into one score without explaining the rubric.
+
 ## Access and Reproducibility
 
 If a referenced file, script, or result cannot be accessed:
@@ -76,9 +141,26 @@ When criticizing a claim, identify:
 - the exact claim;
 - the file and section where it occurs;
 - whether the objection concerns proof, implementation, experiment, interpretation, or application;
-- whether the objection is based on direct inspection, execution, comparison, or inference.
+- whether the objection is based on direct inspection, execution, comparison, literature review, or inference.
 
 Do not present an inference as if it were an observed result.
+
+If the criticism depends on an external comparison, identify the comparator or source rather than relying on a generic analogy.
+
+## Review Output Discipline
+
+A technically useful review should make it possible to tell which conclusions came from which evidence.
+
+Where applicable, classify important statements as:
+
+- Proved in the repository;
+- Computationally cross-checked;
+- Empirically reproduced;
+- Reported but not independently reproduced;
+- Inferred;
+- Not assessed.
+
+For novelty, performance, scalability, or scientific-value judgments, state whether an external literature search, benchmark, or independent execution was actually performed.
 
 ## Claim Boundary
 
@@ -89,4 +171,4 @@ It asks reviewers, human or AI, to evaluate the claims actually made against the
 A valid review may be positive, negative, or mixed.
 
 The requirement is methodological accuracy:
-read first, distinguish claim types, execute when relevant, identify what was measured, and criticize the actual claim rather than a substituted one.
+read first, distinguish claim types, execute when relevant, identify what was measured, identify the basis of comparisons, and criticize the actual claim rather than a substituted one.

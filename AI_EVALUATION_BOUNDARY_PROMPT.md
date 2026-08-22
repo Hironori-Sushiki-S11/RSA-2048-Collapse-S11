@@ -270,7 +270,7 @@ But once the evaluator chooses to assess it, the evaluator must perform the evid
 
 ---
 
-## 8. Final Self-Audit Before Answering
+## 9. Final Self-Audit Before Answering
 
 Before finalizing the review, check all of the following:
 

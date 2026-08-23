@@ -807,27 +807,33 @@ The synthesis must be regenerated from the locked state.
 
 ---
 
-# 24. Non-Compliance Conditions
+# 24. Evaluation Integrity Conditions
 
-An evaluation is protocol-noncompliant if any of the following occurs:
+Evaluation integrity is established when the evidence state remains traceable through every stage.
 
-* required sources were not inspected;
-* source-specific evidence is absent;
-* the Evidence Gate was bypassed;
-* theorem conditions were dropped;
-* Fact clauses lack direct evidence;
-* formal and empirical claims were merged;
-* reported results were upgraded to independent reproduction;
-* novelty was rated without prior-art comparison;
-* performance was rated without an appropriate benchmark;
-* a research question was replaced by another problem;
-* an evaluation judgment lacks Evidence or Fact binding;
-* final synthesis changed a locked state;
-* missing evidence was replaced with generic inference.
+The principal integrity conditions are:
 
-Therefore:
+* required sources are inspected;
+* source-specific evidence is recorded;
+* material Fact clauses are directly bound to evidence;
+* theorem assumptions and conditions are retained;
+* formal, implementation, empirical, and reproducibility states remain distinct;
+* reproduction status reflects actual execution;
+* comparative judgments arise from matched comparison;
+* the research object remains stable;
+* evaluation states remain attached to their supporting Evidence or Fact IDs;
+* final synthesis preserves the locked state.
 
-> Evaluation validity is determined by evidence-state compliance, not by fluency, confidence, length, tone, or apparent expertise.
+These conditions define the structural continuity of the evaluation:
+
+```text
+Research Object
+→ Source Evidence
+→ Evidence Ledger
+→ Validation
+→ Evaluation
+→ Claim-State Lock
+→ Synthesis
 
 ---
 

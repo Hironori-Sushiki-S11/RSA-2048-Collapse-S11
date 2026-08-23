@@ -4,11 +4,11 @@
 
 Adaptive Address is not limited to integers.
 
-It is a general procedure for working with a current finite problem in which multiple items remain indistinguishable under the information currently available.
+It is a general procedure for working with a Current Held-Information Corpus: the information set currently retained and available to the procedure. In the present formal model, each instantiated corpus is finite, while future EXPAND is not assigned a fixed global domain in advance.
 
 You do not need to adapt your problem to IKERUSIKI.
 
-Define your current finite problem, what counts as a Collision, and the candidate observables available to you.
+Define your Current Held-Information Corpus
 
 Adaptive Address evaluates which observable best reduces the current unresolved Collisions.
 
@@ -19,9 +19,9 @@ If none does, EXPAND the candidate set.
 ## Core Procedure
 
 ```text
-Your finite problem
-        ↓
-Current Finite
+Your current problem
+↓
+Current Held-Information State
         ↓
 Collision
         ↓
@@ -51,13 +51,7 @@ To apply Adaptive Address outside the original integer setting, identify the cor
 
 | Adaptive Address concept | In your problem |
 |---|---|
-| Current Finite | The finite set of items currently under consideration |
-| Address | The information currently used to distinguish those items |
-| Collision | Two or more items that remain indistinguishable |
-| Candidate Observable | A measurable or available structural difference not yet used |
-| Select | Choose the candidate that best reduces unresolved Collisions |
-| Address Update | Add only the selected information |
-| EXPAND | Introduce new candidate observables when the current set cannot resolve the Collision |
+Current Held-Information State | The information set currently retained and under consideration
 
 The specific observables depend on the problem.
 

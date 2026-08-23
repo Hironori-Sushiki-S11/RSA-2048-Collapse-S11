@@ -127,118 +127,210 @@ The governing rule is:
 
 ---
 
-## 4. Criticism Is Allowed and Required When Supported
+## 4. Evaluation and Error Localization
 
-This prompt does not prohibit negative conclusions.
+Evaluation begins after the research object and evidence state have been established.
 
-If you find a mathematical error, logical gap, reproducibility failure, unsupported generalization, Claim Boundary violation, or substantive prior-art overlap, state it clearly.
+A positive, negative, mixed, or unresolved conclusion is acceptable when it follows from the inspected evidence.
 
-For each criticism, identify:
+When identifying an issue, localize it to the layer where it occurs.
 
-- the **exact claim** being criticized;
-- the relevant **file and section**;
-- whether the objection concerns **proof, implementation, experiment, interpretation, or application**;
-- the **mathematical, computational, empirical, or literature basis**;
-- what is **observed** and what is **inferred**;
-- whether the criticism lies **inside the stated Claim Boundary**.
+For each substantive criticism or disagreement, record:
 
-Do not use unsupported summary labels such as:
+- the exact claim or statement;
+- the relevant source and section;
+- the Evidence ID or Fact ID where available;
+- the type of issue:
+  - formal proof;
+  - implementation correspondence;
+  - computational result;
+  - empirical interpretation;
+  - reproducibility;
+  - comparative evaluation;
+- what was directly observed;
+- what was inferred;
+- the consequence supported by that issue.
 
-- "low utility";
-- "limited value";
-- "not practical";
-- "low novelty";
-- "not scalable";
-- "not useful because it does not factor RSA".
+Preserve the direction of consequence.
 
-If the required evidence has not been gathered, use **Not Assessed**.
+For example:
+
+**formal issue  
+→ formal consequence**
+
+**implementation mismatch  
+→ implementation consequence**
+
+**reproduction mismatch  
+→ reproduction consequence**
+
+**prior-art correspondence  
+→ novelty consequence**
+
+Do not automatically propagate a local issue into unrelated evaluation dimensions.
+
+The purpose is not to soften criticism.
+
+The purpose is to make criticism structurally traceable.
 
 ---
 
-## 5. Novelty Review Rule
+## 5. Comparative Evaluation
 
-Do not infer lack of novelty from resemblance alone.
+Comparative judgment requires a comparison structure.
 
-A novelty judgment should identify, where possible:
+### Prior-Art Relation
 
-- the closest prior work;
-- the corresponding mathematical mechanism;
+When evaluating relation to prior work, compare mechanisms rather than terminology.
+
+Where relevant, compare:
+
 - maintained state;
+- representation;
 - Collision definition;
-- residual information;
+- residual distinguishing information;
+- candidate generation;
 - candidate quotient or equivalent refinement condition;
 - Select rule;
-- Blind Spot condition;
-- EXPAND rule;
+- Address or partition update;
+- Blind Spot;
+- EXPAND;
 - stopping condition;
-- proved scope;
-- what is mathematically identical and what is different.
+- convergence result;
+- proved scope.
 
-If no meaningful literature/prior-art comparison has been performed, report:
+Record separately:
+
+- mathematically identical structure;
+- similar structure;
+- differently organized structure;
+- unresolved correspondence.
+
+If an adequate prior-art comparison has not been performed:
 
 **Novelty: Not Assessed**
 
----
+### Computational Comparison
 
-## 6. Performance Review Rule
+For comparative performance, establish first that the tasks are the same or meaningfully comparable.
 
-Do not label the method as fast, slow, scalable, unscalable, efficient, inefficient, practical, or impractical without a relevant measurement or comparison.
+Record:
 
-A comparative performance judgment should identify:
-
-- hardware;
-- software environment;
-- implementation;
+- task definition;
 - corpus size;
 - input distribution;
-- bit length or relevant scale;
-- candidate axes;
-- measured runtime and/or memory;
-- comparison baseline;
-- whether the task being compared is actually the same task.
+- relevant scale or bit size;
+- candidate family;
+- implementation;
+- hardware and software environment;
+- runtime;
+- memory;
+- comparison baseline.
 
-If no comparable benchmark was executed, report:
+Preserve the distinction between:
+
+**structural depth  
+→ arithmetic work  
+→ measured execution time**
+
+If an adequate matched benchmark has not been performed:
 
 **Comparative Performance: Not Assessed**
+
+The purpose of comparison is to locate the observed result accurately, not to assign significance in advance.
+
+---
+
+## 6. Evidence-State Classification
+
+Classify important statements according to their actual evidential state.
+
+Use, where applicable:
+
+- **Proved**
+- **Implemented**
+- **Computationally Cross-Checked**
+- **Empirically Observed**
+- **Independently Reproduced**
+- **Reported but not independently reproduced**
+- **Inferred**
+- **Not Established**
+- **Not Assessed**
+- **Unknown**
+
+These states describe different relationships between claim and evidence.
+
+They should not be silently converted into one another during evaluation or final synthesis.
+
+In particular:
+
+**proved structure ≠ empirical observation**
+
+**empirical observation ≠ universal guarantee**
+
+**reported result ≠ independently reproduced result**
+
+**open question ≠ negative result**
 
 ---
 
 ## 7. Required Evaluation Output
 
-Keep the following dimensions separate.
+Keep the main evaluation dimensions visible and separate.
 
-### A. Actual Claim
-What the research actually claims.
+### A. Research Object
 
-### B. Claim Scope
-The finite corpus, model assumptions, candidate family, experimental conditions, and other explicit boundaries.
+What mathematical or computational object is actually being evaluated.
 
-### C. Formal Results
-What is mathematically proved.
+### B. Current State and Scope
 
-### D. Computational Results
-What is implemented or computationally verified.
+The finite corpus, model assumptions, candidate family, and relevant conditions.
+
+### C. Formal Structure
+
+Definitions, theorems, conditions, and proved consequences.
+
+### D. Implementation Correspondence
+
+How the published implementation corresponds to the formal procedure.
 
 ### E. Empirical Observations
-What has been observed in finite experiments but not universalized.
+
+What was observed under the published protocol.
 
 ### F. Reproducibility
-What you personally reproduced, what is only reported, and what remains unverified.
 
-### G. Limitations
-Only limitations internal to the actual Claim Boundary.
+What was executed, reproduced, reported, or remains unresolved.
 
-### H. Novelty
-Assess only with adequate prior-art comparison; otherwise use **Not Assessed**.
+### G. Comparative Evaluation
 
-### I. Performance
-Assess only with adequate benchmark evidence; otherwise use **Not Assessed**.
+Prior-art relation and comparative performance, where the required comparison has actually been performed.
 
-### J. Unsupported Substitutions Check
-State whether the review substituted RSA factorization, universal indexing, universal asymptotic claims, or another external problem for the actual Adaptive Address claim.
+### H. Open Technical Questions
 
----
+Questions not yet resolved by the inspected evidence.
 
+### I. Final Synthesis
+
+A synthesis of the established states above without recreating them from general impressions.
+
+The evaluation sequence is:
+
+**Object  
+→ Evidence State  
+→ Formal Structure  
+→ Implementation  
+→ Observation  
+→ Reproducibility  
+→ Comparison  
+→ Open Questions  
+→ Synthesis**
+
+The governing principle is:
+
+> Let the evidence determine where the boundary is reached.  
+> Do not place the boundary in advance.
+> 
 ## 8. Unified Evidence Gate — Protocol Execution Required Before Evaluation
 
 This section is subordinate to the

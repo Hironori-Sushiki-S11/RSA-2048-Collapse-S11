@@ -835,7 +835,7 @@ Research Object
 → Claim-State Lock
 → Synthesis
 
----
+```
 
 # 25. Evaluation Responsibility Principle
 

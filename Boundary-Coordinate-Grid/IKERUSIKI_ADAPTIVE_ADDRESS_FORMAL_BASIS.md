@@ -14,6 +14,8 @@ $$
 S=\{x_1,\dots,x_m\}.
 $$
 
+Within the broader Adaptive Address procedure, this instantiated finite set S is the Current Held-Information Corpus: the information set presently retained and available for identification at this stage. The finiteness of S is a property of the current instantiated state; it does not assign a fixed global domain to future EXPAND.
+
 This document proves properties of adaptive identification inside the current finite corpus. It separates:
 
 - **theorems** about the current `(distance, direction)` component;

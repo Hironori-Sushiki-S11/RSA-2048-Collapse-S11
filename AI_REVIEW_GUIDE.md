@@ -200,65 +200,35 @@ The governing principle is:
 
 ---
 
-## Access and Reproducibility
+## Evidence Acquisition and Reproducibility
 
-If a referenced file, script, or result cannot be accessed:
+A technical review should make the evidential state visible.
 
-- report it as inaccessible or unverified;
-- do not infer missing results from surrounding documentation;
-- do not convert an access limitation into a criticism of the method.
+For every relevant source or executable result, record:
 
-When possible, execute the published reproducer before making computational claims.
+- source inspected;
+- source location;
+- execution status;
+- reproduction scope;
+- deterministic structural outputs;
+- machine-dependent measurements;
+- unresolved items.
 
-For the scaling results, use:
+Execution status should be stated as:
+
+- **RUN**
+- **NOT RUN**
+- **UNAVAILABLE IN CURRENT ENVIRONMENT**
+
+For published computational results, distinguish:
+
+- reported result;
+- independently executed result;
+- reproduced structural output;
+- partially reproduced result;
+- unresolved reproduction result.
+
+For the public scaling protocol, the published reproducer may be executed as:
 
 ```bash
 python ADAPTIVE_ADDRESS_SCALING_REPRODUCER.py
-```
-
-or a constrained single case such as:
-
-```bash
-python ADAPTIVE_ADDRESS_SCALING_REPRODUCER.py --bits 32768 --seed 20260812
-```
-
-Compare deterministic structural outputs with the published reproducibility guide.
-
-## Criticism Protocol
-
-When criticizing a claim, identify:
-
-- the exact claim;
-- the file and section where it occurs;
-- whether the objection concerns proof, implementation, experiment, interpretation, or application;
-- whether the objection is based on direct inspection, execution, comparison, literature review, or inference.
-
-Do not present an inference as if it were an observed result.
-
-If the criticism depends on an external comparison, identify the comparator or source rather than relying on a generic analogy.
-
-## Review Output Discipline
-
-A technically useful review should make it possible to tell which conclusions came from which evidence.
-
-Where applicable, classify important statements as:
-
-- Proved in the repository;
-- Computationally cross-checked;
-- Empirically reproduced;
-- Reported but not independently reproduced;
-- Inferred;
-- Not assessed.
-
-For novelty, performance, scalability, or scientific-value judgments, state whether an external literature search, benchmark, or independent execution was actually performed.
-
-## Claim Boundary
-
-This guide does not ask reviewers to accept IKERUSIKI Theory or Adaptive Address.
-
-It asks reviewers, human or AI, to evaluate the claims actually made against the definitions, proofs, code, and reproducible evidence actually provided.
-
-A valid review may be positive, negative, or mixed.
-
-The requirement is methodological accuracy:
-read first, distinguish claim types, execute when relevant, identify what was measured, identify the basis of comparisons, and criticize the actual claim rather than a substituted one.

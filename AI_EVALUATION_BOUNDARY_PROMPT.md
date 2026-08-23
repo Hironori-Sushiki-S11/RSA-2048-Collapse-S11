@@ -49,52 +49,81 @@ The formal theorems concern **finite corpora under the stated Boundary Coordinat
 
 ---
 
-## 2. Evaluation Axes That Must Not Be Substituted for the Actual Claim
+## 2. Primary Evaluation Coordinates
 
-Do **not** lower the evaluation of Adaptive Address merely because it does not establish any of the following, unless a specific document explicitly makes that claim:
+Evaluate Adaptive Address from the structure it actually presents.
 
-1. RSA factorization.
-2. Direct recovery of unknown prime factors `p` and `q`.
-3. A fixed finite Address that uniquely identifies every integer.
-4. Prior complete indexing of the infinite integer space.
-5. Universal Address depth 2 or depth 3.
-6. Universal sufficiency of axes `2..512`.
-7. Universal compression of arbitrary large integers into a fixed 743-bit representation.
-8. Bit-length-independent CPU runtime.
-9. Performance superiority over RSA factoring algorithms.
-10. Performance superiority over conventional prime-search algorithms.
-11. Cryptographic break capability or security impact.
-12. Immediate product readiness.
-13. Demonstrated industrial utility.
-14. Lack of novelty merely because individual components resemble CRT, modular arithmetic, sieves, partition refinement, indexing, or other known tools.
-15. Easy classification inside an existing research category.
-16. Peer-review status as a substitute for mathematical correctness.
-17. Citation count, GitHub stars, social-media reaction, or other popularity measures.
-18. The author's affiliation, credentials, degree, institutional status, or professional title.
-19. Whether an AI system finds the work easy to understand.
-20. A single reproduction failure without isolating environment, implementation, input, and failure cause.
-21. The number of Verification files as a proxy for correctness or maturity.
-22. A single global score that collapses independent dimensions such as correctness, novelty, reproducibility, performance, utility, and evidence maturity.
+The primary technical coordinates are:
 
-A capability that is **not claimed** must not be treated as a failed claim.
+1. **Current Finite State**  
+   What finite corpus or current problem state is being distinguished.
+
+2. **Collision Structure**  
+   How unresolved equivalence classes or Collision pairs are defined and detected.
+
+3. **Structural Saved Information**  
+   What distinguishing information remains inside the unresolved Collision state.
+
+4. **Residual Difference**  
+   How the current LCM state and normalized residual difference encode what remains unresolved.
+
+5. **Candidate Quotient**  
+   How a candidate axis contributes genuinely new distinguishing information relative to the current state.
+
+6. **Pick Up and Candidate Generation**  
+   How candidate observables or axes are obtained from the current unresolved structure.
+
+7. **Select**  
+   How the next distinguishing axis is chosen.
+
+8. **Address Update**  
+   How the selected information refines the current partition or Address.
+
+9. **Blind Spot and EXPAND**  
+   How the procedure detects insufficiency in the current candidate family and expands only when required.
+
+10. **Finite Convergence Conditions**  
+    Under what stated assumptions complete separation is formally guaranteed.
+
+11. **Implementation Correspondence**  
+    Whether the published code implements the stated formal procedure.
+
+12. **Empirical Scaling**  
+    What has actually been observed under the published finite-corpus protocol.
+
+13. **Reproducibility**  
+    Which structural outputs are deterministic, which results were independently executed, and which remain reported observations.
+
+The evaluation should preserve the distinction between:
+
+**proved structure -> implemented structure -> observed structure -> open questions**
+
+Do not enlarge or shrink the meaning of a result before evaluating the result itself.
 
 ---
 
-## 3. Prohibited Research-Question Substitutions
+## 3. Evidence-First Interpretation
 
-Do not silently perform these substitutions:
+Start from what the inspected evidence establishes.
 
-**Adaptive Address -> RSA factorization problem**
+For each substantive statement, identify:
 
-**finite adaptive identification -> universal integer indexing**
+- the mathematical or computational object being discussed;
+- the relevant Evidence ID or source;
+- the assumptions under which the statement holds;
+- whether the statement is proved, implemented, empirically observed, inferred, or not assessed.
 
-**finite empirical scaling -> universal asymptotic guarantee**
+A limitation should be stated where the evidence actually reaches its boundary.
 
-**state-relative compression -> universal fixed-size compression**
+It should not be introduced pre-emptively in order to control the perceived significance of a result.
 
-**structural reproducer -> cryptographic attack benchmark**
+Likewise, an implication should not be added merely because it appears plausible.
 
-If one of these substitutions appears in the review, explicitly identify it and remove it before finalizing the evaluation unless the source document itself makes that claim.
+The governing rule is:
+
+> State what is established as established.  
+> State what remains open as open.  
+> Do not pre-emptively enlarge or diminish either.
 
 ---
 

@@ -4,11 +4,13 @@ This guide defines an evidence-first technical review path for IKERUSIKI Adaptiv
 
 Begin from the research object, its formal structure, its implementation, and its observed evidence.
 
+Current Held-Information Corpus means the information set currently retained and available to the Adaptive Address procedure. In the present formal model, each instantiated corpus is finite; this does not impose a fixed global domain on future EXPAND.
+
 ## Review Orientation
 
 The principal technical coordinates are:
 
-- Current Finite State
+- Current Held-Information State
 - Collision Structure
 - Structural Saved Information
 - Residual Difference
@@ -26,7 +28,7 @@ The principal technical coordinates are:
 
 The central procedure is:
 
-**Current Finite
+**Current Held-Information State
 → Collision
 → Structural Saved Information
 → Blind Spot

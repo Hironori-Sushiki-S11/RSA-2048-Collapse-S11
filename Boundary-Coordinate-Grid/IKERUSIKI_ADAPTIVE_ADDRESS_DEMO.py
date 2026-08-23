@@ -4,7 +4,7 @@
 # Make Verification061's internal adaptive selection visible to third parties.
 #
 # Demonstrates:
-#   Current finite corpus
+#   Current Held-Information Corpus
 #   -> collision detection
 #   -> all candidate axes evaluated
 #   -> best axis selected
@@ -18,7 +18,7 @@
 #   3. break remaining ties by smaller axis
 #
 # Scope:
-# - finite-corpus empirical demonstration only
+# - current held-information corpus empirical demonstration; each instantiated corpus is finite
 # - does not prove universal identification over an unbounded range
 
 from __future__ import annotations
@@ -222,7 +222,7 @@ def run_demo(
     print("=" * 72)
     print("IKERUSIKI ADAPTIVE BOUNDARY ADDRESS DEMONSTRATION")
     print("=" * 72)
-    print(f"Finite corpus size : {len(values)}")
+    print(f"Current held-information corpus size : {len(values)}")
     print(f"Candidate axes     : {AXES[0]}..{AXES[-1]}")
     print("Current Address    : []")
     print()
@@ -318,7 +318,7 @@ def run_demo(
             break
 
         if best["after_pairs"] == 0:
-            print("RESULT: UNIQUE WITHIN THE CURRENT FINITE CORPUS")
+            print("RESULT: UNIQUE WITHIN THE CURRENT HELD-INFORMATION CORPUS")
             break
 
     print()
@@ -335,7 +335,7 @@ def run_demo(
         unresolved_pair_count(groups) == 0,
     )
     print(
-        "Scope              : finite-corpus empirical demonstration"
+        "Scope              : current held-information corpus empirical demonstration (instantiated corpus finite)"
     )
 
 
@@ -349,7 +349,7 @@ def main() -> None:
     parser.add_argument(
         "corpus",
         type=Path,
-        help="Path to a finite integer corpus text file.",
+        help="Path to the currently instantiated finite integer corpus text file.",
     )
     parser.add_argument(
         "--max-depth",

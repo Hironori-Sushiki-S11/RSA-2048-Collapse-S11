@@ -686,33 +686,29 @@ full reproduction
 
 ---
 
-# 19. Research-Question Preservation
+# 19. Research Object Preservation
 
-The Evaluator must evaluate the actual claim.
+The Evaluator must preserve the research object established by the validated evidence.
 
-It must not replace the research question with another problem.
+The object being evaluated is defined by:
 
-For example, a finite-corpus adaptive identification claim must not automatically be replaced by questions such as:
+- the stated mathematical or computational problem;
+- the formal model;
+- the current scope;
+- the inspected implementation;
+- the empirical protocol where applicable.
 
-```text
-Can this factor RSA-2048?
-```
+An evaluation must remain attached to that object throughout comparison and synthesis.
 
-unless RSA factorization is itself an explicit evaluated claim.
+If an external problem, benchmark, application, or interpretation becomes relevant, introduce it explicitly as a separate comparison question rather than silently replacing the original object.
 
-Likewise, finite-corpus observations must not be converted into claims of:
+The governing rule is:
 
-```text
-universal integer indexing
-```
+> Establish the object from evidence.  
+> Preserve that object during evaluation.  
+> Introduce additional questions only as additional questions.
 
-unless such a claim is explicitly present.
-
-The rule is:
-
-> Evaluate the stated object, not a substituted benchmark problem.
-
----
+This allows implications and applications to be examined without changing what the original evidence established.
 
 # 20. Stage D — Claim-State Lock
 
@@ -746,42 +742,13 @@ new evidence
 
 # 21. State-Lock Invariant
 
-The Synthesizer must never perform transformations such as:
+The Synthesizer must preserve the locked evaluation state.
+
+It must not perform transformations such as:
 
 ```text
 NOT ESTABLISHED
 → probably false
-```
-
-or:
-
-```text
-NOT ASSESSED
-→ low
-```
-
-or:
-
-```text
-finite empirical observation
-→ universal guarantee
-```
-
-or:
-
-```text
-reported result
-→ independently verified result
-```
-
-or:
-
-```text
-finite-corpus identification
-→ RSA factorization evaluation
-```
-
-The locked state is immutable during synthesis.
 
 ---
 
@@ -826,7 +793,7 @@ Before the final answer is released, verify:
 4. Has any `NOT ASSESSED` been converted into a low rating?
 5. Has any finite claim been converted into a universal claim?
 6. Has any new comparison appeared?
-7. Has RSA or another external benchmark been reintroduced without evidence?
+7. Has any new external benchmark, comparison problem, or application been introduced without validated evidence or explicit separation from the original research object?
 8. Has any reported result been rewritten as independently verified?
 9. Has the final summary introduced a judgment not present in the Claim-State Table?
 

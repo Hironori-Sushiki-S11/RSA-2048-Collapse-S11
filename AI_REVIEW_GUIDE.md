@@ -76,82 +76,129 @@ The governing review principle is:
 
 A review should neither enlarge nor diminish the meaning of a result before evaluating the result itself.
 
-## Performance and Scalability Review
+## Comparative Evaluation Procedures
 
-Before making a performance or scalability judgment:
+Comparative judgments should be built from matched evidence.
 
-- distinguish measured runtime from inferred runtime;
-- if the code has not been executed, state explicitly that performance has not been verified;
-- do not attribute an execution failure to computational cost unless that cause has actually been established;
-- do not describe a method as fast or slow relative to another method unless a comparable protocol and measurement are available;
-- when a runtime is measured, report the exact protocol, corpus size, bit size, seed, implementation, and environment when known.
+The purpose of comparison is to determine what the observed structure means under clearly stated conditions.
 
-Unexecuted performance assumptions are assumptions, not experimental results.
+### 1. Performance and Scaling
 
-## Evidence Rules for Comparative Judgments
+When evaluating computational behavior, record the state being measured:
 
-Apply the following rules before assigning positive or negative comparative labels.
+- task definition;
+- corpus size;
+- input distribution;
+- bit size or relevant scale;
+- candidate-axis family;
+- selected Address depth;
+- implementation;
+- hardware and software environment;
+- runtime;
+- memory;
+- deterministic structural outputs.
 
-### 1. Not demonstrated does not mean demonstrated false
+Separate:
 
-If a property has not been proved or experimentally established, report it as unproved, unverified, or not assessed.
+**structural depth**
+from
+**arithmetic runtime**
+from
+**machine-dependent execution time**.
 
-Do not convert absence of evidence into evidence of failure.
+A shallow Address depth is a structural observation.
 
-A limitation of the current claim boundary is not, by itself, a refutation of the claim that is actually made.
+A measured runtime is an implementation observation.
 
-### 2. No benchmark does not mean low performance
+Neither should silently substitute for the other.
 
-If no comparable benchmark exists, relative performance is not established.
+When comparing two methods, first establish that they are solving the same or meaningfully comparable task under compatible conditions.
 
-Do not infer "slow", "inefficient", "low scalability", or the opposite from the absence of a benchmark.
+If such a matched comparison has not been performed, record:
 
-A valid comparative performance judgment should identify:
+**Comparative Performance: Not Assessed**
 
-- the comparator;
-- the same or meaningfully comparable task;
-- corpus size and input distribution;
-- bit size or relevant problem scale;
-- implementation conditions;
-- measured quantities.
+---
 
-If these are unavailable, state that relative performance is not assessed.
+### 2. Prior-Art and Novelty Comparison
 
-### 3. Resemblance does not establish lack of novelty
+Novelty evaluation begins by identifying the closest relevant prior mechanisms.
 
-Similarity to CRT, modular arithmetic, sieves, partition refinement, indexing, or another known technique is relevant context, but similarity alone does not establish that the complete Adaptive Address mechanism is already known.
-
-Before concluding that the work lacks novelty or is merely a rediscovery, identify the closest prior work and compare the actual mechanisms, including where relevant:
+Compare the actual structures, including where applicable:
 
 - maintained state;
-- Collision definition;
-- residual information;
-- candidate quotient or equivalent refinement condition;
+- representation;
+- Collision or unresolved-equivalence definition;
+- residual distinguishing information;
+- candidate-generation rule;
+- candidate quotient or equivalent refinement criterion;
 - Select rule;
+- Address or partition update;
 - Blind Spot condition;
 - EXPAND rule;
 - stopping condition;
+- convergence statement;
 - proved scope.
 
-If no literature or prior-art comparison has been performed, state that novelty has not been established rather than assigning a definitive novelty score.
+The comparison should identify separately:
 
-### 4. Value ratings require an explicit rubric
+- mathematically identical components;
+- structurally similar components;
+- differently organized components;
+- mechanisms for which no close correspondence was established.
 
-Labels such as "high", "low", "scientifically valuable", "not useful", "practical", or "not publication-level" are evaluative conclusions, not direct observations.
+If this comparison has not been performed, record:
 
-When using such labels, state the criteria and evidence used.
+**Novelty: Not Assessed**
 
-Separate at least the following dimensions when relevant:
+The purpose is to locate the work accurately in relation to prior structures, not to infer identity or difference from terminology alone.
 
-- mathematical correctness;
-- novelty;
+---
+
+### 3. Evidence Maturity
+
+Evaluate evidence maturity by recording what has actually been completed.
+
+Relevant states include:
+
+- formally proved;
+- implemented;
+- computationally cross-checked;
+- empirically reproduced;
+- independently reproduced;
+- externally compared;
+- not yet assessed.
+
+Evidence maturity is a description of the current evidential state.
+
+It is separate from mathematical correctness, novelty, performance, and possible future significance.
+
+---
+
+### 4. Evaluation Dimensions
+
+Keep independent dimensions independent.
+
+Where relevant, report separately:
+
+- formal correctness;
+- implementation correspondence;
 - reproducibility;
-- computational performance;
-- practical utility;
-- maturity of evidence;
-- scope of the demonstrated claim.
+- empirical scaling;
+- comparative performance;
+- novelty / prior-art relation;
+- scope of demonstrated results;
+- open technical questions.
 
-Do not collapse these dimensions into one score without explaining the rubric.
+A combined conclusion may be written only after these dimensions have been established separately.
+
+The governing principle is:
+
+> Compare like with like.  
+> Preserve the state of the evidence.  
+> Let the comparison reveal the boundary instead of assuming the boundary in advance.
+
+---
 
 ## Access and Reproducibility
 

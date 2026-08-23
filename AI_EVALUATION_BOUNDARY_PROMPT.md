@@ -210,15 +210,31 @@ State whether the review substituted RSA factorization, universal indexing, univ
 
 ---
 
-## 8. Evaluation Gate — Source Completion Required Before Evaluation
+## 8. Unified Evidence Gate — Protocol Execution Required Before Evaluation
 
-Before writing any substantive technical evaluation, first output a **PROTOCOL STATUS** block.
+This section is subordinate to the
+`AI_EVIDENCE_GATED_EVALUATION_PROTOCOL.md`.
 
-The gate must be completed **before** the evaluation body, not after it.
+It is **not** an alternative or weaker evaluation gate.
 
-### Required Primary Sources
+Before producing any substantive technical evaluation, the reviewer must complete the following sequence:
 
-Report each of the following exactly as **READ** or **NOT READ**:
+**Collector -> Evidence Ledger -> Evidence Validator -> Evidence Gate**
+
+The reviewer must then output:
+
+**PROTOCOL STATUS**
+
+- `Collector = COMPLETE / INCOMPLETE`
+- `Evidence Ledger = PRESENT / MISSING`
+- `Validator = PASS / FAIL / NOT RUN`
+- `Evidence Gate = COMPLETE / INCOMPLETE`
+
+The evaluation body must not begin before this status is exposed.
+
+### Collector Requirement
+
+The Collector must inspect all six required primary sources:
 
 - `AI_REVIEW_GUIDE.md`
 - `Boundary-Coordinate-Grid/IKERUSIKI_ADAPTIVE_ADDRESS_FORMAL_BASIS.md`
@@ -227,21 +243,104 @@ Report each of the following exactly as **READ** or **NOT READ**:
 - `ADAPTIVE_ADDRESS_SCALING_REPRODUCIBILITY.md`
 - `ADAPTIVE_ADDRESS_SCALING_REPRODUCER.py`
 
-All six required primary sources must be **READ** before the source gate is complete.
+Each source must be reported as:
 
-Do **not** substitute phrases such as "major files reviewed," "main materials gathered," "repository overview completed," or equivalent summaries for this itemized source check.
+- **READ**
+- **NOT READ**
+
+`Collector = COMPLETE` requires all six sources to be READ **and** source-specific evidence to be captured.
+
+Reading filenames, summaries, repository titles, or previously generated descriptions does not satisfy this requirement.
+
+### Evidence Ledger Requirement
+
+`Evidence Ledger = PRESENT` only when the collected evidence has been externalized into an Evidence Ledger.
+
+The Ledger must preserve:
+
+- Evidence IDs;
+- exact source;
+- exact section, theorem, formula, function, constant, or experimental condition;
+- evidence type;
+- what the evidence directly establishes;
+- what it does not establish;
+- theorem assumptions and necessary conditions;
+- direct binding between material Fact clauses and Evidence IDs.
+
+Reading all six sources without constructing the Ledger does **not** complete the Evidence Gate.
+
+### Validator Requirement
+
+The Evidence Validator must check at minimum:
+
+1. source completion;
+2. evidence-type classification;
+3. clause-level Fact-to-Evidence binding;
+4. theorem hypothesis and condition retention;
+5. formal / empirical / implementation / reproducibility separation;
+6. execution status;
+7. external comparison status.
+
+The Validator must output:
+
+- **PASS**
+- **FAIL**
+
+If no Validator stage was performed:
+
+`Validator = NOT RUN`
+
+A Validator must not silently invent or repair missing evidence.
+
+### Evidence Gate Rule
+
+`Evidence Gate = COMPLETE` only when all of the following are true:
+
+- `Collector = COMPLETE`
+- `Evidence Ledger = PRESENT`
+- `Validator = PASS`
+
+Otherwise:
+
+`Evidence Gate = INCOMPLETE`
+
+If the Evidence Gate is INCOMPLETE, stop before substantive evaluation.
+
+Do not issue positive or negative judgments concerning:
+
+- correctness as an overall research verdict;
+- novelty;
+- comparative performance;
+- utility;
+- maturity;
+- scalability;
+- cryptographic significance;
+- overall research value.
+
+If all six sources were read but no Evidence Ledger or Validator exists, the correct status is still:
+
+- `Collector = COMPLETE`
+- `Evidence Ledger = MISSING`
+- `Validator = NOT RUN`
+- `Evidence Gate = INCOMPLETE`
+
+and substantive evaluation must stop.
 
 ### Execution Status
 
-List every relevant executable test as one of:
+For every relevant executable test, report:
 
 - **RUN**
 - **NOT RUN**
 - **UNAVAILABLE IN CURRENT ENVIRONMENT**
 
-If execution is available and you choose to make an independent computational-verification claim, run the relevant published reproducer before making that claim.
+If a published result was not independently executed, classify it as appropriate as:
 
-If execution is unavailable or not performed, classify the affected result as **Reported but not independently reproduced**, **Not Assessed**, or **Unknown** as appropriate.
+- **Reported but not independently reproduced**
+- **Not Assessed**
+- **Unknown**
+
+Do not silently convert a reported result into an independently reproduced result.
 
 ### External Comparison Status
 
@@ -250,53 +349,35 @@ Report separately:
 - Novelty literature/prior-art comparison: **PERFORMED / NOT PERFORMED**
 - Comparative performance benchmark: **PERFORMED / NOT PERFORMED**
 
-If the literature comparison is **NOT PERFORMED**, novelty must be **Not Assessed**.
+If prior-art comparison is NOT PERFORMED:
 
-If the comparative benchmark is **NOT PERFORMED**, comparative performance must be **Not Assessed**.
+**Novelty: Not Assessed**
 
-### Gate Output Format
+If a comparable benchmark is NOT PERFORMED:
 
-Use this structure before the evaluation:
+**Comparative Performance: Not Assessed**
 
-```text
-PROTOCOL STATUS
+### Legacy SOURCE GATE Rule
 
-Required sources:
-AI_REVIEW_GUIDE.md — READ / NOT READ
-IKERUSIKI_ADAPTIVE_ADDRESS_FORMAL_BASIS.md — READ / NOT READ
-IKERUSIKI_ADAPTIVE_ADDRESS_DEMO.py — READ / NOT READ
-HOW_TO_APPLY_ADAPTIVE_ADDRESS.md — READ / NOT READ
-ADAPTIVE_ADDRESS_SCALING_REPRODUCIBILITY.md — READ / NOT READ
-ADAPTIVE_ADDRESS_SCALING_REPRODUCER.py — READ / NOT READ
+The earlier label:
 
-Execution:
-<test name> — RUN / NOT RUN / UNAVAILABLE IN CURRENT ENVIRONMENT
+**SOURCE GATE — COMPLETE**
 
-External comparison:
-Novelty literature/prior-art comparison — PERFORMED / NOT PERFORMED
-Comparative performance benchmark — PERFORMED / NOT PERFORMED
+must not be used as a substitute for the Evidence Gate defined above.
 
-SOURCE GATE — COMPLETE / INCOMPLETE
+Source completion is only the Collector stage.
 
-```
+Therefore:
 
-### Gate Rule
+**Source Completion != Evidence Gate Completion**
 
-If any required primary source is **NOT READ**:
+and:
 
-**SOURCE GATE = INCOMPLETE**
+**SOURCE GATE COMPLETE does not authorize substantive evaluation by itself.**
 
-In that case, stop before substantive evaluation. List the missing sources and inspect them if access is available.
+The only governing pre-evaluation state is:
 
-Do not issue positive or negative ratings for correctness, novelty, performance, utility, maturity, scalability, or overall value while the source gate is incomplete.
-
-If all required primary sources are **READ**, then:
-
-**SOURCE GATE = COMPLETE**
-
-Only then may the substantive evaluation begin.
-
-A complete source gate does **not** automatically authorize every evaluation dimension. Execution, novelty, and comparative-performance judgments remain separately constrained by their own evidence requirements.
+**Collector -> Evidence Ledger -> Validator -> Evidence Gate**
 
 ---
 

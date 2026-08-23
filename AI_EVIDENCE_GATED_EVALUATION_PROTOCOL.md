@@ -839,229 +839,279 @@ Research Object
 
 # 25. Evaluation Responsibility Principle
 
-An evaluator is permitted to decline assessment of a dimension.
+An evaluator may assess a dimension, leave it unresolved, or mark it Not Assessed.
 
-That is valid.
+Once a dimension is assessed, the judgment should remain proportional to the evidence actually acquired for that dimension.
 
-What is not valid is:
+The governing relation is:
 
 ```text
-reduced evidence acquisition
-→ increased inference
+evaluation scope
+→ required evidence
+→ acquired evidence
+→ validated state
+→ judgment
 ```
+
+When additional evidence is required, the evaluation returns to the evidence stage.
+
+The objective is completeness relative to the judgment being made.
 
 The governing rule is:
 
-> Evaluate fully, or mark the dimension Not Assessed.
-
-A second governing rule is:
-
-> Missing evaluation effort is not evidence about research quality.
+> Match the depth of the judgment to the depth of the evidence.
 
 ---
 
 # 26. Permission Boundaries
 
-The complete permission model is:
+Each stage has a distinct role.
 
 ## Collector
 
-May retrieve.
+The Collector may:
 
-May record.
+- retrieve;
+- inspect;
+- record;
+- classify evidence by source role.
 
-May not evaluate.
-
----
+The Collector produces the Evidence Ledger.
 
 ## Validator
 
-May inspect evidence state.
+The Validator may:
 
-May reject incomplete evidence.
+- inspect the Evidence Ledger;
+- inspect Fact-to-Evidence bindings;
+- verify condition retention;
+- verify evidence-type separation;
+- identify incomplete or inconsistent evidence state.
 
-May not invent or silently repair evidence.
-
----
+The Validator produces a validation state.
 
 ## Evaluator
 
-May judge validated claims.
+The Evaluator may:
 
-May not silently retrieve or add evidence.
+- judge validated propositions;
+- classify claims using the permitted evaluation states;
+- identify supported consequences;
+- identify unresolved questions.
 
----
+The Evaluator works from the validated Fact Packet.
 
 ## Claim-State Lock
 
-May freeze evaluation state.
+The Claim-State Lock preserves:
 
-May not infer.
+- Claim ID;
+- evaluation state;
+- supporting Fact or Evidence IDs;
+- relevant conditions.
 
----
+It forms the stable input to synthesis.
 
 ## Synthesizer
 
-May represent locked results.
+The Synthesizer may:
 
-May not re-evaluate.
+- organize;
+- compress;
+- explain;
+- combine compatible statements;
+- improve readability.
+
+The Synthesizer represents the locked evaluation state.
+
+The complete permission structure is:
+
+```text
+Collector
+→ Validator
+→ Evaluator
+→ Claim-State Lock
+→ Synthesizer
+```
+
+Each stage contributes a different transformation.
 
 ---
 
-# 27. Compact Protocol
+# 27. Controlled State Transition
 
-The protocol can be represented as:
+Evaluation is treated as a sequence of explicit state transitions.
 
-```text
-SOURCE
-↓
-COLLECT
-↓
-BIND
-↓
-VALIDATE
-↓
-EVIDENCE GATE
-↓
-EVALUATE
-↓
-STATE LOCK
-↓
-SYNTHESIZE
-↓
-FIDELITY CHECK
-```
+A later stage receives the state established by the preceding stage.
 
-Or, more compactly:
+The normal path is:
 
 ```text
-Source
-→ Evidence
+Research Object
+→ Evidence Acquisition
+→ Evidence Ledger
 → Validation
-→ Judgment
-→ Locked State
-→ Representation
+→ Fact Packet
+→ Evaluation
+→ Claim-State Lock
+→ Synthesis
 ```
+
+If new information becomes relevant, the process may reopen:
+
+```text
+new question
+→ Collector
+→ updated Evidence Ledger
+→ Validator
+→ Evaluator
+→ updated Claim-State Lock
+```
+
+This makes evaluation adaptive rather than irreversible.
+
+The governing principle is:
+
+> New evidence changes the state through an explicit transition.
 
 ---
 
-# 28. Failure Localization
+# 28. Disagreement Localization
 
-When the process fails, the failure should be localized rather than hidden inside a global judgment.
+A disagreement should be located at the point where the relevant structures diverge.
 
-Examples:
+Possible locations include:
+
+- definition;
+- theorem assumption;
+- proof step;
+- implementation correspondence;
+- experimental condition;
+- reproduction result;
+- comparison structure;
+- interpretation;
+- synthesis.
+
+The disagreement should remain attached to that location until evidence establishes a wider consequence.
+
+This produces the diagnostic sequence:
 
 ```text
-Source missing
-→ Collector failure
-
-Fact clause unsupported
-→ Binding failure
-
-Theorem hypothesis dropped
-→ Condition-retention failure
-
-Wrong evidence category
-→ Classification failure
-
-Unsupported judgment
-→ Evaluator failure
-
-Locked status changed
-→ Synthesis failure
+difference detected
+→ locate the layer
+→ identify the evidence
+→ determine the consequence
+→ update the relevant state
 ```
 
-This allows correction at the actual failed stage.
+A localized disagreement may be mathematically important.
+
+Localization does not weaken criticism.
+
+It makes its basis visible.
 
 ---
 
 # 29. Protocol Scope
 
-This protocol is an evaluation-control architecture.
+This protocol is an evaluation-control architecture for evidence-based technical review.
 
-It does not prove a universal law of AI behavior.
+It coordinates:
 
-It does not establish that every AI system will comply with the protocol.
+- evidence acquisition;
+- evidence exposure;
+- condition preservation;
+- validation;
+- evaluation;
+- comparison;
+- synthesis.
 
-It does not establish intentional resource avoidance, intentional suppression, or any specific hidden internal mechanism.
+Its central object is the continuity between evidence and judgment.
 
-It is designed to address observable failure modes including:
+The protocol itself is therefore evaluated by asking whether it improves that continuity across actual review interactions.
 
-* incomplete source inspection;
-* early stopping;
-* evidence loss;
-* condition loss;
-* evidence/claim binding failure;
-* pattern-based completion;
-* research-question substitution;
-* unsupported comparative judgment;
-* state drift during synthesis.
+Its effectiveness is an empirical question.
 
-Its effectiveness must itself be evaluated empirically across systems, sessions, and evaluation contexts.
+Different systems, sessions, tools, and contexts may produce different results.
+
+Those differences become additional observations for the same evaluation architecture.
 
 ---
 
 # 30. Current Empirical Basis
 
-The protocol architecture emerged from staged evaluation diagnostics in which the following operations were separated:
+This protocol emerged from staged diagnostics in which the following operations were separated:
 
 ```text
 Evidence Collection
+→ Evidence Ledger
 → Fact Packet
+→ Validation
 → Evaluation
 → Claim-State Lock
-→ Final Compression
+→ Final Synthesis
 ```
 
-The staged procedure substantially reduced previously observed evaluation drift in the tested interactions.
+In the tested interactions, this separation exposed several distinct transition points that had previously been merged inside a single fluent evaluation.
 
-A separate Validator diagnostic also exposed an important boundary:
+The diagnostics showed that separate inspection could identify, among other things:
 
-> A Validator can detect unsupported Fact-to-Evidence bindings, but cannot recover a condition that the Collector failed to place into the Evidence Ledger.
+- missing source acquisition;
+- incomplete Fact-to-Evidence binding;
+- lost theorem conditions;
+- evidence-type mismatch;
+- evaluation-state drift;
+- synthesis-state drift.
 
-This observation motivates:
+A separate Validator stage also exposed an important structural relation:
 
-* Clause-Level Evidence Binding;
-* Hypothesis and Condition Preservation;
-* explicit Evidence-Type roles;
-* stage-specific permission boundaries.
+> Validation can inspect the evidence state that was captured, while missing evidence requires reopening the Collector stage.
 
-These observations constitute finite diagnostic evidence only.
+This observation motivated:
 
-They are not presented as universal claims about all AI systems.
+- Clause-Level Evidence Binding;
+- Hypothesis and Condition Preservation;
+- explicit Evidence-Type roles;
+- stage-specific permission boundaries;
+- Claim-State Lock;
+- synthesis fidelity checks.
+
+The current empirical basis is the finite set of staged interactions from which these structures were extracted.
+
+Further interactions can extend, refine, or reorganize this architecture.
 
 ---
 
 # 31. Final Principle
 
-The objective is not to make an evaluator incapable of disagreement.
+The purpose of the protocol is to preserve structural continuity from observation to judgment.
 
-The objective is to make disagreement traceable to evidence.
-
-The protocol therefore does not require:
+Its full cycle is:
 
 ```text
-positive evaluation
+Research Object
+→ Pick Up Evidence
+→ Coordinate Evidence
+→ Validate
+→ Select the Supported Judgment
+→ Lock the State
+→ Synthesize
+→ Re-evaluate when new evidence appears
 ```
 
-It requires:
+The essential relation is:
 
-```text
-visible evidence state
-+
-explicit claim binding
-+
-preserved conditions
-+
-bounded evaluator authority
-+
-immutable synthesis state
-```
+> Evidence is not merely collected.  
+> It is coordinated into a state from which judgment becomes traceable.
 
-The final rule is:
+A technical evaluation may ultimately be positive, negative, mixed, surprising, consequential, or unresolved.
 
-> Complete the evidence process before completing the evaluation.
+Its significance does not need to be decided in advance.
 
-And once evaluation is locked:
+The governing principle is:
+
+> Present the established structure as it is.  
+> Preserve the path by which it was established.  
+> Let its implications emerge from the evidence.
 
 > Represent the judgment; do not silently recreate it.

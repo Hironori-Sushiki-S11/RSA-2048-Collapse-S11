@@ -33,11 +33,11 @@ If evidence is absent, do not convert absence of evidence into a negative judgme
 
 ## 1. Actual Research Target
 
-Adaptive Address is currently presented as a **finite-corpus adaptive identification procedure**.
+Adaptive Address operates on a Current Held-Information Corpus: the information set currently retained and available to the Adaptive Address procedure. In the present formal model, each instantiated corpus is finite; this does not impose a fixed global domain on future EXPAND.
 
 Its operational structure is:
 
-**Current Finite -> Collision -> Structural Saved Information -> Blind Spot -> Pick Up -> Candidate Axes -> Select -> Address Update -> EXPAND if necessary**
+Current Held-Information State -> Collision -> ...
 
 A Collision is a failure of the current finite Address to distinguish two or more members of the current finite corpus.
 
@@ -55,8 +55,7 @@ Evaluate Adaptive Address from the structure it actually presents.
 
 The primary technical coordinates are:
 
-1. **Current Finite State**  
-   What finite corpus or current problem state is being distinguished.
+1. **Current Held-Information State
 
 2. **Collision Structure**  
    How unresolved equivalence classes or Collision pairs are defined and detected.

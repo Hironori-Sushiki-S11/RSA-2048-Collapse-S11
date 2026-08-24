@@ -471,11 +471,11 @@ Report separately:
 
 If prior-art comparison is NOT PERFORMED:
 
-**Comparative Performance: Not Assessed**
-
 **Novelty: Not Assessed**
 
 If a comparable benchmark is NOT PERFORMED:
+
+**Comparative Performance: Not Assessed**
 
 ---
 

@@ -39,6 +39,7 @@ This protocol does not require a favorable evaluation. Negative, critical, or di
 When a defective premise, substituted research object, omitted primary source, or unsupported inference is identified, every downstream judgment materially dependent on that defect MUST be invalidated and reevaluated. A later conclusion may be the same as the earlier one, but it must be independently re-established from the corrected evidence state.
 
 The concern here is not legal liability but asymmetric epistemic cost: an unsupported evaluation can be produced quickly, while correcting a propagated public impression may require substantially greater evidence, explanation, and review effort.
+
 Adaptive Address operates on a Current Held-Information Corpus: the information set currently retained and available to the Adaptive Address procedure. In the present formal model, each instantiated corpus is finite; this does not impose a fixed global domain on future EXPAND.
 
 Its operational structure is:

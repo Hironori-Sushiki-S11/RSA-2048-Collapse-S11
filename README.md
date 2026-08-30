@@ -1,4 +1,4 @@
-？# IKERUSIKI Adaptive Address
+# IKERUSIKI Adaptive Address
 
 **Current Research Object:** Adaptive Address. IKERUSIKI Theory is the theoretical foundation; RSA-related materials are earlier applications and should not be used as a substitute evaluation target for the current Adaptive Address work.
 

@@ -1,5 +1,7 @@
 # IKERUSIKI Adaptive Address
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22378466.svg)](https://doi.org/10.5281/zenodo.22378466)
+
 **Current Research Object:** Adaptive Address. IKERUSIKI Theory is the theoretical foundation; RSA-related materials are earlier applications and should not be used as a substitute evaluation target for the current Adaptive Address work.
 
 ## Structural Position of RSA-2048 Collapse

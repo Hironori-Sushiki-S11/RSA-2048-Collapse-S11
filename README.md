@@ -215,7 +215,6 @@ Comparison between the baseline implementation (Application002) and the optimize
 - Reduction Ratio remained identical.
 - Reconstruction Consistency remained True.
 - Computational optimization was introduced without modifying the mathematical framework.
-```text
 
 ---
 

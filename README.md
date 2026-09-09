@@ -250,3 +250,15 @@ Next:
 ## Philosophical Background / 思想的背景
 
 - [開かれた有限と当意即妙・当位即妙――渚に書き続ける](PHILOSOPHICAL_BACKGROUND_OPEN_FINITE.md)
+
+## Huge-Integer Identification / 超巨大数識別（2026-09-09）
+
+[IKERUSIKI Adaptive Address — Huge Integers](https://github.com/Hironori-Sushiki-S11/IKERUSIKI-Adaptive-Address-Huge-Integers)
+
+This published experiment extends Adaptive Address to Mersenne primes and larger implicitly represented integers, using exact modular exponentiation without expanding the integer bodies.
+
+- 52 known Mersenne primes: axes **467 → 11**, collision pairs **1326 → 4 → 0**.
+- 52 integers defined by `2**(10**100+i)-1`, `i=0..51`: axis **53**, collision pairs **1326 → 0**.
+- Extension to the combined 104 integers: preserve axes **467 and 11**, then add **5** to resolve the remaining two collision pairs.
+
+The repository provides code, full addresses, measured results, validation records, and reproduction instructions.

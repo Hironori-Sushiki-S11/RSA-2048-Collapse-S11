@@ -251,7 +251,7 @@ Next:
 
 - [開かれた有限と当意即妙・当位即妙――渚に書き続ける](PHILOSOPHICAL_BACKGROUND_OPEN_FINITE.md)
 
-## Huge-Integer Identification / 超巨大数識別（2026-09-09）
+## Huge-Integer Identification (2026-09-09)
 
 [IKERUSIKI Adaptive Address — Huge Integers](https://github.com/Hironori-Sushiki-S11/IKERUSIKI-Adaptive-Address-Huge-Integers)
 

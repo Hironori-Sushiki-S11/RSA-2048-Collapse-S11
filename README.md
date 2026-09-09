@@ -246,8 +246,9 @@ Next:
 ## Latest Research
 
 - [Structural Address Inertia — Verification061–064](./IKERUSIKI_STRUCTURAL_ADDRESS_INERTIA.md)
+## Philosophical Background
 
-## Philosophical Background / 思想的背景
+- [Open Finitude and Situated Responsiveness — Writing at the Shore (Japanese)](PHILOSOPHICAL_BACKGROUND_OPEN_FINITE.md)
 
 - [開かれた有限と当意即妙・当位即妙――渚に書き続ける](PHILOSOPHICAL_BACKGROUND_OPEN_FINITE.md)
 

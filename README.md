@@ -250,7 +250,7 @@ Next:
 
 - [Open Finitude and Situated Responsiveness — Writing at the Shore (Japanese)](PHILOSOPHICAL_BACKGROUND_OPEN_FINITE.md)
 
-- [開かれた有限と当意即妙・当位即妙――渚に書き続ける](PHILOSOPHICAL_BACKGROUND_OPEN_FINITE.md)
+Remove duplicate Japanese link from README
 
 ## Huge-Integer Identification (2026-09-09)
 

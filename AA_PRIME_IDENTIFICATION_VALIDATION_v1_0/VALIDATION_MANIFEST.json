@@ -1,0 +1,345 @@
+{
+  "title": "AA Prime Identification Validation v1.0",
+  "status": "COMPLETE",
+  "completion_scope": {
+    "included": [
+      "finite-corpus AA identity completion",
+      "exact order-state collision prediction",
+      "identity/certificate separation",
+      "order-class equivalence",
+      "adaptive representation with fresh trajectory preservation",
+      "frontier-scale symbolic identification",
+      "exact composite certificates",
+      "direct factor-free Prime/Composite determination",
+      "direct exact Prime branch",
+      "machine-checkable evidence"
+    ],
+    "not_required_for_v1_0_completion": [
+      "discovering a new world-record Mersenne prime",
+      "proving every unresolved frontier candidate prime",
+      "making every explored optimization faster"
+    ]
+  },
+  "grok_challenge_resolution": {
+    "survive_is_not_axisbirth": "accepted",
+    "identity_is_not_automatically_prime": "accepted",
+    "resolution": "AA keeps identity and primality determination as separate states; exact observer/certificate closes Prime/Composite rather than treating survival as Prime.",
+    "status": "RESOLVED"
+  },
+  "frontier_observed": {
+    "largest_symbolic_exponent_scale_tested": 1000000000000000000,
+    "approx_decimal_digits_at_that_scale": 301029995663981185,
+    "identity_depth_at_1e18": 1,
+    "identity_collision_free": true,
+    "exact_prime_branch_max_exponent_in_package": 132049
+  },
+  "checks": [
+    {
+      "check": "R30 P_le_521: identity collision-free",
+      "pass": true,
+      "evidence": {
+        "axes": [
+          509,
+          7
+        ],
+        "final_phi": 0
+      }
+    },
+    {
+      "check": "R30 P_le_521: order-state predictions exact",
+      "pass": true,
+      "evidence": {
+        "tested_candidates": 254,
+        "mismatches": 0
+      }
+    },
+    {
+      "check": "R30 P_523_1543: identity collision-free",
+      "pass": true,
+      "evidence": {
+        "axes": [
+          509,
+          7
+        ],
+        "final_phi": 0
+      }
+    },
+    {
+      "check": "R30 P_523_1543: order-state predictions exact",
+      "pass": true,
+      "evidence": {
+        "tested_candidates": 254,
+        "mismatches": 0
+      }
+    },
+    {
+      "check": "R33 P_le_521: identity complete",
+      "pass": true,
+      "evidence": {
+        "axes": [
+          523
+        ],
+        "Phi_id": 0
+      }
+    },
+    {
+      "check": "R33 P_le_521: proper-factor bundles exact",
+      "pass": true,
+      "evidence": {
+        "bundle_count": 3,
+        "proper_factorable": 39
+      }
+    },
+    {
+      "check": "R33 P_523_1543: identity complete",
+      "pass": true,
+      "evidence": {
+        "axes": [
+          1019
+        ],
+        "Phi_id": 0
+      }
+    },
+    {
+      "check": "R33 P_523_1543: proper-factor bundles exact",
+      "pass": true,
+      "evidence": {
+        "bundle_count": 3,
+        "proper_factorable": 46
+      }
+    },
+    {
+      "check": "R34 P_le_521: same-order behavior exact",
+      "pass": true,
+      "evidence": {
+        "distinct_order_classes": 6089,
+        "combined_behavior_classes": 243
+      }
+    },
+    {
+      "check": "R34 P_523_1543: same-order behavior exact",
+      "pass": true,
+      "evidence": {
+        "distinct_order_classes": 6089,
+        "combined_behavior_classes": 357
+      }
+    },
+    {
+      "check": "R60 fresh [523, 1543] cap31: exact completion",
+      "pass": true,
+      "evidence": {
+        "sequence": [
+          29,
+          23,
+          11
+        ],
+        "phis": [
+          812,
+          47,
+          0
+        ],
+        "speedup": 1.0614852817943252
+      }
+    },
+    {
+      "check": "R60 fresh [1544, 3072] cap31: exact completion",
+      "pass": true,
+      "evidence": {
+        "sequence": [
+          29,
+          23,
+          11
+        ],
+        "phis": [
+          1534,
+          109,
+          0
+        ],
+        "speedup": 1.0386083363899807
+      }
+    },
+    {
+      "check": "R60 fresh [3001, 5000] cap31: exact completion",
+      "pass": true,
+      "evidence": {
+        "sequence": [
+          29,
+          23,
+          19
+        ],
+        "phis": [
+          2280,
+          172,
+          0
+        ],
+        "speedup": 1.0216670571505064
+      }
+    },
+    {
+      "check": "R60 fresh [5001, 8000] cap31: exact completion",
+      "pass": true,
+      "evidence": {
+        "sequence": [
+          29,
+          23,
+          19,
+          11
+        ],
+        "phis": [
+          4616,
+          371,
+          7,
+          0
+        ],
+        "speedup": 1.0662419692062743
+      }
+    },
+    {
+      "check": "R60 fresh [5001, 8000] cap43: exact completion",
+      "pass": true,
+      "evidence": {
+        "sequence": [
+          37,
+          23,
+          29,
+          11
+        ],
+        "phis": [
+          4616,
+          382,
+          7,
+          0
+        ],
+        "speedup": 1.0454766080854219
+      }
+    },
+    {
+      "check": "R61: trillion-exponent corpus collision-free",
+      "pass": true,
+      "evidence": {
+        "p_min": 1000000000039,
+        "p_max": 1000000001881,
+        "axes": [
+          1019
+        ]
+      }
+    },
+    {
+      "check": "R61: exact composite certificates obtained",
+      "pass": true,
+      "evidence": {
+        "certified": 12,
+        "unresolved": 52
+      }
+    },
+    {
+      "check": "R62 scale 1000000000000: collision-free",
+      "pass": true,
+      "evidence": {
+        "axes": [
+          443
+        ],
+        "digits": 301029995676
+      }
+    },
+    {
+      "check": "R62 scale 1000000000000000: collision-free",
+      "pass": true,
+      "evidence": {
+        "axes": [
+          359
+        ],
+        "digits": 301029995663993
+      }
+    },
+    {
+      "check": "R62 scale 1000000000000000000: collision-free",
+      "pass": true,
+      "evidence": {
+        "axes": [
+          359
+        ],
+        "digits": 301029995663981185
+      }
+    },
+    {
+      "check": "R63: direct factor-free Prime/Composite path",
+      "pass": true,
+      "evidence": {
+        "prime_count": 1,
+        "composite_count": 4,
+        "axes": [
+          23
+        ]
+      }
+    },
+    {
+      "check": "R64: direct Prime branch positive controls",
+      "pass": true,
+      "evidence": {
+        "prime_exponents": [
+          44497,
+          86243,
+          110503,
+          132049
+        ]
+      }
+    },
+    {
+      "check": "R65: small-axis proof-compression boundary closed",
+      "pass": true,
+      "evidence": {
+        "L512_bits": 743,
+        "M_bits": 44497
+      }
+    },
+    {
+      "check": "R66 C1_100s: exact packed proof experiment recorded",
+      "pass": true,
+      "evidence": {
+        "targets": 8,
+        "bundle_tests": [
+          "2",
+          "3",
+          "4",
+          "8"
+        ]
+      }
+    },
+    {
+      "check": "R66 C2_300s: exact packed proof experiment recorded",
+      "pass": true,
+      "evidence": {
+        "targets": 6,
+        "bundle_tests": [
+          "2",
+          "3",
+          "4",
+          "6"
+        ]
+      }
+    },
+    {
+      "check": "R66 C3_700s: exact packed proof experiment recorded",
+      "pass": true,
+      "evidence": {
+        "targets": 4,
+        "bundle_tests": [
+          "2",
+          "3",
+          "4"
+        ]
+      }
+    },
+    {
+      "check": "R67: measured bundle selector fresh validation",
+      "pass": true,
+      "evidence": {
+        "hits": 3,
+        "cases": 3
+      }
+    }
+  ],
+  "all_checks_pass": true,
+  "stop_rule": "No additional validation round is required for v1.0 unless a reproducible bug/regression is found or a genuinely new capability is added."
+}

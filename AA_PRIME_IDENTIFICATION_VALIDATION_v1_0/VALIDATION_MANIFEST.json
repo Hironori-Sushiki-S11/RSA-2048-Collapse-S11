@@ -1,6 +1,6 @@
 {
   "title": "AA Prime Identification Validation v1.0",
-  "status": "COMPLETE",
+  "status": "CORE_COMPLETE_FRONTIER_OPEN",
   "completion_scope": {
     "included": [
       "finite-corpus AA identity completion",
@@ -341,5 +341,19 @@
     }
   ],
   "all_checks_pass": true,
-  "stop_rule": "No additional validation round is required for v1.0 unless a reproducible bug/regression is found or a genuinely new capability is added."
+  "stop_rule": "Core Validation remains complete. Frontier Prime Identification remains open until an exact Prime certificate is completed beyond the public first-test frontier.",
+  "core_validation_status": "COMPLETE",
+  "frontier_prime_identification_status": "OPEN",
+  "external_frontier_attempt_grok": {
+    "status": "COMPLETED_UNRESOLVED_IN_ATTEMPT_TARGET_KNOWN_COMPOSITE",
+    "target_exponent": 141566927,
+    "prime_established": false,
+    "composite_established": true,
+    "record": "EXTERNAL_FRONTIER_ATTEMPT_GROK.md",
+    "known_factor": 183753871247,
+    "factor_check": "pow(2, 141566927, 183753871247) == 1",
+    "target_record": "https://www.mersenne.org/report_exponent/?exp_lo=141566927",
+    "correction_date": "2026-09-23",
+    "note": "Grok did not resolve the target in its run, but GIMPS had found three factors in 2007; the target cannot serve as a new-Prime candidate."
+  }
 }

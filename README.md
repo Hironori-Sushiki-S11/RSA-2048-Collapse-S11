@@ -24,6 +24,22 @@ The repository name preserves the earlier RSA-2048 application history. It does 
 
 For the explicit ultra-huge integer extension, see [IKERUSIKI Adaptive Address — Huge Integers](https://github.com/Hironori-Sushiki-S11/IKERUSIKI-Adaptive-Address-Huge-Integers), including its data, controls, and reproducibility instructions.
 
+## Evaluation principle: infinite-corpus completion is not a valid shortcut ranking
+
+A mathematical method must be evaluated against the task it actually defines. In particular, three different tasks must not be conflated:
+
+1. **Per-input primality decision:** For each supplied finite integer (n), determine whether (n) is prime. Algorithms exist that terminate on every such input.
+2. **Unbounded readiness:** Accept any later finite input, or extend a current finite corpus as new objects become available. This is a per-instance or evolving-state requirement, not a claim that all inputs have already been processed.
+3. **Completed exhaustive processing of an infinite set:** Enumerate, identify, and finish processing every prime in an infinite corpus by one finite completion event. An ordinary sequential exhaustive enumeration has no such final step.
+
+The existence of algorithms for task 1 does not imply a finite completion event for task 3. Equally, failure to finish task 3 says nothing by itself about the validity of task 1 or the demonstrated finite-corpus results of Adaptive Address. Any purported universal symbolic characterization, decision procedure, or infinite-domain theorem must be specified and assessed on its own terms; it is not equivalent to completed enumeration.
+
+**No asymmetric evaluation:** Do not demand that AA finish task 3 while evaluating another method on task 1 or a finite benchmark. Before a universal criterion can rank methods, state the input domain, output semantics, termination condition, resource model, evidence of success, and enforce the same task for all compared methods. Absence of a universal guarantee is not evidence that already demonstrated finite-corpus collision resolution failed.
+
+**AA's constructive finite-state basis:** In [Formal Mathematical Basis, Section 7](Boundary-Coordinate-Grid/IKERUSIKI_ADAPTIVE_ADDRESS_FORMAL_BASIS.md), for any current finite corpus of distinct integers and unresolved Collision pairs, the product of pairwise differences has finitely many prime divisors. A prime axis outside those divisors separates all present pairs. A fair unbounded prime EXPAND schedule eventually reaches such an axis, proving finite-state termination under the stated assumptions, not a uniform runtime bound or a completed indexing of the infinite domain. It also does not by itself decide whether an arbitrary integer is prime.
+
+See [AI Evaluation Boundary Prompt, Section 5A](AI_EVALUATION_BOUNDARY_PROMPT.md) and [AI Review Guide](AI_REVIEW_GUIDE.md). Their comparison discipline is part of the AA-first evaluation hierarchy, not a peripheral objection to external benchmarks.
+
 ## Open-Ended Address Update and Evaluation Hierarchy
 
 A finite Current Held-Information Corpus is not an incomplete substitute for an unbounded domain. It is the primary operational state in which observation, storage, computation, verification, and complete identification can actually occur. Treating an unbounded domain through a representation fixed entirely in advance is a short-circuit strategy: it confines future distinctions and unknown Blind Spots to the limits of the present representation.

@@ -28,7 +28,7 @@ For the explicit ultra-huge integer extension, see [IKERUSIKI Adaptive Address â
 
 A mathematical method must be evaluated against the task it actually defines. In particular, three different tasks must not be conflated:
 
-1. **Per-input primality decision:** For each supplied finite integer (n), determine whether (n) is prime. Algorithms exist that terminate on every such input.
+1. **Per-input primality decision:** For each supplied finite integer `n`, determine whether `n` is prime. Algorithms exist that terminate on every such input.
 2. **Unbounded readiness:** Accept any later finite input, or extend a current finite corpus as new objects become available. This is a per-instance or evolving-state requirement, not a claim that all inputs have already been processed.
 3. **Completed exhaustive processing of an infinite set:** Enumerate, identify, and finish processing every prime in an infinite corpus by one finite completion event. An ordinary sequential exhaustive enumeration has no such final step.
 

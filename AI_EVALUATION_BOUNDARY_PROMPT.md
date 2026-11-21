@@ -244,6 +244,14 @@ In particular, specify:
 - what evidence certifies success;
 - the same task and success criterion for every method being compared.
 
+In particular, keep the quantifiers and notion of completion distinct:
+
+- **For every individually supplied finite integer**, a primality decision procedure can terminate and return a decision (per-input termination).
+- **For every currently instantiated finite corpus**, AA's current residue-based formal model has a separating prime axis, with eventual finite-state resolution under fair unbounded prime EXPAND; this theorem is about corpus distinction, not primality classification.
+- **After one finite computation, every element of an infinite set has been exhaustively enumerated and processed** is a different and generally non-terminating sequential-enumeration demand. A finite symbolic representation or universally applicable decision algorithm is not the same thing as completing that enumeration.
+
+The availability of a per-input primality procedure does not imply completion of the infinite set. Conversely, an inability to complete exhaustive infinite enumeration cannot be used as evidence that AA is inferior at a finite-corpus task; the same impossible-to-finish sequential-enumeration requirement would apply to any comparator.
+
 A demand that a process terminate after identifying every member of an infinite set is a materially different task from completely identifying a specified finite Current Held-Information Corpus. Its feasibility and meaning must be addressed as part of that task definition, rather than presumed and then used to mark AA as inferior. If a valid, well-defined universal criterion is proposed, it should be examined on its own merits and applied symmetrically; this section does not declare every conceivable infinite-domain formulation impossible.
 
 The evaluator must not infer from finite-corpus results that AA has a universal infinite-corpus guarantee. The evaluator must also not infer from the absence of such a guarantee that demonstrated finite-corpus identification, collision resolution, reproducibility, or other reported results are failures. Each conclusion remains attached to its own object, assumptions, and evidence.

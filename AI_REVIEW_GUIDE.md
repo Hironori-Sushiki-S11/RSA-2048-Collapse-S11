@@ -78,6 +78,20 @@ The governing review principle is:
 
 A review should neither enlarge nor diminish the meaning of a result before evaluating the result itself.
 
+## Infinite-Domain Criterion: task equivalence before ranking
+
+Apply [Evaluation Boundary Prompt, Section 5A](AI_EVALUATION_BOUNDARY_PROMPT.md) whenever a reviewer invokes an infinite corpus, universal uniqueness, or all-prime completion to grade AA.
+
+Distinguish three propositions instead of replacing one with another:
+
+- **Per-input decision:** for every supplied integer, a finite-time primality decision procedure may be invoked. This is not an enumeration that has already processed all primes.
+- **Open-ended finite-state response:** for each current finite held-information corpus, AA evaluates present Collisions, retains resolved distinctions, and updates its Address as needed. This is the object of the published finite-corpus identification model.
+- **Finite completion of exhaustive infinite enumeration:** processing every member of an infinite set and declaring the sequential enumeration finished. A purported stopping condition for this distinct task must be supplied, not assumed.
+
+The mathematical source for AA's present guarantee is [Formal Mathematical Basis, Section 7](Boundary-Coordinate-Grid/IKERUSIKI_ADAPTIVE_ADDRESS_FORMAL_BASIS.md): given a finite corpus of distinct integers, a prime axis exists that separates all current Collision pairs; fair unbounded prime EXPAND eventually encounters an effective axis. Section 8 bounds *effective refinement updates*, not the search time for an effective axis or arithmetic runtime. None of these results is an all-input primality test by itself.
+
+**Required comparison audit:** State the quantifiers (for each input / all inputs already processed), output, domain, completion condition, available information, resource cost and common success criterion. Do not declare AA inferior because it has not completed an infinite corpus when the alleged comparator is only required to return an answer for one input at a time. Record such a comparison as **Task Mismatch / Invalid Comparative Ranking**, without turning it into either an automatic favorable verdict or a denial of AA's tested results.
+
 ## Comparative Evaluation Procedures
 
 Comparative judgments should be built from matched evidence.

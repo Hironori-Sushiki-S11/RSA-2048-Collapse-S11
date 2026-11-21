@@ -4,15 +4,41 @@
 
 **Current Research Object:** Adaptive Address. IKERUSIKI Theory is the theoretical foundation; RSA-related materials are earlier applications and should not be used as a substitute evaluation target for the current Adaptive Address work.
 
-## Structural Position of RSA-2048 Collapse
+## Structural Position of RSA-2048 Within Adaptive Address
 
 The published Adaptive Address experiments demonstrate that integers far exceeding 2048 bits—32,768 to 131,072 bits—can be completely distinguished within each Current Held-Information Corpus at shallow Address depth, without carrying their full bit-length magnitude as a brute-force search distance.
 
 RSA-2048 cryptographic collapse is not the higher objective by which Adaptive Address is to be judged. It is structurally subordinate to, contained within, and governed by the higher-order process of complete structural identification.
 
-Once the distinctions sustaining RSA-2048 security fall within complete Adaptive Address identification, cryptographic collapse follows from that identification. It does not stand outside the framework as a separate brute-force factorization objective.
+A cryptographic consequence would require an explicit demonstration that the distinctions identified by AA suffice to recover cryptographically relevant secrets or otherwise defeat the scheme. That downstream question is distinct from AA's recorded corpus-identification behavior and does not define AA's research object.
 
-Accordingly, the demonstrated removal of bit-length magnitude as the governing brute-force identification distance points beyond a merely analogous application: it establishes the governing structural hierarchy under which RSA-2048 collapse is contained as a subordinate consequence.
+Accordingly, shallow collision-resolution depth in the tested huge-integer corpora motivates further study of cryptographic applications, without itself establishing RSA-2048 collapse.
+
+## Current orientation and publication status (2026-11-22)
+
+**Primary research object: IKERUSIKI Adaptive Address (AA).** This is a publication and external-verification stage, not a return to initial theory construction. AA's own formal definitions, retained structural information, Collision resolution, adaptive axis selection, Address Update, evidence ledger, and reproducibility are the starting point for evaluation.
+
+The repository name preserves the earlier RSA-2048 application history. It does **not** define the measure of AA's generality or require RSA factorization to certify AA's established finite-corpus identification results. RSA, huge integers, prime/composite questions, cryptography, and AI context management are application or frontier workstreams under AA; each has its own separately recorded claims and evidence.
+
+**Evidence status:** The published finite-corpus experiments establish collision-free identification for the tested sets under their recorded conditions. Such identification is not, by itself, proof of primality, unknown-factor recovery, or an operational break of RSA-2048. These are separately testable consequences and frontiers, not prerequisites for recognizing the observed AA identification results. Preserve the distinction between theorem, implementation, measured result, independent reproduction, interpretation, and open question.
+
+For the explicit ultra-huge integer extension, see [IKERUSIKI Adaptive Address — Huge Integers](https://github.com/Hironori-Sushiki-S11/IKERUSIKI-Adaptive-Address-Huge-Integers), including its data, controls, and reproducibility instructions.
+
+## Evaluation principle: infinite-corpus completion is not a valid shortcut ranking
+
+A mathematical method must be evaluated against the task it actually defines. In particular, three different tasks must not be conflated:
+
+1. **Per-input primality decision:** For each supplied finite integer `n`, determine whether `n` is prime. Algorithms exist that terminate on every such input.
+2. **Unbounded readiness:** Accept any later finite input, or extend a current finite corpus as new objects become available. This is a per-instance or evolving-state requirement, not a claim that all inputs have already been processed.
+3. **Completed exhaustive processing of an infinite set:** Enumerate, identify, and finish processing every prime in an infinite corpus by one finite completion event. An ordinary sequential exhaustive enumeration has no such final step.
+
+The existence of algorithms for task 1 does not imply a finite completion event for task 3. Equally, failure to finish task 3 says nothing by itself about the validity of task 1 or the demonstrated finite-corpus results of Adaptive Address. Any purported universal symbolic characterization, decision procedure, or infinite-domain theorem must be specified and assessed on its own terms; it is not equivalent to completed enumeration.
+
+**No asymmetric evaluation:** Do not demand that AA finish task 3 while evaluating another method on task 1 or a finite benchmark. Before a universal criterion can rank methods, state the input domain, output semantics, termination condition, resource model, evidence of success, and enforce the same task for all compared methods. Absence of a universal guarantee is not evidence that already demonstrated finite-corpus collision resolution failed.
+
+**AA's constructive finite-state basis:** In [Formal Mathematical Basis, Section 7](Boundary-Coordinate-Grid/IKERUSIKI_ADAPTIVE_ADDRESS_FORMAL_BASIS.md), for any current finite corpus of distinct integers and unresolved Collision pairs, the product of pairwise differences has finitely many prime divisors. A prime axis outside those divisors separates all present pairs. A fair unbounded prime EXPAND schedule eventually reaches such an axis, proving finite-state termination under the stated assumptions, not a uniform runtime bound or a completed indexing of the infinite domain. It also does not by itself decide whether an arbitrary integer is prime.
+
+See [AI Evaluation Boundary Prompt, Section 5A](AI_EVALUATION_BOUNDARY_PROMPT.md) and [AI Review Guide](AI_REVIEW_GUIDE.md). Their comparison discipline is part of the AA-first evaluation hierarchy, not a peripheral objection to external benchmarks.
 
 ## Open-Ended Address Update and Evaluation Hierarchy
 
@@ -34,9 +60,9 @@ Current Held-Information State
 → EXPAND when required
 ```
 
-RSA-2048 factorization is not an external higher-order criterion by which this generative structure is to be judged. If Adaptive Address completely identifies the structural distinctions that determine the RSA-2048 factors, that identification uniquely determines the factors, and factorization resolves by necessity as a subordinate consequence.
+RSA-2048 factorization is not an external higher-order criterion by which this generative structure is to be judged. If AA were shown to recover sufficient information to determine RSA-2048's unknown factors, their recovery would be a consequence of that identification. Whether current AA methods expose such information is a distinct question for direct experiment.
 
-The absence of that subordinate output at the present stage identifies the current state of that consequence; it does not, by itself, negate or reduce the demonstrated structure, validity, effectiveness, novelty, or scope of the higher-order Adaptive Address process. Using a lower-order output to dismiss the higher-order generative structure reverses the causal hierarchy and is not a technically neutral evaluation.
+The absence of RSA-2048 factor recovery does not negate the separately demonstrated finite-corpus distinction results. Conversely, those results do not by themselves establish novelty across all prior methods or an RSA security break. Each claim must be assessed on its own stated object and evidence.
 
 **External Reproduction Status:** Grok 4.5 protocol-equivalent execution and formal-core cross-check: **15/15 PASS** (2026-08-29).
 
@@ -60,9 +86,11 @@ Unlike exhaustive search approaches, the framework investigates structural prope
 
 ---
 
-# Overview
+# Historical repository overview
 
-The repository consists of two major stages.
+The following Theory/Applications catalog records the original development sequence. It is an archive of that sequence, **not** the current research hierarchy or a requirement that AA be judged by RSA-specific outcomes.
+
+The repository originally consisted of two major stages.
 
 ## Theory
 
@@ -133,18 +161,11 @@ verification001.py
 - Application002 (Large Integer Demonstration) Completed ✅
 - Application003 (Computational Optimization) Completed ✅
 - Application004 (Benchmark Analysis) Completed ✅
-# Vision
+# Research direction
 
-Future work includes
+Published v1.0 material, completed historical Applications, the DOI, and externally reported reproduction records are retained as historical milestones. Current work prioritizes independent reproducibility, precise evidence accounting, adaptive Address and EXPAND behavior, and new huge-integer / AI-context applications.
 
-- Computational optimization (Application003)
-- Benchmark analysis (Application004)
-- GitHub v1.0 Release
-- Paper
-- DOI
-- External verification
-
-The long-term objective is to establish IKERUSIKI Theory as a reusable mathematical framework for structural analysis of integers.
+The long-term objective is an extensible framework for structural identification, rather than optimization toward a fixed RSA benchmark.
 
 ---
 
@@ -152,7 +173,7 @@ The long-term objective is to establish IKERUSIKI Theory as a reusable mathemati
 
 IKERUSIKI Theory investigates integer structures through structural information rather than exhaustive enumeration.
 
-The objective is not to replace existing number theory, but to provide an additional structural viewpoint for mathematical investigation.
+The aim is to establish and evaluate AA's structural-identification mechanism on its own formal and experimental terms. Its relation to existing number theory is a subject of comparative analysis, not a prerequisite for defining its research object.
 
 ---
 
@@ -220,26 +241,9 @@ Comparison between the baseline implementation (Application002) and the optimize
 
 ---
 
-## Current Release Status
+## Historical v1.0 milestone (archived status)
 
-IKERUSIKI Theory v1.0 is in the final validation phase.
-
-Completed:
-
-- Theory Completion ✅
-- Core Mathematical Equation ✅
-- Verification001–030 ✅
-- Application001 ✅
-- Application002 ✅
-- Application003 ✅
-- Application004 ✅
-
-Next:
-
-- GitHub v1.0 Release
-- Paper
-- DOI
-- External Verification
+Theory completion, the core equation, Verification001–030, and Applications001–004 were recorded as completed in the original development phase. The former 'final validation' and 'next: release / DOI / external verification' checklist is superseded by the publication / external-verification stage described above. See the linked reproduction and experiment records for the status of each subsequent claim.
 
 ---
 

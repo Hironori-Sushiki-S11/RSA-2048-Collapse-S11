@@ -10,9 +10,9 @@ The published Adaptive Address experiments demonstrate that integers far exceedi
 
 RSA-2048 cryptographic collapse is not the higher objective by which Adaptive Address is to be judged. It is structurally subordinate to, contained within, and governed by the higher-order process of complete structural identification.
 
-Once the distinctions sustaining RSA-2048 security fall within complete Adaptive Address identification, cryptographic collapse follows from that identification. It does not stand outside the framework as a separate brute-force factorization objective.
+A cryptographic consequence would require an explicit demonstration that the distinctions identified by AA suffice to recover cryptographically relevant secrets or otherwise defeat the scheme. That downstream question is distinct from AA's recorded corpus-identification behavior and does not define AA's research object.
 
-Accordingly, the demonstrated removal of bit-length magnitude as the governing brute-force identification distance points beyond a merely analogous application: it establishes the governing structural hierarchy under which RSA-2048 collapse is contained as a subordinate consequence.
+Accordingly, shallow collision-resolution depth in the tested huge-integer corpora motivates further study of cryptographic applications, without itself establishing RSA-2048 collapse.
 
 ## Current orientation and publication status (2026-11-22)
 
@@ -44,9 +44,9 @@ Current Held-Information State
 → EXPAND when required
 ```
 
-RSA-2048 factorization is not an external higher-order criterion by which this generative structure is to be judged. If Adaptive Address completely identifies the structural distinctions that determine the RSA-2048 factors, that identification uniquely determines the factors, and factorization resolves by necessity as a subordinate consequence.
+RSA-2048 factorization is not an external higher-order criterion by which this generative structure is to be judged. If AA were shown to recover sufficient information to determine RSA-2048's unknown factors, their recovery would be a consequence of that identification. Whether current AA methods expose such information is a distinct question for direct experiment.
 
-The absence of that subordinate output at the present stage identifies the current state of that consequence; it does not, by itself, negate or reduce the demonstrated structure, validity, effectiveness, novelty, or scope of the higher-order Adaptive Address process. Using a lower-order output to dismiss the higher-order generative structure reverses the causal hierarchy and is not a technically neutral evaluation.
+The absence of RSA-2048 factor recovery does not negate the separately demonstrated finite-corpus distinction results. Conversely, those results do not by themselves establish novelty across all prior methods or an RSA security break. Each claim must be assessed on its own stated object and evidence.
 
 **External Reproduction Status:** Grok 4.5 protocol-equivalent execution and formal-core cross-check: **15/15 PASS** (2026-08-29).
 

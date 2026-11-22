@@ -262,6 +262,8 @@ For finite-corpus AA evidence, continue to assess the actual sequence:
 
 **finite Current Held-Information -> Collision -> preserved structural information -> Blind Spot -> Pick Up -> Select -> adaptive Address update -> complete identification**
 
+Complete Identification is reached when the Address distinguishes every member of the finite Current Held-Information Corpus at that stage. When new objects are added, the retained Address is checked against the expanded corpus and updated if collisions remain.
+
 The Address is finite at each state and changes in response to unresolved collisions. Record the input corpus, initial retained information, selected axes, update trajectory, final identification state, computational cost, and reproduction status. Retain the repository's existing empirical and verification claims with their stated scope; do not broaden them into universal claims or erase them because an unrelated infinite-corpus condition was not met.
 
 ---

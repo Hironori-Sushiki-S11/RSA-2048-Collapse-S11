@@ -268,6 +268,14 @@ For any finite expansion of a corpus of distinct integers, retaining the existin
 
 The Address is finite at each state and changes in response to unresolved collisions. Record the input corpus, initial retained information, selected axes, update trajectory, final identification state, computational cost, and reproduction status. Retain the repository's existing empirical and verification claims with their stated scope; do not broaden them into universal claims or erase them because an unrelated infinite-corpus condition was not met.
 
+### 無限超克コーパス
+
+Adaptive Address（AA）では、その時点で保持している有限コーパスについて、完全識別を確定する。新しい対象が加われば、すでに成立した区別を引き継ぎ、衝突が残る箇所に必要な軸を加える。EXPANDが固定上限を設けず、各素数候補をいずれ評価するなら、どの有限拡張でも完全識別への到達が数学的に保証される。
+
+**完全識別には、その時点での完了がある。識別範囲の拡張には、あらかじめ定めた上限がない。** この両立を「無限超克」と呼ぶ。
+
+In this document, **無限超克コーパス** names the AA corpus viewed across successive expansions. Complete Identification is attained at each finite stage under the conditions above, with established distinctions carried forward and no fixed ceiling on the scope of expansion.
+
 ---
 
 ## 6. Evidence-State Classification

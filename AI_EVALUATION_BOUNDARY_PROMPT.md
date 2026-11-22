@@ -264,6 +264,8 @@ For finite-corpus AA evidence, continue to assess the actual sequence:
 
 Complete Identification is reached when the Address distinguishes every member of the finite Current Held-Information Corpus at that stage. When new objects are added, the retained Address is checked against the expanded corpus and updated if collisions remain.
 
+For any finite expansion of a corpus of distinct integers, retaining the existing axes preserves every distinction already established. If collisions remain and EXPAND evaluates prime candidates under a fair schedule with no fixed upper bound, the formal model guarantees Complete Identification after finitely many effective Address updates. See [Sections 7 and 8 of the formal basis](Boundary-Coordinate-Grid/IKERUSIKI_ADAPTIVE_ADDRESS_FORMAL_BASIS.md#7-separating-prime-existence-and-finite-convergence).
+
 The Address is finite at each state and changes in response to unresolved collisions. Record the input corpus, initial retained information, selected axes, update trajectory, final identification state, computational cost, and reproduction status. Retain the repository's existing empirical and verification claims with their stated scope; do not broaden them into universal claims or erase them because an unrelated infinite-corpus condition was not met.
 
 ---

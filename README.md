@@ -20,6 +20,8 @@ Accordingly, shallow collision-resolution depth in the tested huge-integer corpo
 
 The repository name preserves the earlier RSA-2048 application history. It does **not** define the measure of AA's generality or require RSA factorization to certify AA's established finite-corpus identification results. RSA, huge integers, prime/composite questions, cryptography, and AI context management are application or frontier workstreams under AA; each has its own separately recorded claims and evidence.
 
+**Publication evidence ledger (2026-11-26):** [Evidence, reproduction paths, and evaluation boundaries](AA_PUBLICATION_EVIDENCE_LEDGER_20261126.md).
+
 **Evidence status:** The published finite-corpus experiments establish collision-free identification for the tested sets under their recorded conditions. Such identification is not, by itself, proof of primality, unknown-factor recovery, or an operational break of RSA-2048. These are separately testable consequences and frontiers, not prerequisites for recognizing the observed AA identification results. Preserve the distinction between theorem, implementation, measured result, independent reproduction, interpretation, and open question.
 
 For the explicit ultra-huge integer extension, see [IKERUSIKI Adaptive Address — Huge Integers](https://github.com/Hironori-Sushiki-S11/IKERUSIKI-Adaptive-Address-Huge-Integers), including its data, controls, and reproducibility instructions.

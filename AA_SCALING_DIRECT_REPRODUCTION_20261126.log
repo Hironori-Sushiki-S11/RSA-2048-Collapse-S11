@@ -1,0 +1,21 @@
+IKERUSIKI Adaptive Address Scaling — Public Structural Reproducer
+============================================================================================
+ 32768-bit seed=20260812: axes=477|5    phi=4950->3->0   depth=2 collision_free=True match=True time=0.9257s
+ 32768-bit seed=20260813: axes=505|9    phi=4950->5->0   depth=2 collision_free=True match=True time=0.8515s
+ 32768-bit seed=20260814: axes=365|8    phi=4950->6->0   depth=2 collision_free=True match=True time=0.9117s
+ 32768-bit seed=20260815: axes=467|7    phi=4950->4->0   depth=2 collision_free=True match=True time=0.9472s
+ 32768-bit seed=20260816: axes=449|7    phi=4950->6->0   depth=2 collision_free=True match=True time=0.9015s
+ 65536-bit seed=20260812: axes=493|5    phi=4950->5->0   depth=2 collision_free=True match=True time=1.6968s
+ 65536-bit seed=20260813: axes=417|7    phi=4950->4->0   depth=2 collision_free=True match=True time=1.7392s
+ 65536-bit seed=20260814: axes=483|5    phi=4950->4->0   depth=2 collision_free=True match=True time=1.7487s
+ 65536-bit seed=20260815: axes=511|5    phi=4950->5->0   depth=2 collision_free=True match=True time=1.6860s
+ 65536-bit seed=20260816: axes=425|7    phi=4950->4->0   depth=2 collision_free=True match=True time=1.6884s
+131072-bit seed=20260812: axes=455|3    phi=4950->5->0   depth=2 collision_free=True match=True time=3.4731s
+131072-bit seed=20260813: axes=511|11   phi=4950->3->0   depth=2 collision_free=True match=True time=3.3731s
+131072-bit seed=20260814: axes=499|11   phi=4950->3->0   depth=2 collision_free=True match=True time=3.3959s
+131072-bit seed=20260815: axes=493|7    phi=4950->5->0   depth=2 collision_free=True match=True time=3.4430s
+131072-bit seed=20260816: axes=413|12   phi=4950->4->0   depth=2 collision_free=True match=True time=3.4851s
+============================================================================================
+RESULT: PASS
+Boundary: structural fields are deterministic under this protocol; runtime is machine-dependent.
+Provenance: this is a formal LCM-state reproducer, not a claim that the historical Verification063.py / Verification064.py files are byte-identical.

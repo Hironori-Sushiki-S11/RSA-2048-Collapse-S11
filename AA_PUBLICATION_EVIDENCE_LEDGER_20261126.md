@@ -19,6 +19,10 @@
 
 **Scope discipline:** formal theorem, source-code implementation, author self-check, externally reported AI protocol reproduction, and independent human reproduction are different evidence levels. Do not substitute one for another.
 
+### Direct public-source execution (2026-11-26)
+
+[15-case direct execution report](AA_SCALING_DIRECT_REPRODUCTION_20261126.md) and [full stdout](AA_SCALING_DIRECT_REPRODUCTION_20261126.log) record **15/15 matched**, **15/15 Collision-free**, with direct Git-blob SHA confirmation. A [separate Address-residue cross-check](AA_SCALING_ADDRESS_CROSSCHECK_20261126.py) returned **15/15** matching partition trajectories without calling the reproducer's refinement function. This is a ChatGPT execution-environment audit, not independent human replication.
+
 ## 2. Reproduce the published AA core
 
 From the main repository root with Python 3:
